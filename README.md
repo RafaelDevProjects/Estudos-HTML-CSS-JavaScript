@@ -1,2 +1,7 @@
 # HTML-CSS
- repositorio de html-css com funcionalidades
+##repositorio de html-css
+- HTML é forcado em conteudo
+ -textos
+ -imagens
+ -videos
+ -tabelas
