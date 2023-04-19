@@ -1,7 +1,13 @@
 # HTML-CSS
 ## repositorio de **html-css**
-**HTML** :pushpin: focado em conteudo:
+**HTML** :pushpin: conteudo:
 - textos
 - imagens
-- videos
+- vídeos
 - tabelas
+
+**CSS** :pushpin: design:
+- cores
+- sombras
+- tamanhos
+- posicionamento
