@@ -8,16 +8,17 @@
     <title>Paragrafos</title>
 </head>
 <body>
-    <h1>Paragrafos e quebra de linha</h1>
-        <hr>
+    <h1>Fundamentos do HTML5 e CSS3</h1>
+    <hr>
+        <h2>Paragrafos e quebra de linha</h2>
             <p>
                 É possivel criar um paragrafo for meio das tags &lt;p&gt; e &lt;/p&gt; <!--LESS THAN / GREDER THEN-->
             </p>
             <p>
                 Para criar uma quebra de linha
-            em um lugar específico ultiliza a tag &lt;br&gt;,
+                em um lugar específico ultiliza a tag &lt;br&gt;,
 
-            <br>pronto! foi feita uma line break
+                <br>pronto! foi feita uma line break
             </p>
         <h2>Adição de símbolos especiais:</h2>
             <p>
@@ -54,31 +55,69 @@
             <p>
                 Como colocar um favicon.ico no seu site <br> ir na head e adicionar o comando link e colocar a imagem.ico no href
             </p>
-        <h2>Negrito e Italico</h2>
+        <h2>Formatação de textos</h2>
+            <h3>Negrito e Italico</h3>
+                <p>
+                    Para colocar em negrito usar a tag B, como neste termo <b>AQUI</b>
+                </p>
+                <p>
+                para colocar em italico usar a tag I como neste termo, <i>AQUI</i>
+                </p>
+            <h3>Texto Marcado</h3>
+                <p>
+                    Podemos colocar <mark>o texto marcado</mark>, com a tag MARK.
+                </p>
+            <h3>Texto pequeno e Texto grande</h3>
+                <p>
+                    <small>Aqui temos um texto pequeno</small>
+                    <br><big>aqui temos um texto grande</big>
+                </p>
+            <h3>Texto Deletado</h3>
+                <p>
+                    Um texto deletado é representado <del>DESSE JEITO</del>, com a tag DEL
+                </p>
+            <h3>Texto inserido</h3>
+                <p>
+                    Um texto inserido é representado <INS>DESSE JETIO</INS>, com a tag INS
+                </p>
+            <h3>Texto sobrescrito</h3>
+                <p>
+                    Para escrever textos comos este, X<sup>10</sup>x 5, usar a tag SUP
+                </p>
+            <h3>Texto Subscrito</h3>
+                <p>Para textos como este, H<sub>2</sub>O, usar a tag SUB</p>
+            <h3>Código fonte</h3>
+                <p>
+                    O comando <code>print</code>('teste') pode ser escrito como codigo usando o tag CODE
+                </p>
+            <h3>Prétabulação</h3>
+                <pre>
+                    <code>
+    num = int(input('Digite um numero:'))
+    if num % 2 == 0:
+        print(f'O {num} é um numero impar')
+    else:
+        print(f'O {num} é um numero par')
+    print('Fim do programa')
+                    </code>
+        </pre>
             <p>
-                Para colocar em negrito usar a tag B, como neste termo <b>AQUI</b>
+                Podemos fazer com que a tabulação seja mantida com a Tag PRE
             </p>
-            <p>
-            para colocar em italico usar a tag I como neste termo, <i>AQUI</i>
-            </p>
-        <h2>Texto Marcado</h2>
-            <p>
-                Podemos colocar <mark>o texto marcado</mark>, com a tag MARK.
-            </p>
-        <h2>Texto pequeno e Texto grande</h2>
-            <p>
-                <small>Aqui temos um texto pequeno</smal>
-                <br><big>aqui temos um texto grande</big>
-            </p>
-        <h2>Texto Deletado</h2>
-            <p>
-                Um texto deletado é representado <del>DESSE JEITO</del>, com a tag DEL
-            </p>
-        <h2>Texto inserido</h2>
-            <p>
-                Um texto inserido é representado <INS>DESSE JETIO</INS>, com a tag INS
-            </p>
-        
-        
+    <h2>Citações simples</h2>
+        <p>
+            Como dizia minha mãe: <q>Na volta a gente compra</q>
+            <br>podemos fazer citações com a Tag Q
+        </p>
+    <h2>Citações completas</h2>
+        <p>
+            A sitação de de Mark Ruffalo diz que:
+            <blockquote cite="https://vestibulares.estrategia.com/portal/materias/redacao/citacoes-por-temas-para-usar-na-redacao/">As alterações climáticas são a maior ameaça à nossa existência nesta <br>é a curta história do nosso planeta, ninguém vai fugir das suas consequências.
+            </blockquote>
+        </p>
+    <h2>Abreviações</h2>
+        <p>
+            Passe o mouse por cima das abreviações <abbr title="São Paulo">SP</abbr> e <abbr title="Rio de Janeiro">RJ</abbr>, só é possivel ver o siginificado das abreviações graças a Tag ABBR
+        </p>
     </body>
     </html>
