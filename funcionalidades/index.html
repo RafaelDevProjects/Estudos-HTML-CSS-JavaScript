@@ -213,7 +213,33 @@
     <br> o maximo de largura que cada imagem pode ter, dependendo da largura da tela, a imagem vai mudar para , grande, media ou pequena
     </p>
 
-    
 
+
+    <h2>Reproduzindo audios</h2>
+    <audio  preload="metadata" controls>
+        <source src="midia/scarlet-fire.mp3" type="audio/mpeg">
+        <source src="midia/scarlet-fire.ogg" type="audio/ogg">
+        <source src="midia/scarlet-fire.wav" type="audio/wav">
+        <p>Infelizmente o seu dispositivo não reproduz o arquivo <a href="midia/scarlet-fire.mp3">clique aqui para baixar o audio</a></p>
+    </audio>
+    <p>Usar a tag &lt;audio&gt; para adiconar um audio no seu site</p>
+    <p>autoplay = musica é reproduzida automaticamente <br>controls = aparece o controlador da musica, como no caso acima <br>loop = a musica entra em repetição no seu site
+    </p>
+    <p><b>preload</b> = a musica faz um faz um precarregamento no site <br><b>preload = "auto"</b> O site vai terminar de carregar somente quando o arquivo de audio tambem estiver carregado<br><b>preload = "metadata"</b> somente os dados da musica são carregados <br><b>preload = "none"</b> não carregara nada</p>
+
+
+    <h2>Reproduzindo videos em hospedagem propria</h2>
+    <p>Usar a tag &lt;video&gt; para adicionar videos ao seu site. <br>width = "tamanho do video dentro do site. <br>controls = mostra os controles do video. <br>Usar a tag &lt;source&gt; para adaptar o tipo de arquivo que cada navegador aceita</p>
+    <video width= "560" controls>
+        <source src="midia/Video-Exemplo.mkv" type="video/mp4">
+        <source src="midia/Video-Exemplo.webm" type="video/webm">
+        <source src="midia/video-exemplo.mp4" type="video/mp4">
+        <p>Infelizmente não foi possivel reproduzir o video <a href="midia/video-exemplo.mp4">clique aqui para baixar o video</a></p>
+    </video>
+
+
+    <h2>Videos em hospedagem externa do YouTube</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/FdE5G95B7Mg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <p>Ir no YouTube e achar um video que você possa ter os direitos autorais, clicar em compartilhar e incorporar, copiar o codigo e colar no seu proprio codigo htlm</p>
 </body>
     </html>

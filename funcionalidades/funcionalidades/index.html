@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icone/dogcoin.ico.lnk" type="image/x-icon">
+    <title>Paragrafos</title>
+</head>
+<body>
+    <h1>Fundamentos do HTML5 e CSS3</h1>
+    <hr>
+
+    <h2>Paragrafos e quebra de linha</h2>
+
+    <p>É possivel criar um paragrafo for meio das tags &lt;p&gt; e &lt;/p&gt; <!--LESS THAN / GREDER THEN--></p>
+
+
+    <p> Para criar uma quebra de linha em um lugar específico ultiliza a tag &lt;br&gt;,
+        <br>pronto! foi feita uma line break</p>
+
+
+
+    <h2>Adição de símbolos especiais:</h2>
+    <p>
+        &reg;
+        &copy;
+        &trade;
+        &euro;
+        &pound;
+        &cent;
+        &Delta;
+        &UpperLeftArrow;
+        &UpArrow;
+    </p>
+
+
+
+    <h2>adicionar Emojs: </h2>
+        <p>entrar na https://emojipedia.org<br>copiar o codigo do emoj (apenas os símbulos depois do sinal de mais). Com o '&#x' antes do codigo</br></p>
+        <p>emojs:
+            &#x1F525;
+            &#x1F480;
+        </p>
+    <h2>Adicionar fotos no site</h2>
+
+
+
+    <h3>Atraves de imagens internas na maquina</h3>
+        <p>usar a tag &lt;img&gt; e encontrar o arquivo de imagem PNG ou JPEG e adicionar no src. O 'alt' serve como descrição da imagem
+            <br><b>Lembre-se de baixar a sua imagem e deixa-la com um baixo consumo de espaço</b></p>
+
+        <img src="imagens/html5-300.png" alt="Logo do HTML5">
+        <img src="imagens/css.png-250.png" alt="logo do css3">
+
+
+    <H3>Imagem externa:</H3>
+            <img src="https://a.thumbs.redditmedia.com/zDOFJTXd6fmlD58VDGypiV94Leflz11woxmgbGY6p_4.png" alt="logo do javascript">
+
+
+    <h3>favicon.ico</h3>
+        <p>Para adicionar um favicon no seu site <br> escreva na head o comando &lt;link&gt; e colocar a imagem.ico no 'href'</p>
+
+
+
+    <h2>Formatação de textos</h2>
+
+    <h3>Negrito e Italico</h3>
+        <p>Para colocar em negrito usar a tag &lt;b&gt;, como neste termo <b>AQUI</b></p>
+        <p>para colocar em italico usar a tag &lt;i&gt; como neste termo, <i>AQUI</i></p>
+
+
+    <h3>Texto Marcado</h3>
+        <p>Podemos colocar <mark>o texto marcado</mark>, com a tag &lt;mark&gt;.</p>
+
+
+    <h3>Texto pequeno e Texto grande</h3>
+        <p>
+            <small>Aqui temos um texto pequeno</small>
+            <br><big>aqui temos um texto grande</big>
+        </p>
+        <p>Usar a tag &lt;small&gt; para texto pequeno <br>Usar a tag &lt;bib&gt; para um texto grande</p>
+
+
+    <h3>Texto Deletado</h3>
+        <p>Um texto deletado é representado <del>DESSE JEITO</del></p>
+        <p>Usar a tag &lt;del&gt;</p>
+
+
+    <h3>Texto inserido</h3>
+        <p>Um texto inserido é representado <ins>DESSE JEITO</ins></p>
+        <p>Usar a tag &lt;ins&gt; para apresentar um texto inserido</p>
+
+
+    <h3>Texto sobrescrito</h3>
+        <p>  Para escrever textos comos este X<sup>10</sup>x 5</p>
+        <p>Usar a tag &lt;sup&gt; para fazer um texto sobrescrito</p>
+
+
+    <h3>Texto Subscrito</h3>
+        <p>Para textos como este, H<sub>2</sub>O</p>
+        <p>Usar a tag &lt;sub&gt; para fazer textos subscritos</p>
+
+
+    <h3>Código fonte</h3>
+    <p> O comando <code>print</code>('teste') pode ser escrito como codigo usando a tag &lt;code&gt;</p>
+
+
+    <h3>Prétabulação</h3>
+    <pre>
+        <code>
+    num = int(input('Digite um numero:'))
+    if num % 2 == 0:
+        print(f'O {num} é um numero impar')
+    else:
+        print(f'O {num} é um numero par')
+    print('Fim do programa')
+        </code>
+    </pre>
+    <p>Usar a tag &lt;pre&gt; para a tabulação ser mantida</p>
+
+
+    <h2>Citações simples</h2>
+    <p>Como dizia minha mãe: <q>Na volta a gente compra</q></p>
+    <p>Usar a tag &lt;q&gt; para fazer citações simples, com aspas</p>
+
+
+    <h2>Citações completas</h2>
+    <p>
+        A sitação de de Mark Ruffalo diz que:
+        <blockquote cite="https://vestibulares.estrategia.com/portal/materias/redacao/citacoes-por-temas-para-usar-na-redacao/">As alterações climáticas são a maior ameaça à nossa existência nesta <br>é a curta história do nosso planeta, ninguém vai fugir das suas consequências.
+        </blockquote>
+    </p>
+    <p>Usar a tag &lt;blockquote&gt; para criar uma citação em bloco</p>
+
+
+    <h2>Abreviações</h2>
+    <p>Passe o mouse por cima das abreviações <abbr title="São Paulo">SP</abbr> e <abbr title="Rio de Janeiro">RJ</abbr>, só é possivel ver o siginificado das abreviações graças a Tag &lt;abbr&gt;</p>
+
+
+
+    <h2>Listas</h2>
+
+    <h3>Listas ordenadas</h3>
+    <ol type="1">
+        <li>Acordar</li>
+        <li>tomar bamnho</li>
+        <li>escovar os dentes</li>
+        <li>tomar cafe da manha</li>
+        <li>Tag Ol para identificar ordem</li>
+        <li>Tag LI dentro da OL para ordenar</li>
+    </ol>
+    <p>Usar a tag &lt;ol&gt; para criar uma lista ordenada </p>
+
+
+    <h3>Listas não ordenadas</h3>
+    <ul type="square">
+        <li>Pão</li>
+        <li>Café</li>
+        <li>Mandioca</li>
+        <li>Tag UL para lista não ordenada</li>
+    </ul>
+    <p>Usar a tag &lt;ul&gt; para criar uma lista não ordenada</p>
+
+
+    <h3>Listas de definição</h3>
+    <dl>
+        <dt>Termo</dt>
+        <dd>Descrição</dd>
+        <dt>Tag Dl</dt>
+        <dd>Serve para abrir a lista de termo de definiçao</dd>
+        <dt>Tag Dt</dt>
+        <dd>Serve para classificar a parte do termo</dd>
+        <dt>Tag DD</dt>
+        <dd>Serve para classificar a parte da descrição</dd>
+    </dl>
+    <p>Usar a tag &lt;dt&gt; para criar uma lista de definição</p>
+
+
+
+    <h2>Trabalhando com Links</h2>
+
+
+    <h3>Links Externos</h3>
+    <p>Link do repositorio github, <a href="https://github.com/RafaelDevProjects" target="_blank" rel="external">clique aqui</a></p>
+
+    <p>Para criar um link no seu site use a Tag &lt;a&gt; e preencha o href com o link desejado
+    <br>O uso do <code>target="_blank"</code> e o <code>rel="external"</code> faz com que o link seja aberto em uma nova aba</p>
+
+
+    <h3>Usando links internos</h3>
+    <p>Link interno para o head <a href="head.html" rel="prev">ir para a pagina do head</a></p>
+    <p> Usar a Tag &lt;a&gt; para ir a um link interno, apertar ctrl + <br>space para achar o outro arquivo, que deve estar na <br>mesma pasta.</p>
+
+
+    <h3>Links para donwload</h3>
+    <ul>
+        <li><a href="livro/pdf-teste.zip" download="'pdf-teste" type="application/pdf">baixar pdf.zip</a></li>
+        <li><a href="livro/pdf-teste.pdf" download="pdf-teste.zip" type="application/zip">baixar pdf</a></li>
+    </ul>
+    <p>Usar a Tag &lt;a&gt; e colocar como href o caminho de aquivo,<br>usando o ctrl + espaço, depois escrever download = '<code>nome do arquivo</code>', também adicionar um <code>type= "application/zip"</code> ou <code>application/alguma</code> <br> para cada tipo de arquivo <a href="https://www.iana.org/assignments/media-types/media-types.xhtml" target="_blank" rel="external">aqui esta o site para o type de cada tipo de arquivo</a></p>
+
+
+    <h2>Midia em HTML5</h2>
+    <h3>Imagens dinamicas</h3>
+    <p>Diminua ou aumente o zoom do seu computador ou use o site em diferentes dispositivos</p>
+    <picture>
+        <source media="(max-width: 750px )" srcset="imagens/imagem-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/imagem-m.png" type="image/png">
+        <img src="imagens/imagem-g.png" alt="imagem grande">
+    </picture>
+    <p>Para criar imagens dinamicas, use a tag &lt;piture&gt;, coloque a tag &lt;img&gt; e acima dessa imagem base, adicione a tag &lt;source&gt; colocando
+    <br> o maximo de largura que cada imagem pode ter, dependendo da largura da tela, a imagem vai mudar para , grande, media ou pequena
+    </p>
+
+
+
+    <h2>Reproduzindo audios</h2>
+    <audio  preload="metadata" controls>
+        <source src="midia/scarlet-fire.mp3" type="audio/mpeg">
+        <source src="midia/scarlet-fire.ogg" type="audio/ogg">
+        <source src="midia/scarlet-fire.wav" type="audio/wav">
+        <p>Infelizmente o seu dispositivo não reproduz o arquivo <a href="midia/scarlet-fire.mp3">clique aqui para baixar o audio</a></p>
+    </audio>
+    <p>Usar a tag &lt;audio&gt; para adiconar um audio no seu site</p>
+    <p>autoplay = musica é reproduzida automaticamente <br>controls = aparece o controlador da musica, como no caso acima <br>loop = a musica entra em repetição no seu site
+    </p>
+    <p><b>preload</b> = a musica faz um faz um precarregamento no site <br><b>preload = "auto"</b> O site vai terminar de carregar somente quando o arquivo de audio tambem estiver carregado<br><b>preload = "metadata"</b> somente os dados da musica são carregados <br><b>preload = "none"</b> não carregara nada</p>
+
+
+    <h2>Reproduzindo videos</h2>
+    <video controls>
+        <source src="" type="">
+
+    </video>
+</body>
+    </html>
