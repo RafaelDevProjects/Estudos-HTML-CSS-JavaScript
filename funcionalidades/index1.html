@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Estilos</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;800;900&display=swap');
+        @font-face {
+            font-family: 'Coffe';
+            src: url('fontes/CoffeCake.otf') format('opentype'),
+            url('fontes/CoffeCake.ttf') format('truetype');
+            font-weight: normal;
+            font-style:normal
+        }
+        body{
+            background-image:  linear-gradient(45deg, #B1E8FA 0,10%,#3A506B,#1C2541);
+            background-attachment: fixed;
+            font-family: Arial, Helvetica, sans-serif;
+
+
+        }
+        main{
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 10px 10px 20px #080e20d5;
+            width: 600px ;
+            padding: 10px;
+            margin:auto
+        
+            
+        }
+        h1{
+          color: #C03221;
+          text-align: center;  
+          text-shadow: 1px 1px 2px #550f0fdc;
+          font: italic 800 4em 'Inconsolata', monospace;
+
+        }
+        h2{
+            color: #0b5999;
+        }
+        h3{
+            color: #284b63;
+        }
+        p{
+            text-align: justify;
+        }
+        
+    </style>
+</head>
+<body>
+    <main>
+        <h1>CSS</h1>
+
+
+        <h2>Estilo inline</h2>
+        <p>Os estilos inline são feitos dentro das linhas do html, não é muito ulilizada por causa da bagunça que fica as linhas de codigo</p>
+
+
+        <h2>Estilos internos</h2>
+        <p>No metodo de estilos locais, colocar a tag <span class="exemplo">&lt;style&gt;</span> dentro do &lt;head&gt; e colocar a classe desejada <br>como a classe <code>body</code> ou a classe <code>h1</code>, isso fara com que todos as tags &lt;h1&gt; mudem
+        </p>
+        <p>Desvantagens</p>
+        <ul>
+            <li>Não da para mudar em multiplos documentos</li>
+            <li>O codigo das css fica extenso</li>
+        </ul>
+        <p>Esse tipo de metodo é recomendado quando se tem apenas um documento</p>
+
+
+        <h2>Estilos externos</h2>
+        <p>O estilo mais versatil, serve para multiplos documentos</p>
+        <p>Criar um arquivo <span class="exemplo"><code>style.css</code></span> e adiconar um estilo nesse novo arquivo. Na aba do &lt;head&gt; no seu domento html, adicionar a tag &lt;link&gt; de css e fazer o link com o arquivo de estilos css</p>
+
+
+        <h2>Testando gradientes</h2>
+        <p>Para criar um gradiente, usar o comando <abbr title="background-image: linear-gradient (sentido, cor1, cor2, cor3...)"><span class="exemplo">background-image</span></abbr></p>
+        <p>O sentido pode ser: to right, to left ou usando graus (45deg)</p>
+        <p><a href="cores.html", rel="next">clique aqui para ver um exemplo</a></p>
+
+
+        <h2>Fontes</h2>
+        <p>Fontes podem ser</p>
+        <ul>
+            <li>serifadas</li>
+            <li><abbr title="sem serifas">sans-serif</abbr></li>
+            <li>monoespaçadas</li>
+            <li>escritas a mão</li>
+            <li>display</li>
+        </ul>
+        <p>Usar o comando <abbr title="font-family: font1,font2,font3"><span class="exemplo">font-family</span></abbr> usar uma safe combination, no caso da primeira fonte não funcionar, usar a fonte 2 e assim respectivamente</p>
+        <p><a href="https://www.w3schools.com/cssref/css_websafe_fonts.php" target="_blank">clique aqui para ver as fontes</a></p>
+
+
+        <h3>Tamanho das fontes</h3>
+        <p>É recomendado o uso da medida <abbr title="pixel"><span class="exemplo">px</span></abbr> ou da medida <abbr title="1em = 16px"><span class="exemplo">em</span>.</abbr></p>
+        <p>Usar o comando <abbr title="font-size: 1em ou 16px">font-size</abbr> para mudar o tamanho da fonte</p>
+
+
+        <h3>Peso das fontes</h3>
+        <p>Usar o comando <span class="exemplo">font-weight</span> para aumentar o peso da fonte</p>
+        <p>A fonte pode ter o peso <abbr title="menor que o normal">lighter</abbr>, normal, <abbr title="mais grossa">bold</abbr> e <abbr title="mais grossa que o bold">bolder</abbr>.</p>
+
+        
+        <h3>Estilo da fonte</h3>
+        <p>A fonte pode ficar em italico sando o comando <span class="exemplo">font-style: italic;</span></p>
+
+
+        <h3>Exportando fontes externas</h3>
+        <p>Usar o site do <a href="https://fonts.google.com/" target="_blank">google fontes</a> achar a sua fonte ideal e copiar a url dela.</p>
+        <p>Para adiconar essa fonte ao Css usar o comando <span class="exemplo">@import</span> depois da tag style no head e copiar a url</p>
+        
+
+        <h3>Baixando fontes externas</h3>
+        <p>Uma fonte externa pode ser baixada em um site como o <a href="https://www.dafont.com/pt/" target="_blank"> dafonte.com</a></p>
+        <p>Baixar a fonte desejada, e adicionar no seu codigo o comando <span class="exemplo">@font-face</span> </p>
+        <p>exemplo:</p>
+        <code>@font-face {
+            font-family: 'Coffe';
+            src: url('fontes/CoffeCake.otf') format('opentype'),
+            url('fontes/CoffeCake.ttf') format('truetype');
+            font-weight: normal;
+            font-style:normal
+        }</code>
+        <p>Há varios tipos de formatos de arquivo de fontes, os mais usados são <abbr title="opentype">otf</abbr> e <abbr title="truetype">ttf</abbr></p>
+        <p>Colocar a fonte no seu css usando o nome que você deu para ela, no exemplo o nome da fonte é 'Coffe'</p>
+
+
+        <h2>Alinhamento de textos</h2>
+        <p>Usamos o comando <span class="exemplo">text-align</span> para alinhar o texto</p>
+        <ul>
+            <li>text-align: <abbr title="centro">center</abbr></li>
+            <li>text-align: <abbr title="esquerda">right</abbr></li>
+            <li>text-align: <abbr title="direita">left</abbr></li>
+            <li>text-align: <abbr title="justificado">justify</abbr></li>
+        </ul>
+
+        <h2>Seletores personalizados</h2>
+
+        <h3>Usando id no css</h3>
+        <p>Muitas vezes o programador se depara com seletores em seu html que são iguais, como varios h1 ou outros seletores, mas e se ele quiser mudar somente um h1 em expecífico?</p>
+        <p>Para isso é usado o <code>id</code> dentro do html</p>
+        <p>Usar a tag <code>id</code> para personalizar um seletor com o nome desejado, usar o nome escolhido do seletor para muda-lo no css</p>
+        <p>No css o comando id quer dizer #, portanto, usar no css o comando <code>#nomeescolhido</code></p>
+
+        <h3>Usando class no css</h3>
+        <p>O comando class e o comando id, fazem basicamente a mesma coisa, porem, o comando id pode ser usado em apenas um elemento, o comando class pode ser usado em multiplos elementos. No css ele é identificado com um '.nomeescolhido'</p>
+
+        <p>Usar o comando <span class="exemplo">&lt;span class= "nome"&gt;</span> para criar uma class no meio de escritas</p>
+
+
+
+
+        <a href="index.html">voltar para a pagina de html</a>
+    </main>
+    
+</body>
+</html>
