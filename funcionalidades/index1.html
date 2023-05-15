@@ -6,51 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Estilos</title>
-    
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;800;900&display=swap');
-        @font-face {
-            font-family: 'Coffe';
-            src: url('fontes/CoffeCake.otf') format('opentype'),
-            url('fontes/CoffeCake.ttf') format('truetype');
-            font-weight: normal;
-            font-style:normal
-        }
-        body{
-            background-image:  linear-gradient(45deg, #B1E8FA 0,10%,#3A506B,#1C2541);
-            background-attachment: fixed;
-            font-family: Arial, Helvetica, sans-serif;
-
-
-        }
-        main{
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 10px 10px 20px #080e20d5;
-            width: 600px ;
-            padding: 10px;
-            margin:auto
-        
-            
-        }
-        h1{
-          color: #C03221;
-          text-align: center;  
-          text-shadow: 1px 1px 2px #550f0fdc;
-          font: italic 800 4em 'Inconsolata', monospace;
-
-        }
-        h2{
-            color: #0b5999;
-        }
-        h3{
-            color: #284b63;
-        }
-        p{
-            text-align: justify;
-        }
-        
-    </style>
 </head>
 <body>
     <main>
@@ -153,9 +108,86 @@
         <p>Usar o comando <span class="exemplo">&lt;span class= "nome"&gt;</span> para criar uma class no meio de escritas</p>
 
 
+        <h2>Pseudo-classes </h2>
+        <p>Com as pseudos-classes podemos criar coisas como no exemplo a seguir:</p>
+        <div class="quadrado">1</div>
+        <div class="quadrado">2</div>
+        <div class="quadrado">3</div>
+        <p>Ao passar o mouse por cima de cada quadrado (div) o quadrado ficou de outra cor, isso é graças ao comando <span class="exemplo">:hover</span> esse comando ativa uma ação quando estamos com o mouse em cima do quadrado</p>
+        <p>Para usar as pseudo-classes usar ':' e apos usar o comando, como no exemplo:</p>
+        <pre>
+        <code>
+        div:hover{
+            background-color: yellow;
+        }
+        </code>
+        </pre>
+
+        <p>Outro exemplo:</p>
+        <div class="escondido">
+            <li>Passe o mouse aqui</li>
+            <p>este texto esta escondido</p>
+        </div>
+        <p>Nesse caso foi usado uma <span class="exemplo">div</span> com a classe 'escondido' e usando a pseudo-classe <span class="exemplo">:houver</span> com o sinal de &gt; para marcar que o paragrafo que esta dentro da div é filho da div</p>
+        <pre>
+    <code>
+        .escondido > p{
+            display: none;
+        }
+        .escondido:hover > p{
+            display: block;
+            color: white;
+            background-color: #0b5999;
+            width: 200px;
+        }
+        .escondido:hover{
+            color: red;
+        }
+    </code>
+        </pre>
+
+        <h2>Pseudo-elementos</h2>
+        <p>Os pseudo elementos mexem no conteúdo, são representador por '<span class="exemplo"><b>::</b></span>', pelos duplos dois pontos.</p>
+        <p>Usando o comando <span class="exemplo">::after</span> ele faz com que apos o conteudo mostrado , mostre outro conteudo escolhido no comando <span class="exemplo">content</span> ,como no exemplo:</p>
+
+        <a href="cores.html">site exemplo</a>
+        
+        <p>apos o site exemplo aparece um contudo, o [link] que foi adicionado pelos comandos descritos acima</p>
+        <pre>
+    <code>
+        a::after{
+            content: " [Link]";
+        }
+    </code>
+        </pre>
 
 
-        <a href="index.html">voltar para a pagina de html</a>
+        <h2>Modelo de caixas</h2>
+        <p>As caixas ficam envolta do elemento como um elemento h1, existem dois modelos de caixa, as caixas <span class="exemplo">box-level</span> e as <span class="exemplo">inline-level</span> </p>
+
+        <p>As caixas podem ter:</p>
+        <ul>
+            <li><abbr title="altura">height</abbr></li>
+            <li><abbr title="largura">weight</abbr></li>
+            <li><abbr title="borda">border</abbr></li>
+            <li><abbr title="linha por fora da borda">outline</abbr></li>
+            <li><abbr title="acolchoamento dentro das bordas">padding</abbr></li>
+            <li><abbr title="margem fora das boradas">margin</abbr></li>
+        </ul>
+
+        <h3>box-level</h3>
+        <p>Essas caixas pulam a linha.</p>
+        <div class="box-level">
+            <p><em>box-level</em></p>
+        </div>
+        <p>A parte azul escuto é a borda, entre o conteudo e a borda é o padding, a parte de fora da borda é aonde fica a magem.</p>
+        
+        <h3>Inline-level</h3>
+        <p>Essas caixas ficam na propria linha <span class="inline-level">inline-level</span> desse jeito.</p>
+        <p>A parte azul escuto é a borda, entre o conteudo e a borda é o padding, a parte de fora da borda é aonde fica a magem.</p>
+        
+
+        <br><br><br><br><br><br><a href="index.html">voltar para a pagina de html</a>
     </main>
     
 </body>
