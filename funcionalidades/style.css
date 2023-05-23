@@ -81,8 +81,12 @@
     .escondido:hover > p{
         display: block;
         color: white;
-        background-color: #0b5999;
+        background-color: #0b59998c;
         width: 200px;
+        margin-top: 1px;
+        margin-bottom: 1px;
+        padding: 2px;
+        transition: 100s;
     }
 
 

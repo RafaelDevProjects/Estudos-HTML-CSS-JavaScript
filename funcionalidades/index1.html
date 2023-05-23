@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Estilos</title>
 </head>
-<body>
+<body></body>
     <main>
         <h1>CSS</h1>
 
@@ -108,6 +108,7 @@
         <p>Usar o comando <span class="exemplo">&lt;span class= "nome"&gt;</span> para criar uma class no meio de escritas</p>
 
 
+
         <h2>Pseudo-classes </h2>
         <p>Com as pseudos-classes podemos criar coisas como no exemplo a seguir:</p>
         <div class="quadrado">1</div>
@@ -146,6 +147,8 @@
     </code>
         </pre>
 
+
+
         <h2>Pseudo-elementos</h2>
         <p>Os pseudo elementos mexem no conteúdo, são representador por '<span class="exemplo"><b>::</b></span>', pelos duplos dois pontos.</p>
         <p>Usando o comando <span class="exemplo">::after</span> ele faz com que apos o conteudo mostrado , mostre outro conteudo escolhido no comando <span class="exemplo">content</span> ,como no exemplo:</p>
@@ -162,6 +165,7 @@
         </pre>
 
 
+
         <h2>Modelo de caixas</h2>
         <p>As caixas ficam envolta do elemento como um elemento h1, existem dois modelos de caixa, as caixas <span class="exemplo">box-level</span> e as <span class="exemplo">inline-level</span> </p>
 
@@ -175,6 +179,7 @@
             <li><abbr title="margem fora das boradas">margin</abbr></li>
         </ul>
 
+
         <h3>box-level</h3>
         <p>Essas caixas pulam a linha.</p>
         <div class="box-level">
@@ -182,12 +187,11 @@
         </div>
         <p>A parte azul escuto é a borda, entre o conteudo e a borda é o padding, a parte de fora da borda é aonde fica a magem.</p>
         
+
         <h3>Inline-level</h3>
         <p>Essas caixas ficam na propria linha <span class="inline-level">inline-level</span> desse jeito.</p>
         <p>A parte azul escuto é a borda, entre o conteudo e a borda é o padding, a parte de fora da borda é aonde fica a magem.</p>
         
-
-        <br><br><br><br><br><br><a href="index.html" rel="prev">voltar para a pagina de html</a>
 
 
         <h2>Grouping tags</h2>
@@ -200,6 +204,8 @@
         <li><abbr title="navegação, links"><span class="exemplo">&lt;nav&gt;</span></abbr></li>
         <p>Essas tags agrupadas formam o site</p>
         <a href="caixas.html" prev="next">um exemplo de site</a>
+
+
 
         <h2>Box shadow</h2>
         <p>Para criar sombras nas suas caixas usar o comando <span class="exemplo">box shadow</span>.</p>
@@ -219,10 +225,49 @@
         <a href="caixas.html" rel="next">site exemplo</a>
         <p>Nesse site, contem caixas arredondas no main.</p>
 
+
+
         <h2>Imagem de fundo no Site</h2>
         <p>Para usar uma imagem de fundo no site usar o comando <span class="exemplo">background-image: url('/caminho/dafoto')</span></p>
+
         <a href="fundos.html" target="_blank" rel="next">ver exemplo</a>
 
+        <p>
+        A imagem escolhida ficara se repetindo até a tela acabar, pórem podemos usar de alguns comandos para personalizar isso, como o
+        <span class="exemplo"><abbr title="tamanho da imagem de fundo">background-size</abbr></span> e como o comando 
+        <span class="exemplo"><abbr title="imagem se repete ou não">background-repeat</abbr></span> e suas funcionalidades como: 
+        </p>
+
+        <li>
+            <span class="exemplo"><abbr title="não repete">no-repeat</abbr></span>
+        </li>
+        <li>
+            <span class="exemplo"><abbr title="repete horizontal"> repeat-x</abbr> </span>
+        </li>
+        <li>
+            <span class="exemplo"><abbr title="repete vertical">repeat-y</abbr></span>
+        </li>
+
+        <h3>Configurar a posição da imagem de fundo</h3>
+        <p>Para mudar a posição da imagem de fundo escolhida usamos o comando <span class="exemplo">background-position</span> as posiçoes variam de: (passe o mouse por cima)</p>
+        <div class="escondido">
+            <li><b>right</b></li>
+            <p>right top</p>
+            <p>right center</p>
+            <p>right bottom</p>
+        </div>
+        <div class="escondido">
+            <li><b>center</b></li>
+            <p>center top</p>
+            <p>center center</p>
+            <p>center bottom</p>
+        </div>
+        <div class="escondido"> 
+            <li><b>left</b></li>
+            <p>left top</p>
+            <p>left center</p>
+            <p>left bottom</p>
+        </div>
 
 
 
