@@ -136,3 +136,27 @@
         background-color: #4f7894;
         color: yellow;
     }
+
+    #container{
+        background-color: purple;
+        background-image: url(imagens/target001.png);
+        background-size: 100% 100%;
+        position: relative;
+
+        margin: auto;
+        height: 100px;
+        width: 100px;
+    }
+    
+    #conteudo{
+        background-image: url(imagens/target001.png);
+        background-size: 100% 100%;
+        background-color: yellow;
+        position: absolute;
+        width: 60px;
+        height: 50px;
+        top: 50%;
+        left:50%;
+        transform: translate(-50% ,-50%);
+
+    }
