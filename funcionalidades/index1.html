@@ -196,12 +196,14 @@
 
         <h2>Grouping tags</h2>
         <p>As grouping tags são tags, que ficam uma dentro da outra, como divs, pórem para a montagem de um site usamos:</p>
-        <li><abbr title="cabeçalho"><span class="exemplo">&lt;header&gt;</span></abbr></li>
-        <li><abbr title="conteudo"><span class="exemplo">&lt;main&gt;</span></abbr></li>
-        <li><abbr title="rodapé"><span class="exemplo">&lt;footer&gt;</span></abbr></li>
-        <li><abbr title="artigo"><span class="exemplo">&lt;article&gt;</span></abbr></li>
-        <li><abbr title="sessão"><span class="exemplo">&lt;section&gt;</span></abbr></li>
-        <li><abbr title="navegação, links"><span class="exemplo">&lt;nav&gt;</span></abbr></li>
+        <ul>
+            <li><abbr title="cabeçalho"><span class="exemplo">&lt;header&gt;</span></abbr></li>
+            <li><abbr title="conteudo"><span class="exemplo">&lt;main&gt;</span></abbr></li>
+            <li><abbr title="rodapé"><span class="exemplo">&lt;footer&gt;</span></abbr></li>
+            <li><abbr title="artigo"><span class="exemplo">&lt;article&gt;</span></abbr></li>
+            <li><abbr title="sessão"><span class="exemplo">&lt;section&gt;</span></abbr></li>
+            <li><abbr title="navegação, links"><span class="exemplo">&lt;nav&gt;</span></abbr></li>
+        </ul>
         <p>Essas tags agrupadas formam o site</p>
         <a href="caixas.html" prev="next">um exemplo de site</a>
 
@@ -210,10 +212,12 @@
         <h2>Box shadow</h2>
         <p>Para criar sombras nas suas caixas usar o comando <span class="exemplo">box shadow</span>.</p>
         <p><code>box-shadow:3px 4px 6px 1px rgba(0, 0, 0, 0.39) ;</code></p>
-        <li>3px: quantidade para direita</li>
-        <li>4px: quantidade para baixo</li>
-        <li>6px: quantidade de desfoco</li>
-        <li>1px: quantida de tamanho do desfoco</li>
+        <ul>
+            <li>3px: quantidade para direita</li>
+            <li>4px: quantidade para baixo</li>
+            <li>6px: quantidade de desfoco</li>
+            <li>1px: quantida de tamanho do desfoco</li>
+        </ul>
         <p>Para mudar a sobra para cima ou para direita, usar a quantidade negativa. <br>Também é recomendado deixa a cor preta da sobra mais transparente.</p>
         <a href="caixas.html" rel="next">site exemplo</a>
         <p>Nesse site, contem sombras no header, nav e main.</p>
@@ -230,7 +234,7 @@
         <h2>Imagem de fundo no Site</h2>
         <p>Para usar uma imagem de fundo no site usar o comando <span class="exemplo">background-image: url('/caminho/dafoto')</span></p>
 
-        <a href="fundos.html" target="_blank" rel="next">ver exemplo</a>
+        <a href="/fundos/fundos.html" target="_blank" rel="next">ver exemplo</a>
 
         <p>
         A imagem escolhida ficara se repetindo até a tela acabar, pórem podemos usar de alguns comandos para personalizar isso, como o
@@ -238,36 +242,49 @@
         <span class="exemplo"><abbr title="imagem se repete ou não">background-repeat</abbr></span> e suas funcionalidades como: 
         </p>
 
-        <li>
-            <span class="exemplo"><abbr title="não repete">no-repeat</abbr></span>
-        </li>
-        <li>
-            <span class="exemplo"><abbr title="repete horizontal"> repeat-x</abbr> </span>
-        </li>
-        <li>
-            <span class="exemplo"><abbr title="repete vertical">repeat-y</abbr></span>
-        </li>
+        <ul>
+            <li>
+                <span class="exemplo"><abbr title="não repete">no-repeat</abbr></span>
+            </li>
+            <li>
+                <span class="exemplo"><abbr title="repete horizontal"> repeat-x</abbr> </span>
+            </li>
+            <li>
+                <span class="exemplo"><abbr title="repete vertical">repeat-y</abbr></span>
+            </li>
+        </ul>
 
         <h3>Configurar a posição da imagem de fundo</h3>
         <p>Para mudar a posição da imagem de fundo escolhida usamos o comando <span class="exemplo">background-position</span> as posiçoes variam de: (passe o mouse por cima)</p>
-        <div class="escondido">
-            <li><b>right</b></li>
-            <p>right top</p>
-            <p>right center</p>
-            <p>right bottom</p>
-        </div>
-        <div class="escondido">
-            <li><b>center</b></li>
-            <p>center top</p>
-            <p>center center</p>
-            <p>center bottom</p>
-        </div>
-        <div class="escondido"> 
-            <li><b>left</b></li>
-            <p>left top</p>
-            <p>left center</p>
-            <p>left bottom</p>
-        </div>
+        <ul>
+            <div class="escondido">
+                <li><b>right</b></li>
+                <p>right top</p>
+                <p>right center</p>
+                <p>right bottom</p>
+            </div>
+            <div class="escondido">
+                <li><b>center</b></li>
+                <p>center top</p>
+                <p>center center</p>
+                <p>center bottom</p>
+            </div>
+            <div class="escondido">
+                <li><b>left</b></li>
+                <p>left top</p>
+                <p>left center</p>
+                <p>left bottom</p>
+            </div>
+        </ul>
+
+        <h3>Mudando o tamanho da imagem</h3>
+        <>As imagens que são vinculadas ao background-image, já vem com um tamanho, para mudar o tamanho de uma imagem usar o comando <span class="exemplo">background-image</span>,se for necessario preencher a tela inteira da sua view port do body, usar o comando <span class="exemplo">background-image: cover</span> pode se a melhor forma, porém a imagem não sera 100% mostrada na tela, partes dala ficarão de fora.</p>
+
+        <p>Para mostrar 100% da imagem é necessario usar o comando <span class="exemplo">background-image:content</span>, isso faz com que o todo o conteudo da imagem seja mostrado, porém, pode aparecer bordas no seu site. </p>
+        <a href="/funcionalidades/fundos/fundos01.html">exemplo de fundo cover</a>
+
+        <p>Com essas configurações surge outro problema, a imagem estara andando junto do conteúdo e quando tiver muito conteúdo isso criara um novo problema, por isso é usando o comando <span class="exemplo">background-attachment: fixed</span>, desse jeito o plano de fundo ficara fixado.</p>
+
 
 
 

@@ -19,9 +19,11 @@
         background-color: white;
         border-radius: 10px;
         box-shadow: 10px 10px 20px #080e20d5;
-        width: 600px ;
+        max-width: 600px ;
         padding: 10px;
-        margin:auto  
+        margin:auto;
+        line-height: 30px;
+
     }
 
 
@@ -29,12 +31,13 @@
         color: #C03221;
         text-align: center;  
         text-shadow: 1px 1px 2px #550f0fdc;
-        font: italic 800 4em 'Inconsolata', monospace
+        font: italic 800 4em 'Inconsolata', monospace;
     }
 
 
     h2{
         color: #0b5999;
+        margin-top: 38px;
     }
 
 
