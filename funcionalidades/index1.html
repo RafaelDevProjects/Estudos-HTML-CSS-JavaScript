@@ -10,6 +10,7 @@
 <body></body>
     <main>
         <h1>CSS</h1>
+        <hr>
 
 
         <h2>Estilo inline</h2>
@@ -74,15 +75,12 @@
         <p>Uma fonte externa pode ser baixada em um site como o <a href="https://www.dafont.com/pt/" target="_blank"> dafonte.com</a></p>
         <p>Baixar a fonte desejada, e adicionar no seu codigo o comando <span class="exemplo">@font-face</span> </p>
         <p>exemplo:</p>
-        <code>@font-face {
-            font-family: 'Coffe';
-            src: url('fontes/CoffeCake.otf') format('opentype'),
-            url('fontes/CoffeCake.ttf') format('truetype');
-            font-weight: normal;
-            font-style:normal
-        }</code>
+        
+        <img src="imagens/print/fontface.png" alt="foto do comando @font-face" class="img">
+
         <p>Há varios tipos de formatos de arquivo de fontes, os mais usados são <abbr title="opentype">otf</abbr> e <abbr title="truetype">ttf</abbr></p>
         <p>Colocar a fonte no seu css usando o nome que você deu para ela, no exemplo o nome da fonte é 'Coffe'</p>
+
 
 
         <h2>Alinhamento de textos</h2>
@@ -93,6 +91,8 @@
             <li>text-align: <abbr title="direita">left</abbr></li>
             <li>text-align: <abbr title="justificado">justify</abbr></li>
         </ul>
+
+
 
         <h2>Seletores personalizados</h2>
 
@@ -109,6 +109,7 @@
 
 
 
+
         <h2>Pseudo-classes </h2>
         <p>Com as pseudos-classes podemos criar coisas como no exemplo a seguir:</p>
         <div class="quadrado">1</div>
@@ -116,13 +117,8 @@
         <div class="quadrado">3</div>
         <p>Ao passar o mouse por cima de cada quadrado (div) o quadrado ficou de outra cor, isso é graças ao comando <span class="exemplo">:hover</span> esse comando ativa uma ação quando estamos com o mouse em cima do quadrado</p>
         <p>Para usar as pseudo-classes usar ':' e apos usar o comando, como no exemplo:</p>
-        <pre>
-        <code>
-        div:hover{
-            background-color: yellow;
-        }
-        </code>
-        </pre>
+        
+        <img src="imagens/print/hover.png" alt="foto do comando :hover" class="img">
 
         <p>Outro exemplo:</p>
         <div class="escondido">
@@ -130,22 +126,9 @@
             <p>este texto esta escondido</p>
         </div>
         <p>Nesse caso foi usado uma <span class="exemplo">div</span> com a classe 'escondido' e usando a pseudo-classe <span class="exemplo">:houver</span> com o sinal de &gt; para marcar que o paragrafo que esta dentro da div é filho da div</p>
-        <pre>
-    <code>
-        .escondido > p{
-            display: none;
-        }
-        .escondido:hover > p{
-            display: block;
-            color: white;
-            background-color: #0b5999;
-            width: 200px;
-        }
-        .escondido:hover{
-            color: red;
-        }
-    </code>
-        </pre>
+       
+        <img src="imagens/print/comandoescondido.png" alt="foto do comando para esconder texto" class="img"> 
+
 
 
 
@@ -155,15 +138,10 @@
 
         <a href="cores.html">site exemplo</a>
         
-        <p>apos o site exemplo aparece um contudo, o [link] que foi adicionado pelos comandos descritos acima</p>
-        <pre>
-    <code>
-        a::after{
-            content: " [Link]";
-        }
-    </code>
-        </pre>
+        <p>Depois do site exemplo aparece um contudo, o [link] que foi adicionado pelos comandos descritos acima, feito desse jeito</p>
 
+
+        <img src="imagens/print/contentafter.png" alt="foto do a::after" class="img">
 
 
         <h2>Modelo de caixas</h2>
@@ -211,7 +189,9 @@
 
         <h2>Box shadow</h2>
         <p>Para criar sombras nas suas caixas usar o comando <span class="exemplo">box shadow</span>.</p>
-        <p><code>box-shadow:3px 4px 6px 1px rgba(0, 0, 0, 0.39) ;</code></p>
+
+        <img src="imagens/print/box-shadow.png" alt="imagem do comando box-shadow" class="img">
+
         <ul>
             <li>3px: quantidade para direita</li>
             <li>4px: quantidade para baixo</li>
@@ -300,6 +280,116 @@
 
         <p>Para isso ser possivel, foi usado a ferramenta de <span class="exemplo">positon:relative;</span> para a caixa roxa e a ferramenta de <span class="exemplo">position:absolute;</span> para a caixa amarela, com isso foi possivel alterar o <span class="exemplo">top:50%;</span> e o <span class="exemplo">left:50%;</span> fazendo com que a ponta superior esqueda da caixa amarela fique no meio, para centralizar o totalmente a caixa, usou-se o comando <span class="exemplo">transform: translate( -50%, -50%)</span>.</p>
 
+
+        <h2>Usando tabelas para dados</h2>
+        <p>As tabelas são ultilizadas para dados e podem ser criadas no HTML:</p>
+
+        <table>
+            <tr>
+                <td>A1</td>
+                <td>B1</td>
+                <td>C1</td>
+            </tr>
+            <tr>
+                <td>A2</td>
+                <td>B2</td>
+                <td>C2</td>
+            </tr>
+            <tr>
+                <td>A3</td>
+                <td>B3</td>
+                <td>C3</td>
+            </tr>
+
+        </table>
+
+        <p>Essa é uma tabela simples, foi feita usando as tags:</p>
+
+        <ul>
+            <li><abbr title="tabela">&lt;table&gt;</abbr>
+            <li><abbr title="linha de tabela">&lt;tr&gt;</abbr></li>
+            <li><abbr title="dado de tabela">&lt;td&gt;</abbr></li>
+            <li><abbr title="linha de cabeçalho">th</abbr></li>
+        </ul>
+
+        <p>Usamdo dessa forma:</p>
+        
+        <img src="imagens/print/tabela.png" alt="imagem de tabela" class="img">
+
+        <p>nesse exemplo esta apenas a primeira linha da tabela</p>
+        <p>Também foi usado o css para criar as bordas, como comando <span class="exemplo">border</span>, e a junção das bordas como comando <span class="exemplo" >border-collapse</span>, também foi usado o <span class="exemplo">width</span> para arrumar a lagura da tabela, dentro das <abbr title="dados de tabela">&lt;td&gt;</abbr></p>
+
+        <h3>Usando tabelas grandes</h3>
+        <p>As tabelas grandes podem ser divididas em:</p>
+        <ul>
+            <li><abbr title="cabeçalho">&lt;theader&gt;</abbr></li>
+            <li><abbr title="corpo">&lt;tbody&gt;</abbr></li>
+            <li><abbr title="rodapé">&lt;tfoot&gt;</abbr></li>
+        </ul>
+
+        <table class="tgrande">
+            <thead>
+                <tr>
+                    <th scope="col">estado</th>
+                    <th>população</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="col">São paulo</td>
+                    <td class="num">41.262.199</td>
+                </tr>
+                <tr>
+                    <td>Minas Gerais</td>
+                    <td class="num">19.597.330</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num">15.989.929	</td>
+                </tr>
+                <tr>
+                    <td>Bahia</td>
+                    <td class="num">14.016.906</td>
+                </tr>
+                <tr>
+                    <td>Paraná</td>
+                    <td class="num">10.444.526	</td>
+                </tr>
+                <tr>
+                    <td>Rio Grande do Sul</td>
+                    <td class="num">10.693.929</td>
+                </tr>
+                <tr>
+                    <td>Pernambuco</td>
+                    <td class="num">8.796.448</td>
+                </tr>
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td scope="row">Total de habitantes</td>
+                    <td class="num">122.840.921</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <img src="imagens/print/thead.png" alt="imagem do thead"  class="img">
+
+        <img src="imagens/print/tbody.png" alt="imagem do tbody" class="img">
+
+        <img src="imagens/print/tfoot.png" alt="imagem do tfoot" class="img">
+
+        <h3>Uso de escopo</h3>
+        <p>O escopo não é algo que muda visualmente a sua tabela, porém, os mecanismos de buca dos navegadores vão reconhecer mais facil oque é cada coluna e linha no seu site</p>
+
+        <p>O <span class="exemplo">scope:"col"</span> é usado em colunas do deu th, como no exemplo:</p>
+
+        <img src="imagens/print/scope-col.png" alt="imagem de scope-col" class="img">
+
+        <p>O <span class="exemplo">scope:"row"</span> é usado para linhas do th, como no exemplo:</p>
+
+        <img src="imagens/print/scope-row.png" alt="imagem de scope-row">
+        
 
 
 
