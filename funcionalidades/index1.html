@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Estilos</title>
 </head>
-<body></body>
+<body>
     <main>
         <h1>CSS</h1>
         <hr>
@@ -309,10 +309,10 @@
             <li><abbr title="tabela">&lt;table&gt;</abbr>
             <li><abbr title="linha de tabela">&lt;tr&gt;</abbr></li>
             <li><abbr title="dado de tabela">&lt;td&gt;</abbr></li>
-            <li><abbr title="linha de cabeçalho">th</abbr></li>
+            <li><abbr title="linha de cabeçalho">&lt;th&gt;</abbr></li>
         </ul>
 
-        <p>Usamdo dessa forma:</p>
+        <p>Usando dessa forma:</p>
         
         <img src="imagens/print/tabela.png" alt="imagem de tabela" class="img">
 
@@ -331,12 +331,12 @@
             <thead>
                 <tr>
                     <th scope="col">estado</th>
-                    <th>população</th>
+                    <th scope="col" style="width: 100px;">população</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td scope="col">São paulo</td>
+                    <td>São paulo</td>
                     <td class="num">41.262.199</td>
                 </tr>
                 <tr>
@@ -367,7 +367,7 @@
             </tbody>
             <tfoot>
                 <tr>
-                    <td scope="row">Total de habitantes</td>
+                    <td scope="row"><strong>Total de habitantes</strong></td>
                     <td class="num">122.840.921</td>
                 </tr>
             </tfoot>
@@ -382,13 +382,74 @@
         <h3>Uso de escopo</h3>
         <p>O escopo não é algo que muda visualmente a sua tabela, porém, os mecanismos de buca dos navegadores vão reconhecer mais facil oque é cada coluna e linha no seu site</p>
 
-        <p>O <span class="exemplo">scope:"col"</span> é usado em colunas do deu th, como no exemplo:</p>
+        <p>O <span class="exemplo">scope:"col"</span> é usado em colunas do seu th, como no exemplo:</p>
 
         <img src="imagens/print/scope-col.png" alt="imagem de scope-col" class="img">
 
         <p>O <span class="exemplo">scope:"row"</span> é usado para linhas do th, como no exemplo:</p>
 
-        <img src="imagens/print/scope-row.png" alt="imagem de scope-row">
+        <img src="imagens/print/scope-row.png" alt="imagem de scope-row" class="img">
+
+        <h3>Efeito zebrado</h3>
+        <p>O efeito zabrado ajuda na leitura de uma tabela, pode ser feito no css com a pseudo classe <span class="exemplo">:nth-child()</span>, usando a variavel <abbr title="impar">odd</abbr> e a <abbr title="par">even</abbr>.</p>
+
+        <img src="imagens/print/nth-child.png" alt="imagem do nth-child" class="img">
+
+
+        <h3>Mesclagem de células</h3>
+        <p>As mesclagens de células são muito importantes para posicionar os dados da tabela, fazendo com que um dado possa ocupar duas colunas ou mais ou até duas linhas ou mais.</p>
+
+        <table>
+            <tr>
+                <td colspan="2">A</td>
+                <td>C</td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td>E</td>
+                <td rowspan="2">F</td>
+            </tr>
+            <tr>
+                <td>G</td>
+                <td>H</td>
+            </tr>
+        </table>
+
+        <img src="imagens/print/colspan.png" alt="colspan" class="img">
+        <img src="imagens/print/rowspan.png" alt="rowspan" class="img">
+
+        <p>Usando o comando <span class="exemplo">colspan="2"</span> a letra 'A' ficou o cupando duas colunas da tabela.</p>
+
+        <p>Usando o comando <span class="exemplo">rowspan="2"</span> a letra 'F' ocupou duas linhas da tabela.</p>
+
+
+        <h3>Tabelas reponsivas</h3>
+
+        <p>Tabelas reponsivas podem ser exibidas em computadores e celulares, nesse tipo de responsividade a tabela tera uma barra de rolagem, aonde só a tabela ira ser afetada pela barra de rolagem.</p>
+        
+        <a href="tabelaresponsiva.html" target="_blank" rel="next">Tabela reponsiva</a>
+
+        <p>No exemplo anterior foi feita a tabela responsiva, envelopando a tabela em uma <span class="exemplo">&lt;div&gt;</span> e configurando ela no css, com o comando <span class="exemplo">overflow-x: auto</span> fazendo com que seja feita uma barra de rolagem na tabela.</p>
+
+
+
+        <h2>Usando o Iframe</h2>
+        <p>O iframe é uma ferramenta inline que cria um frame que reproduz o site que você escolheu, como no exemplo:</p>
+
+        <iframe src="index.html" frameborder="0" class="iframe01"></iframe>
+
+        <p>Para criar um iframe basta usar a tag <span class="exemplo">&lt;frame&gt;</span> e dentro dela colocar o <span class="exemplo">src</span>. Fazer as configuraçoes de aparencia no css</p>
+
+        <img src="imagens/print/iframe.png" alt="imagem do iframe" class="img">
+
+        <h3>Usando para Mapas</h3>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5155.959351885062!2d-46.33525499699875!3d-23.967025510096754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce030539673df1%3A0x6d819945aba9862f!2sPra%C3%A7a%20da%20Independ%C3%AAncia!5e0!3m2!1spt-BR!2sbr!4v1686006123814!5m2!1spt-BR!2sbr" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <p>Para usar mapas é necessario ir ao site do <a href='https://www.google.com.br/maps'>google maps</a> e clicar em compartilhar, ápos isso apertar em <strong>incorporar um mapa</strong>.</p>
+
+
+
         
 
 

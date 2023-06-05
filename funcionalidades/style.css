@@ -1,6 +1,8 @@
-@charset
+@charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;800;900&display=swap');
+
+
     @font-face {
         font-family: 'Coffe';
         src: url('fontes/CoffeCake.otf') format('opentype'),
@@ -16,10 +18,11 @@
 
 
     main{
+        display: block;
         background-color: white;
         border-radius: 10px;
         box-shadow: 10px 10px 20px #080e20d5;
-        max-width: 600px ;
+        max-width: 700px ;
         padding: 10px;
         margin:auto;
         line-height: 30px;
@@ -170,17 +173,24 @@
     }
 
     table{
+        width: 400px;
         border-collapse: collapse;
         margin:10px;
+        position: relative;
         
 
     }
     td,th{
         border: 1px solid black;
         border-collapse: collapse;
-        width: 200px;
         padding-left: 5px;
         text-align: left;
+    }
+
+    thead > tr > th{
+        position: sticky;
+        top: -1px;
+        background-color: grey;
     }
 
     td.num{
@@ -190,11 +200,23 @@
     thead,tfoot{ 
         background-color: grey;
         color: white;
-        text-align: center;
     }
 
     th{
-        text-align: center;
+        text-align: center
+    }
+
+    tbody > tr:nth-child(odd){
+        background-color: lightgray;
+    }
+
+    .iframe01{
+        display: block;
+        margin: auto;
+        height: 300px;
+        width: 300px;
+        border: 1px solid black;
+        box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.308);
     }
 
     
