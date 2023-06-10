@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="icone/dogcoin.ico.lnk" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <title>Paragrafos</title>
+    <title>HTML</title>
 </head>
 
 <body>
@@ -201,13 +201,150 @@
             <p>Infelizmente não foi possivel reproduzir o video <a href="midia/video-exemplo.mp4">clique aqui para baixar o
                     video</a></p>
         </video>
+
         <h2>Videos em hospedagem externa do YouTube</h2>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/FdE5G95B7Mg" title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
+
         <p>Ir no YouTube e achar um video que você possa ter os direitos autorais, clicar em compartilhar e incorporar,
             copiar o codigo e colar no seu proprio codigo htlm</p>
+
+
+        <h2>Formulários</h2>
+        <h3>Primeiros passos</h3>
+        <p>Para criar um formulario é preciso usar a tag <span class="exemplo">&lt;form&gt;</span> e o comando <span class="exemplo">input:text</span> e também uma tag <span class="exemplo">&lt;label&gt;</span> fazendo com que o id dessa label seja o mesmo id que o do input.</p>
+
+        <form action="cadastro.php" autocomplete="off" method="post">
+            <p>
+                <label for="inome"> Usuário:</label>
+                <input type="text" name="nome" id="inome" required>
+            </p>
+            <p>
+                <label for="isenha">Senha:</label>
+                <input type="password" name="senha" id="isenha" required minlength="8" placeholder="ex: #12@ZZ22ra22">
+            </p>
+        </form>
+        <br>
+
+        <img src="imagens/print/form01.png" alt="magem de formulario" class="img">
+
+        <p>Tambem foi usado o <span class="exemplo">autocomplete= "off"</span> que faz com que o texto nao se auto complete nas caixas de input.</p>
+        
+        <p>O metodo <span class="exemplo">GET</span> faz com que apareça os dados do que foi escrto no formulario na Url do site, mais recomendado para conteúdos que não são sensiveis.</p>
+
+        <p>O metodo <span class="exemplo">POST</span> faz com que não apareça os dados na Url, mais recomendado para conteudos sensiveis.</p>
+
+        <p>O comando <span class="exemplo">action: "[local que vai ser direconado]"</span> faz com que aqueles dados preenchdos sejam direconados para algum lugar.</p>
+
+        <p>O comando <span class="exemplo">required</span> faz com que o input aonde foi colocado o comando, seja obrigatorio. Também é possivel colocar o maximo e o minimo de letras que o formulario deve ter com os comandos <span class="exemplo">maxlenght</span> e <span class="exemplo">minlength</span>.</p>
+
+        <p>O uso do comando <span class="exemplo">placeholder</span> é muito importante também para colocar mensagens dentro da caixa de texto, como no exemplo acima</p>
+
+
+        <h3>Tipos de input</h3>
+        <p>Os tipos usados no comando <span class="exemplo">input type=""</span> podem ser diversos como:</p>
+
+        <fieldset>
+            <legend>Tipos</legend>
+            <ul class="listcolunm">
+                <li><abbr title="formulario só de numero">number</abbr></li>
+                <li><abbr title="formulario de mês e ano">month</abbr></li>
+                <li><abbr title="formulario de data">date</abbr></li>
+                <li><abbr title="formulario de horário">time</abbr></li>
+                <li><abbr title="formulario para senha">passoword</abbr></li>
+                <li><abbr title="formulario para senha texto">text</abbr></li>
+                <li><abbr title="Botão de enviar">submit</abbr></li>
+                <li><abbr title="botão de apagar">reset</abbr></li>
+                <li><abbr title="formulario para email">email</abbr></li>
+                <li><abbr title="formuladio para telefone">tel</abbr></li>
+                <li><abbr title="formulario de escolha entre um e outro (usar o mesmo nome para os dois na label)">radio</abbr></li>
+                <li><abbr title="caixa para marcar">checkbox</abbr></li>
+                <li><abbr title="formulario de cor, escolhe uma cor especifica">color</abbr></li>
+                <li><abbr title="formulario de barra de nivel para prencher">range</abbr></li>
+                <li><abbr title="para adicionar uma foto (Usar o metodo POST)">file</abbr></li>
+            </ul>
+        </fieldset>
+
+            
+        <h3>Usando select e datalist</h3>
+        <p>O <span class="exemplo">select</span> é um elemento parecido como input, porem ele cria uma área para selecionar um objeto. como no exemplo:</p>
+
+        <p>
+            <label for="iest">Estado</label>
+            <select name="estado" id="iest">
+                <option value="" selected>--escolha--</option>
+                <optgroup label="Estados">
+                    <option value="MA">Mato Grosso</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="BA">Bahia</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>Esse select foi feito com o comando <span class="exemplo">&lt;select&gt;</span> junto do elemento <span class="exemplo">&lt;option&gt;</span> que cria uma opção junto do <span class="exemplo">&lt;optgroup&gt;</span> que cria grupo de opções, nele é possivel usar um <span class="exemplo">&lt;label&gt;</span>, para nomear um grupo</p>
+
+        <img src="imagens/print/select.png" alt="imagem do select" class="img">
+
+        <p>O datalist é usado para a mesma coisa so select, porém no datalist é possivel escrever a sua escolha, tirando as que ja estão disponiveis, como no exemplo:</p>
+
+        <p>
+            <label for="iprof">Profissão: </label>
+            <input type="text" name="prof" id="iprof" list="lstprof">
+            <datalist id="lstprof">
+                <option >administrador</option>
+                <option >Cozinheiro</option>
+                <option > Balconista</option>
+                <option >Médico</option>
+                <option >Engenheiro</option>
+            </datalist>
+        </p>
+
+        <p>O formulario é feito com o elemento <span class="exemplo">&lt;datalist&gt;</span>, junto com um <span class="exemplo">&lt;input:text&gt;</span> que ira criar uma caixa de texto aonde poderá escrever, no input colocar o atributo <span class="exemplo">list</span> para fazer com que se crie uma lista nesse input, e adicionar o elemento <span class="exemplo">&lt;datalist&gt;</span> com as suas <span class="exemplo">&lt;option&gt;</span>. não esqueça dos <strong>ids</strong>.</p>
+
+        <img src="imagens/print/datalist.png" alt="imagem do datalist" class="img">
+
+        <h3>Textarea</h3>
+        <p>O elemento <span class="exemplo">textarea</span> cria uma área de texto para o úsuario digitar uma mensagem.</p>
+
+        <p>
+            <label for="imsg">Mensagem:</label><br>
+            <textarea name="msg" id="imsg" cols="30" rows="5"></textarea>
+        </p>
+
+        <p>Essa área de texto foi criada com o comando <span class="exemplo">&lt;textarea&gt;</span> aonde o programador pode escolher o numero de linhas e colunas</p>
+
+        <img src="imagens/print/textarea.png" alt="imagem do textarea" class="img"> 
+
+
+        <h3>Usando output</h3>
+        <p>Os autputs são usados para tirar o mostrar algo na tela do cliente, algo que ele escreveu, cono uma soma.</p>
+
+        <form action="" method="get">
+            <p>
+                <label for="n1">Numero 1:</label>
+                <input type="number" id="inum1" name="n1" min="0" max="50" required oninput="isoma.innerHTML = Number(inum1.value) + Number(inum2.value)">
+
+
+                <label for="n2">Numero 2</label>
+                <input type="number" name="n2" id="inum2" min="0" max="50" required oninput="isoma.innerHTML = Number(inum1.value) + Number(inum2.value)">
+
+                <label for="isoma">Soma:</label>
+                <output name="soma" id="isoma">0</output>
+
+            <p>
+                <input type="reset" value="Apagar">
+            </p>
+        </form>
+
+        <p>Esse <span class="exemplo">output</span> foi criado para somar esses dois numeros, isso é possivel por que foi feito um id em cada número, e somados dentro de um output, isso foi possivel graças a programação em <span class="exemplo">JavaScript</span></p>
+
+        <img src="imagens/print/output.png" alt="imagem do output" class="img">
+
+
+        <br><br>
         <h3><a href="index1.html" rel="prev">Sobre o CSS</a></h3>
     </main>
 </body>
