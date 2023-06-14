@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo/style.css" media="screen">
+    <link rel="stylesheet" href="estilo/style.css" media="all">
     <link rel="stylesheet" href="estilo/print.css" media="print">
+    <link rel="stylesheet" href="estilo/portrait.css" media="screen and (orientation: portrait)">
     <title>CSS</title>
 </head>
 <body>
@@ -460,7 +461,7 @@
 
         <h3>Usando para Mapas</h3>
 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5155.959351885062!2d-46.33525499699875!3d-23.967025510096754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce030539673df1%3A0x6d819945aba9862f!2sPra%C3%A7a%20da%20Independ%C3%AAncia!5e0!3m2!1spt-BR!2sbr!4v1686006123814!5m2!1spt-BR!2sbr" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="iframe02" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5155.959351885062!2d-46.33525499699875!3d-23.967025510096754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce030539673df1%3A0x6d819945aba9862f!2sPra%C3%A7a%20da%20Independ%C3%AAncia!5e0!3m2!1spt-BR!2sbr!4v1686006123814!5m2!1spt-BR!2sbr" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
         <p>Para usar mapas é necessario ir ao site do <a href='https://www.google.com.br/maps'>google maps</a> e clicar em compartilhar, ápos isso apertar em <strong>incorporar um mapa</strong>.</p>
 
@@ -478,6 +479,16 @@
         <p>Para criar um estilo especifico para impressoras é preciso analisar o site e ver que estilos sao necessarios para a leirura do seu site em papel.</p>
         <p>Como o comando <span class="exemplo">display:none</span> que tira algo do site, como o header, aperte ctrl + P para ver como o site fica no modo de impressão.</p>
         <p>O pseudo elemento <span class="exemplo">::after</span> pode ser bastante útil também, usando para colocar um conteudo ápos o artigo com o comando <span class="exemplo">content</span> adicionando entre aspas um conteudo, como a url do site por exemplo. </p>
+
+        <h3>Portrait</h3>
+        <p>Também podemos usar as Media quearies para diferenciar quando o aparelho esta no modo retrato. Usando o comando <span class="exemplo">portrait</span> na área de midia nos links, como no exemplo a baixo.</p>
+
+        <img src="imagens/print/portrait.png" alt="imagem do portrait" class="img">
+
+        <h3>Landscape</h3>
+        <p>Assim como o portrait, podemos usar a orientação <span class="exemplo">landscape</span>, quando a tela estiver no modo paisagem.</p>
+
+        <img src="imagens/print/landscape.png" alt="imagem do landscape" class="img">
         
 
         

@@ -16,14 +16,14 @@
     }
 
     
-    body{
+    body{         /*configuração do body*/
         background-image:  linear-gradient(45deg, #B1E8FA 0,10%,#3A506B,#1C2541);
         background-attachment: fixed;
         font-family: Arial, Helvetica, sans-serif;
         text-align: justify;
     }
 
-    header{
+    header{     /*configuração do header*/
         background-color:#5585af ;
         height: 100px;
         position: sticky;
@@ -31,7 +31,7 @@
         z-index: 9;
     }
 
-    header h1{
+    header h1{ 
         text-align: center;
         color: white;
         font-size: 3em;
@@ -39,7 +39,7 @@
         padding: 20px;
     }
 
-    menu{
+    menu{       /*menu do header*/
         padding-inline-start: 0px;
         box-shadow: 1px 6px 4px 0px rgba(0, 0, 0, 0.219);
         margin-top: 5px;
@@ -70,7 +70,7 @@
         
         
     }
-    main{
+    main{     /*configuração do conteudo principal*/
         display: block;
         background-color: white;
         border-radius: 10px;
@@ -110,7 +110,7 @@
         margin: 5px;
     }
     
-    .exemplo{
+    .exemplo{   /*classe para palavras chave*/
         color: #910404;
         font-weight: bold;
         background-image: linear-gradient(45deg, #899ace,white);
@@ -119,10 +119,10 @@
         border-radius: 3px;
     }
 
-    .img{
+    .img{       /*classe para imagens*/
         border-radius: 10px;
         box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.301);
-        max-width: 400px;
+        max-width: 700px;
     }
 
 
@@ -132,7 +132,7 @@
     }
 
 
-    div.quadrado{
+    div.quadrado{       /*configuração para exemplo de quadrado em pseudo elementos*/
         display:inline-block;
         background-color: white;
         border:1px solid black;
@@ -147,7 +147,7 @@
     }
 
 
-    .escondido > p{
+    .escondido > p{       /*configuração para texto escondido*/
         display: none;
     }
 
@@ -168,7 +168,7 @@
         color: red;  
     }
 
-    main a{
+    main a{     /*links no main*/
         text-decoration: none;
         color: #0f47ee;
     }
@@ -183,7 +183,7 @@
         content: " [Link]";
     }
 
-    .box-level{
+    .box-level{    /*configuração para caixa box-level*/
         height: 50px ;
         width: 75px;
         border: 3px solid #102c81;
@@ -197,14 +197,14 @@
         color: yellow;
     }
     
-    .inline-level{ 
+    .inline-level{    /*configuração para caixa inline-level*/
         border: 3px solid #102c81;
         padding: 5px;
         background-color: #4f7894;
         color: yellow;
     }
 
-    #container{
+    #container{     /*configuração para container maior no maio da main*/
         background-color: purple;
         background-image: url(imagens/target001.png);
         background-size: 100% 100%;
@@ -215,7 +215,7 @@
         width: 100px;
     }
     
-    #conteudo{
+    #conteudo{      /*configuração de conteudo dentro de container maior*/
         background-image: url(imagens/target001.png);
         background-size: 100% 100%;
         background-color: yellow;
@@ -227,7 +227,7 @@
         transform: translate(-50% ,-50%);
     }
 
-    table{
+    table{          /*congiguração de tabela*/
         width: 400px;
         border-collapse: collapse;
         margin:10px;
@@ -263,7 +263,7 @@
         background-color: lightgray;
     }
 
-    .iframe01{
+    .iframe01{         /*configuração do iframe*/
         display: block;
         margin: auto;
         height: 300px;
@@ -272,15 +272,20 @@
         box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.308);
     }
 
-    ul.listcolunm{
+
+    ul.listcolunm{      /*configuração de lista em colunas*/
         list-style-position: inside;
         columns: 3;
     }
 
-    fieldset{
+    fieldset{       /*configuração do fieldset*/
         background-color: lightgrey;
         color: #1C2541;
         font-weight: bold; 
     }
 
+    .iframe02{
+        display: flex;
+        margin: auto;
+    }
     

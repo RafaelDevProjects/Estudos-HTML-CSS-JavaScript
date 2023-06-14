@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+.img{
+    max-width: 450px;
+}
+
+.iframe02{
+    display: flex;
+    max-width: 500px;
+    max-height: 500px;
+    margin: auto;
+}
