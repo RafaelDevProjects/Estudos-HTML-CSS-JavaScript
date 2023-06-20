@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icone/dogcoin.ico.lnk" type="image/x-icon">
     <link rel="stylesheet" href="estilo/style.css" media="all">
     <link rel="stylesheet" href="estilo/print.css" media="print">
     <link rel="stylesheet" href="estilo/portrait.css" media="screen and (orientation: portrait)">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>CSS</title>
 </head>
 <body>
-    <header>
+    <header class="header" id="myheader">
         <h1>Estudos</h1>
-        <menu>
+        <span id="burguer" class="material-icons" onclick="clickMenu()">menu</span>
+        <menu id="menu">
             <ul>
                 <li>
                     <a href="index.html">HTML5</a>
                 </li>
                 <li>
-                    <a href="index1.html">CSS</a>
+                    <a href="#">CSS</a>
                 </li>
             </ul>
         </menu>
@@ -489,22 +492,29 @@
         <p>Assim como o portrait, podemos usar a orientação <span class="exemplo">landscape</span>, quando a tela estiver no modo paisagem.</p>
 
         <img src="imagens/print/landscape.png" alt="imagem do landscape" class="img">
-        
-
-        
 
 
+        <h3>Typical Device Breakpoints</h3>
+        <p>Eles são pontos de quebra de pixel de uma midia para outra, como por exemplo, as telas dos celulares possuem uma quantidade de pixel diferente dos monitores. </p>
+        <ul>
+            <p>os breakpoins são:</p>
+            <li>tela pequena: até <strong>600px</strong></li>
+            <li>celular: <strong>600px</strong> até <strong>768px</strong></li>
+            <li>tablete: <strong>768px</strong> até <strong>992px</strong> </li>
+            <li>desktop: <strong>992px</strong> até <strong>1200px</strong></li>
+            <li>tela grande: acima de <strong>1200px</strong></li>
+        </ul>
 
-
-        
-
-
-
-    
-        <br><br><br>
-        <a href="index.html" rel="prev">voltar para pagina de html</a>
-        <br>
     </main>
-    
+    <script>
+        function clickMenu() {
+            if (menu.style.display == "block") {
+                menu.style.display = 'none'
+            } else {
+                menu.style.display = 'block'
+            }
+        }
+    </script>
+
 </body>
 </html>

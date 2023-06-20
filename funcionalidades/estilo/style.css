@@ -89,25 +89,45 @@
         font: italic 800 4em 'Inconsolata', monospace;
         margin: 10px;
         margin-top: 30px;
+        
     }
 
 
     h2{
         color: #d39840;
-        text-shadow: 1px 1px rgba(0, 0, 0, 0.363);
+        text-shadow: 1px 1px #6e4e1eb9;
         margin-top: 38px;
         margin-bottom: 10px;
+        font-variant: small-caps;
+        
     }
 
 
     h3{
         color: #99610B;
-        text-shadow: 1px 1px rgba(0, 0, 0, 0.363);
+        text-shadow: 1px 1px #4b2f069c;
+        margin-top: 20px;
         margin-bottom: 10px;
+        font-variant: small-caps;
     }
 
     p{
         margin: 5px;
+        text-indent: 0.2em;
+    }
+
+    main a{     /*links no main*/
+        text-decoration: none;
+        color: #0f47ee;
+    }
+
+    main a:hover{
+        color: black;
+        text-decoration: underline;
+    }
+
+    main a::after{
+        content: " [Link]";
     }
     
     .exemplo{   /*classe para palavras chave*/
@@ -168,20 +188,6 @@
         color: red;  
     }
 
-    main a{     /*links no main*/
-        text-decoration: none;
-        color: #0f47ee;
-    }
-
-     main a:hover{
-        color: black;
-        text-decoration: underline;
-    }
-
-
-    main a::after{
-        content: " [Link]";
-    }
 
     .box-level{    /*configuração para caixa box-level*/
         height: 50px ;
@@ -272,6 +278,10 @@
         box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.308);
     }
 
+        display: flex;
+        margin: auto;
+    }
+
 
     ul.listcolunm{      /*configuração de lista em colunas*/
         list-style-position: inside;
@@ -282,10 +292,5 @@
         background-color: lightgrey;
         color: #1C2541;
         font-weight: bold; 
-    }
-
-    .iframe02{
-        display: flex;
-        margin: auto;
     }
     

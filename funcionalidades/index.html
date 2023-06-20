@@ -5,18 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="icone/dogcoin.ico.lnk" type="image/x-icon">
-    <link rel="stylesheet" href="estilo/style.css">
+    <link rel="stylesheet" href="estilo/style.css" media="all">
+    <link rel="stylesheet" href="estilo/print.css" media="print">
+    <link rel="stylesheet" href="estilo/portrait.css" media="screen and (orientation: portrait)">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>HTML</title>
 </head>
-
 <body>
     <header class="header" id="myheader">
         <h1>Estudos</h1>
-        <menu>
+        <span id="burguer" class="material-icons" onclick="clickMenu()">menu</span>
+        <menu id="menu">
             <ul>
                 <li>
-                    <a href="#">HTML5</a>
+                    <a href="index.html">HTML5</a>
                 </li>
                 <li>
                     <a href="index1.html">CSS</a>
@@ -27,6 +29,9 @@
     <main>
         <h1>HTML5</h1>
         <hr>
+
+
+
         <h2>Paragrafos e quebra de linha</h2>
         <p>É possivel criar um paragrafo for meio das tags <span class="exemplo">&lt;p&gt</span>; e &lt;<span class="exemplo">/p</span>&gt;</p>
         <p>Para criar uma quebra de linha em um lugar específico ultiliza a tag <span class="exemplo">&lt;br&gt;</span>,
@@ -167,7 +172,7 @@
         <h3>Listas ordenadas</h3>
         <ol type="1">
             <li>Acordar</li>
-            <li>tomar bamnho</li>
+            <li>tomar banho</li>
             <li>escovar os dentes</li>
             <li>tomar cafe da manha</li>
             <li>Tag Ol para identificar ordem</li>
@@ -192,39 +197,45 @@
             <dt>Termo</dt>
             <dd>Descrição</dd>
             <dt>Tag Dl</dt>
-            <dd>Serve para abrir a lista de termo de definiçao</dd>
+            <dd>Serve para abrir a lista de termo de definiçao.</dd>
             <dt>Tag Dt</dt>
-            <dd>Serve para classificar a parte do termo</dd>
+            <dd>Serve para classificar a parte do termo.</dd>
             <dt>Tag DD</dt>
-            <dd>Serve para classificar a parte da descrição</dd>
+            <dd>Serve para classificar a parte da descrição.</dd>
         </dl>
-        <p>Usar a tag <span class="exemplo">&lt;dt&gt;</span> para criar uma lista de definição</p>
+        <p>Usar a tag <span class="exemplo">&lt;dt&gt;</span> para criar uma lista de definição.</p>
 
 
 
         <h2>Trabalhando com Links</h2>
 
+
         <h3>Links Externos</h3>
         <p>Link do repositorio github, <a href="https://github.com/RafaelDevProjects" target="_blank" rel="external">clique aqui</a></p>
 
-        <p>Para criar um link no seu site use a Tag <span class="exemplo">&lt;a&gt;</span> e preencha o href com o link desejado. O uso do <span class="exemplo">target="_blank"</span> e o <span class="exemplo">rel="external"</span> faz com que o link seja aberto em uma nova aba
-        </p>
+        <p>Para criar um link no seu site use a Tag <span class="exemplo">&lt;a&gt;</span> e preencha o href com o link desejado. O uso do <span class="exemplo">target="_blank"</span> e o <span class="exemplo">rel="external"</span> faz com que o link seja aberto em uma nova aba.</p>
+
+
         <h3>Usando links internos</h3>
         <p>Link interno para o head <a href="head.html" rel="prev">ir para a pagina do head</a></p>
-        <p> Usar a Tag &lt;a&gt; para ir a um link interno, apertar ctrl + <br>space para achar o outro arquivo, que deve
+
+        <p> Usar a Tag <span class="exemplo">&lt;a&gt;</span> para ir a um link interno, apertar ctrl + espaço para achar o outro arquivo, que deve
             estar na <br>mesma pasta.</p>
+
+
         <h3>Links para donwload</h3>
         <ul>
             <li><a href="livro/pdf-teste.zip" download="'pdf-teste" type="application/pdf">baixar pdf.zip</a></li>
             <li><a href="livro/pdf-teste.pdf" download="pdf-teste.zip" type="application/zip">baixar pdf</a></li>
         </ul>
-        <p>Usar a Tag &lt;a&gt; e colocar como href o caminho de aquivo,<br>usando o ctrl + espaço, depois escrever download
-            = '<code>nome do arquivo</code>', também adicionar um <code>type= "application/zip"</code> ou
-            <code>application/alguma</code> <br> para cada tipo de arquivo <a
-                href="https://www.iana.org/assignments/media-types/media-types.xhtml" target="_blank" rel="external">aqui
-                esta o site para o type de cada tipo de arquivo</a>
-        </p>
+
+        <p>Usar a Tag <span class="exemplo">&lt;a&gt;</span> e colocar como href o caminho de aquivo usando o ctrl + espaço, depois escrever download nome do arquivo, também adicionar um type= "application/zip" ou
+        application/alguma para cada tipo de arquivo. <a href="https://www.iana.org/assignments/media-types/media-types.xhtml" target="_blank" rel="external">site para o type de cada tipo de arquivo</a></p>
+        
+
+
         <h2>Midia em HTML5</h2>
+
         <h3>Imagens dinamicas</h3>
         <p>Diminua ou aumente o zoom do seu computador ou use o site em diferentes dispositivos</p>
         <picture>
@@ -232,44 +243,49 @@
             <source media="(max-width: 1050px)" srcset="imagens/imagem-m.png" type="image/png">
             <img src="imagens/imagem-g.png" alt="imagem grande">
         </picture>
-        <p>Para criar imagens dinamicas, use a tag &lt;piture&gt;, coloque a tag &lt;img&gt; e acima dessa imagem base,
-            adicione a tag &lt;source&gt; colocando
-            <br> o maximo de largura que cada imagem pode ter, dependendo da largura da tela, a imagem vai mudar para ,
-            grande, media ou pequena
-        </p>
+
+        <p>Para criar imagens dinamicas, use a tag <span class="exemplo">&lt;picture&gt;</span>, coloque a tag <span class="exemplo">&lt;img&gt;</span> e acima dessa imagem base, adicione a tag <span class="exemplo"> &lt;source&gt;</span> colocando o maximo de largura que cada imagem pode ter com o elemento <span class="exemplo">max-width</span>, dependendo da largura da tela, a imagem vai mudar para , grande, media ou pequena.</p>
+
+
+
         <h2>Reproduzindo audios</h2>
+
         <audio preload="metadata" controls>
             <source src="midia/scarlet-fire.mp3" type="audio/mpeg">
             <source src="midia/scarlet-fire.ogg" type="audio/ogg">
             <source src="midia/scarlet-fire.wav" type="audio/wav">
-            <p>Infelizmente o seu dispositivo não reproduz o arquivo <a href="midia/scarlet-fire.mp3">clique aqui para
-                    baixar o audio</a></p>
+            <p>Infelizmente o seu dispositivo não reproduz o arquivo <a href="midia/scarlet-fire.mp3">audio</a>.</p>
         </audio>
-        <p>Usar a tag &lt;audio&gt; para adiconar um audio no seu site</p>
-        <p>autoplay = musica é reproduzida automaticamente <br>controls = aparece o controlador da musica, como no caso
-            acima <br>loop = a musica entra em repetição no seu site
-        </p>
-        <p><b>preload</b> = a musica faz um faz um precarregamento no site <br><b>preload = "auto"</b> O site vai terminar
-            de carregar somente quando o arquivo de audio tambem estiver carregado<br><b>preload = "metadata"</b> somente os
-            dados da musica são carregados <br><b>preload = "none"</b> não carregara nada</p>
+
+        <p>Usar a tag <span class="exemplo">&lt;audio&gt;</span> para adiconar um audio no seu site.</p>
+        <li><abbr title="audio reproduzido automaticamente">autoplay</abbr></li>
+        <li><abbr title="aparece um controlador do audio">controls</abbr></li>
+        <li><abbr title="audio em repetição">loop</abbr></li>
+        <li><abbr title="a musica faz um precarregamento no site">preload</abbr></li>
+        <li><abbr title="o site para de carregar o audio só quando ele estiver 100% carregado">preload="auto"</abbr></li>
+        <li><abbr title="somente os dados do audio são carregador">preload="metadata"</abbr></li>
+        <li><abbr title="não carrega nada">preload="none"</abbr></li>
+
+
+
         <h2>Reproduzindo videos em hospedagem propria</h2>
-        <p>Usar a tag &lt;video&gt; para adicionar videos ao seu site. <br>width = "tamanho do video dentro do site.
-            <br>controls = mostra os controles do video. <br>Usar a tag &lt;source&gt; para adaptar o tipo de arquivo que
-            cada navegador aceita
-        </p>
+
+        <p>Usar a tag <span class="exemplo">&lt;video&gt;</span> para adicionar videos ao seu site.</p>
+        <li><abbr title="tamando da tela horizontal">width</abbr></li>
+        <li><abbr title="mostra os controles do video">controls</abbr></li>
+        <p>Usar a tag <span class="exemplo">&lt;source&gt;</span> para adaptar o tipo de arquivo que cada navegador aceita</p>
+        <p>Colocar no Type o tipo de arquivo que esta o seu video, podendo ser eles, arquivos: <b>mkv</b>, <b>webm</b>, <b>mp4</b></p>
         <video width="400" height="300" controls>
             <source src="midia/Video-Exemplo.mkv" type="video/mp4">
             <source src="midia/Video-Exemplo.webm" type="video/webm">
             <source src="midia/video-exemplo.mp4" type="video/mp4">
-            <p>Infelizmente não foi possivel reproduzir o video <a href="midia/video-exemplo.mp4">clique aqui para baixar o
-                    video</a></p>
+            <p>Infelizmente não foi possivel reproduzir o video <a href="midia/video-exemplo.mp4">clique aqui para baixar o video</a></p>
         </video>
 
         <h2>Videos em hospedagem externa do YouTube</h2>
         <iframe width="400" height="220" src="https://www.youtube.com/embed/FdE5G95B7Mg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-        <p>Ir no YouTube e achar um video que você possa ter os direitos autorais, clicar em compartilhar e incorporar,
-            copiar o codigo e colar no seu proprio codigo htlm</p>
+        <p>Ir no YouTube e achar um video que você possa ter os direitos autorais, clicar em compartilhar e incorporar e copiar o codigo e colar no seu proprio codigo htlm</p>
 
 
         <h2>Formulários</h2>
@@ -402,11 +418,19 @@
         <p>Esse <span class="exemplo">output</span> foi criado para somar esses dois numeros, isso é possivel por que foi feito um id em cada número, e somados dentro de um output, isso foi possivel graças a programação em <span class="exemplo">JavaScript</span></p>
 
         <img src="imagens/print/output.png" alt="imagem do output" class="img">
-
-
-        <br><br>
-        <h3><a href="index1.html" rel="prev">Sobre o CSS</a></h3>
+        
     </main>
+
+    <script>
+        function clickMenu() {
+            if (menu.style.display == "block") {
+                menu.style.display = 'none'
+            } else {
+                menu.style.display = 'block'
+            }
+        }
+    </script>
+    
 </body>
 
 </html>
