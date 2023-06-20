@@ -27,6 +27,7 @@
     header{     /*configuração do header*/
         background-color:#5585af ;
         height: 100px;
+        width: 100vw;
         position: sticky;
         top: 0px;
         z-index: 9;
@@ -65,7 +66,7 @@
         font-size: 0.9em;
         text-decoration: none;
         padding: 10px;
-        border-radius: 3px;
+        border-radius: 5px;
     }
 
     menu a:hover{
@@ -137,7 +138,7 @@
         content: " [Link]";
     }
     
-    .exemplo{   /*classe para palavras chave*/
+    .exemplo{           /*classe para palavras chave*/
         color: #910404;
         font-weight: bold;
         background-image: linear-gradient(45deg, #899ace,white);
@@ -146,13 +147,11 @@
         border-radius: 3px;
     }
 
-    .img{       /*classe para imagens*/
-        border-radius: 10px;
-        box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.301);
+    .img{
+        box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.24);
         max-width: 700px;
+        margin: 5px;
     }
-
-
 
     abbr{
         color: #395477;
@@ -300,5 +299,9 @@
         background-color: lightgrey;
         color: #1C2541;
         font-weight: bold; 
+    }
+
+    main li{
+        list-style-position: inside;
     }
     
