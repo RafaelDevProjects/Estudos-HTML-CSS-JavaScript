@@ -13,6 +13,7 @@
 
     *{
         margin:0px;
+        padding: 0px
     }
 
     
@@ -37,29 +38,34 @@
         font-size: 3em;
         margin: auto;
         padding: 20px;
+        font-variant: small-caps;
     }
 
-    menu{       /*menu do header*/
-        padding-inline-start: 0px;
+    #burguer{
+        display: none;
+    }
+
+    menu{   /*menu do header*/
+        display: block;
         box-shadow: 1px 6px 4px 0px rgba(0, 0, 0, 0.219);
-        margin-top: 5px;
     }
 
-    menu ul{
+    menu > ul{
         list-style-type: none;
         background-color: rgb(70, 166, 211);
     }
-    menu li{
+    menu > ul > li{
         display: inline-block;
     }
     
-    menu a {
-        display: inline-block;
+    menu ul > li > a {
+        display: block;
         background-color:#1C2541 ;
         color: white;
+        font-size: 0.9em;
         text-decoration: none;
         padding: 10px;
-        border-radius: 5px;
+        border-radius: 3px;
     }
 
     menu a:hover{
@@ -75,9 +81,10 @@
         background-color: white;
         border-radius: 10px;
         box-shadow: 10px 10px 20px #080e2067;
-        max-width: 700px ;
-        padding: 10px;
+        max-width: 800px ;
+        padding: 25px;
         margin:auto;
+        margin-top:50px;
         line-height: 30px;
     }
 
@@ -278,6 +285,7 @@
         box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.308);
     }
 
+    .iframe02{
         display: flex;
         margin: auto;
     }
