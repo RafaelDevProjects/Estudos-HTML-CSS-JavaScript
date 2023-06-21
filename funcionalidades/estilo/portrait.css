@@ -29,7 +29,12 @@
 menu > ul > li {
     display: block;
     text-align: center;
-    border: 1px solid rgb(16, 101, 141);
+    border: 1px solid rgb(0, 0, 0);
+}
+
+menu > ul > li > a{
+    margin: 0px;
+    border-radius: 0px;
 }
 
 menu > ul > li > a:hover{

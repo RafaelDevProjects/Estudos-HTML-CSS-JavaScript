@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>HTML</title>
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header class="header" id="myheader">
         <h1>Estudos</h1>
         <span id="burguer" class="material-icons" onclick="clickMenu()">menu</span>
@@ -422,9 +422,18 @@
     </main>
 
     <script>
+        function mudouTamanho() {
+            if (window.innerWidth >=770) {
+                menu.style.display = 'block'
+            } else {
+                menu.style.display = 'none'
+            }
+
+        }
         function clickMenu() {
             if (menu.style.display == "block") {
                 menu.style.display = 'none'
+            
             } else {
                 menu.style.display = 'block'
             }

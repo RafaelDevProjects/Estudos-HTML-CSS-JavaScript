@@ -27,7 +27,7 @@
     header{     /*configuração do header*/
         background-color:#5585af ;
         height: 100px;
-        width: 100vw;
+        width: 99vw;
         position: sticky;
         top: 0px;
         z-index: 9;
@@ -67,6 +67,7 @@
         text-decoration: none;
         padding: 10px;
         border-radius: 5px;
+        margin-left: 10px;
     }
 
     menu a:hover{
