@@ -1,5 +1,5 @@
-# HTML-CSS
-## repositorio de **html-css**
+# HTML-CSS-JavaScript
+## **Repositorio de Estudos**
 **HTML** :pushpin: conteudo:
 - textos
 - imagens
