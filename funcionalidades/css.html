@@ -23,6 +23,9 @@
                 <li>
                     <a href="#">CSS</a>
                 </li>
+                <li>
+                    <a href="javascript.html">JavaScript</a>
+                </li>
             </ul>
         </menu>
     </header>
@@ -154,7 +157,7 @@
         <p>Os pseudo elementos mexem no conteúdo, são representador por '<span class="exemplo"><b>::</b></span>', pelos duplos dois pontos.</p>
         <p>Usando o comando <span class="exemplo">::after</span> ele faz com que apos o conteudo mostrado , mostre outro conteudo escolhido no comando <span class="exemplo">content</span> ,como no exemplo:</p>
 
-        <a href="cores.html">site exemplo</a>
+        <p><a href="cores.html">site exemplo</a></p>
         
         <p>Depois do site exemplo aparece um contudo, o [link] que foi adicionado pelos comandos descritos acima, feito desse jeito</p>
 
@@ -181,12 +184,12 @@
         <div class="box-level">
             <p><em>box-level</em></p>
         </div>
-        <p>A parte azul escuto é a borda, entre o conteudo e a borda é o padding, a parte de fora da borda é aonde fica a magem.</p>
+        <p>A parte azul escuro é a borda e entre o conteudo e a borda é o padding, a parte de fora da borda é aonde fica a margem.</p>
         
 
         <h3>Inline-level</h3>
         <p>Essas caixas ficam na propria linha <span class="inline-level">inline-level</span> desse jeito.</p>
-        <p>A parte azul escuto é a borda, entre o conteudo e a borda é o padding, a parte de fora da borda é aonde fica a magem.</p>
+        <p>A parte azul escuro é a borda e entre o conteudo e a borda é o padding, a parte de fora da borda é aonde fica a margem.</p>
         
 
 
@@ -201,7 +204,7 @@
             <li><abbr title="navegação, links"><span class="exemplo">&lt;nav&gt;</span></abbr></li>
         </ul>
         <p>Essas tags agrupadas formam o site</p>
-        <a href="caixas.html" prev="next">um exemplo de site</a>
+        <p><a href="caixas.html" prev="next">exemplo de site</a></p>
 
 
 
@@ -214,17 +217,17 @@
             <li>3px: quantidade para direita</li>
             <li>4px: quantidade para baixo</li>
             <li>6px: quantidade de desfoco</li>
-            <li>1px: quantida de tamanho do desfoco</li>
+            <li>1px: quantidade de tamanho do desfoco</li>
         </ul>
         <p>Para mudar a sobra para cima ou para direita, usar a quantidade negativa. <br>Também é recomendado deixa a cor preta da sobra mais transparente.</p>
-        <a href="caixas.html" rel="next">site exemplo</a>
+        <p><a href="caixas.html" rel="next">site exemplo</a></p>
         <p>Nesse site, contem sombras no header, nav e main.</p>
 
 
 
         <h2>Bordas arredondadas</h2>
         <p>Para usar as bordas das suas caixas de maneira arredondada, usar o comando <span class="exemplo">border-radius</span></p>
-        <a href="caixas.html" rel="next">site exemplo</a>
+        <p><a href="caixas.html" rel="next">site exemplo</a></p>
         <p>Nesse site, contem caixas arredondas no main.</p>
 
 
@@ -232,7 +235,7 @@
         <h2>Imagem de fundo no Site</h2>
         <p>Para usar uma imagem de fundo no site usar o comando <span class="exemplo">background-image: url('/caminho/dafoto')</span></p>
 
-        <a href="/fundos/fundos.html" target="_blank" rel="next">ver exemplo</a>
+        <p><a href="/fundos/fundos.html" target="_blank" rel="next">ver exemplo</a></p>
 
         <p>
         A imagem escolhida ficara se repetindo até a tela acabar, pórem podemos usar de alguns comandos para personalizar isso, como o
@@ -240,17 +243,18 @@
         <span class="exemplo"><abbr title="imagem se repete ou não">background-repeat</abbr></span> e suas funcionalidades como: 
         </p>
 
-        <ul>
-            <li>
-                <span class="exemplo"><abbr title="não repete">no-repeat</abbr></span>
-            </li>
-            <li>
-                <span class="exemplo"><abbr title="repete horizontal"> repeat-x</abbr> </span>
-            </li>
-            <li>
-                <span class="exemplo"><abbr title="repete vertical">repeat-y</abbr></span>
-            </li>
-        </ul>
+            <ul>
+                <li>
+                    <span class="exemplo"><abbr title="não repete">no-repeat</abbr></span>
+                </li>
+                <li>
+                    <span class="exemplo"><abbr title="repete horizontal"> repeat-x</abbr> </span>
+                </li>
+                <li>
+                    <span class="exemplo"><abbr title="repete vertical">repeat-y</abbr></span>
+                </li>
+            </ul>
+
 
         <h3>Configurar a posição da imagem de fundo</h3>
         <p>Para mudar a posição da imagem de fundo escolhida usamos o comando <span class="exemplo">background-position</span> as posiçoes variam de: (passe o mouse por cima)</p>
@@ -279,7 +283,7 @@
         <p>As imagens que são vinculadas ao background-image, já vem com um tamanho, para mudar o tamanho de uma imagem usar o comando <span class="exemplo">background-image</span>,se for necessario preencher a tela inteira da sua view port do body, usar o comando <span class="exemplo">background-image: cover</span> pode se a melhor forma, porém a imagem não sera 100% mostrada na tela, partes dala ficarão de fora.</p>
 
         <p>Para mostrar 100% da imagem é necessario usar o comando <span class="exemplo">background-image:content</span>, isso faz com que o todo o conteudo da imagem seja mostrado, porém, pode aparecer bordas no seu site. </p>
-        <a href="/funcionalidades/fundos/fundos01.html">exemplo de fundo cover</a>
+        <p><a href="/funcionalidades/fundos/fundos01.html">exemplo de fundo cover</a></p>
 
         <p>Com essas configurações surge outro problema, a imagem estara andando junto do conteúdo e quando tiver muito conteúdo isso criara um novo problema, por isso é usando o comando <span class="exemplo">background-attachment: fixed</span>, desse jeito o plano de fundo ficara fixado.</p>
 
@@ -445,9 +449,9 @@
 
         <h3>Tabelas reponsivas</h3>
 
-        <p>Tabelas reponsivas podem ser exibidas em computadores e celulares, nesse tipo de responsividade a tabela tera uma barra de rolagem, aonde só a tabela ira ser afetada pela barra de rolagem.</p>
+        <p>Tabelas reponsivas podem ser exibidas em computadores e celulares, nesse tipo de responsividade a tabela vai ter uma barra de rolagem, aonde só a tabela ira ser afetada pela barra de rolagem.</p>
         
-        <a href="tabelaresponsiva.html" target="_blank" rel="next">Tabela reponsiva</a>
+        <p><a href="tabelaresponsiva.html" target="_blank" rel="next">Tabela reponsiva</a></p>
 
         <p>No exemplo anterior foi feita a tabela responsiva, envelopando a tabela em uma <span class="exemplo">&lt;div&gt;</span> e configurando ela no css, com o comando <span class="exemplo">overflow-x: auto</span> fazendo com que seja feita uma barra de rolagem na tabela.</p>
 
@@ -468,7 +472,7 @@
 
         <p>Para usar mapas é necessario ir ao site do <a href='https://www.google.com.br/maps'>google maps</a> e clicar em compartilhar, ápos isso apertar em <strong>incorporar um mapa</strong>.</p>
 
-        <a href="https://rafaeldevprojects.github.io/social-networking-site/">Site feito com Iframe</a>
+        <p><a href="https://rafaeldevprojects.github.io/social-networking-site/">Site feito com Iframe</a><p>
 
 
 
