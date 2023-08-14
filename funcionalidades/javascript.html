@@ -30,8 +30,60 @@
     </header>
     <main>
         <h1>JavaScript</h1>
-        
         <hr>
+
+
+        <h2>Variáveis e Tipos Primitivos</h2>
+
+        <p>As <span class="exemplo">variaveis</span> são locais aonde ficam armazenados dados. Podendo ser números ou letras. <br> Cada variavel tem um <span class="exemplo">identificador</span>, porém os identificadores tem suas regras. <br>
+        O comando para usar uma variavel é o comando <span class="exemplo">var</span> antes do identificador.</p>
+
+        
+        <fieldset>
+            <legend>Regras</legend>
+            <p>
+        
+                <ul>
+                    <li>Podem começar com <strong>letra</strong>, <strong>$</strong> ou <strong>_</strong></li>
+                    <li>Não podem começar com <strong>números</strong></li>
+                    <li>É possivel usar <strong>letras</strong> ou <strong>números</strong></li>
+                    <li>É possivel usar <strong>acentos</strong> e <strong>símbolos</strong></li>
+                    <li>Não podem conter <strong>espaços</strong></li>
+                    <li>Não podem ser palavras <strong>reservadas</strong></li>
+                </ul>
+            </p>
+        </fieldset>
+        
+        
+        <p>Os tipos primitivos podem ser: <strong>number, string, boolean, null, undefined, object e function.</strong>
+        <br>Para saber se uma variavel é de certo tipo, usar o comando <span class="exemplo">typeof</span>.</p>
+
+
+
+
+        <h2>Tratamento de Dados</h2>
+
+        <p>Se o programador quiser mudar o tipo primitivo de string para number é preciso usar o comando <span class="exemplo">Number.parseInt(x)</span>, para números inteiros, ou <span class="exemplo">Number.parseFloat(x)</span>, para números reais.</p>
+        
+        <img src="imagens/print/number.parseint.png" alt="covertendo os dados" class="img">
+
+        <p>A conversão de Number para string é feita pelo comando <span class="exemplo">String(n)</span> ou <span class="exemplo">n.toString()</span>.
+        <br>A formatação de numeros para mais casas decimais pode ser feita pelo comando <span class="exemplo">n1.fixed(2)</span>, desse jeito o numero tera 2 casas decimais.
+        <br>Para fazer com que numeros tenham a moeda do pais na frente é preciso digitar esse comando n1.toLocaleString <span class="exemplo">('pt-BR' , {style: 'currency', currency: 'BRL'})</span>.</p>
+
+        <p>Podemos fazer tratamentos na string usando os comandos <span class="exemplo">s.length</span>, para contar quantas letras tem uma string, o comando <span class="exemplo">s.toUpperCase()</span>, para fazer todas as letras ficarem maiúsculas, e o <span class="exemplo">s.toLowerCase()</span> para letras minúsculas.</p>
+
+
+        <h3>Template string</h3>
+
+        <p>Para a criação de uma frase com dados que o proprio usuário colocou no site usamos o template string, para formatar strings, veja o exemplo:
+
+        <br><span class="exemplo">`O aluno ${nome} com idade de ${idade} anos tirou uma nota ${nota}`</span>
+
+        <br>Repare que a frase esta com crase, na área que deve ter os dados do usuário tem o símbulo <span class="exemplo">${}</span>
+        </p>
+
+        
         
     </main>
     <script>
