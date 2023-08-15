@@ -80,8 +80,86 @@
 
         <br><span class="exemplo">`O aluno ${nome} com idade de ${idade} anos tirou uma nota ${nota}`</span>
 
-        <br>Repare que a frase esta com crase, na área que deve ter os dados do usuário tem o símbulo <span class="exemplo">${}</span>
+        <br>Repare que a frase esta com crase, na área que deve ter os dados do usuário tem o símbulo <span class="exemplo">${}</span>.
         </p>
+
+
+        <h2>Operadores</h2>
+
+        <p></p>
+
+        <fieldset>
+            <legend>Operadores</legend>
+            <ul>
+                <li>Aritimétricos</li>
+                <li>Atribuição</li>
+                <li>Relacionais</li>
+                <li>Lógicos</li>
+                <li>Ternário</li>
+            </ul>
+        </fieldset>
+
+        <h3>Aritimétricos</h3>
+
+        <p>Os operadores aritimétricos são aqueles que ja estamos acostumandos a usar em todo período escolar. Porém os operadores no java script tem sinais diferentes. Veja a seguir:</p>
+        
+        <div class="paragrafo-estilizado">
+            <p>A <span class="exemplo">soma</span> é feita pelo sinal <span class="exemplo">+</span>
+            <br>A <span class="exemplo">subtração</span> é pelo sinal <span class="exemplo">-</span>
+            <br>A <span class="exemplo">divisão</span> é pelo sinal <span class="exemplo">/</span>
+            <br>A <span class="exemplo">multiplicação</span> é pelo sinal <span class="exemplo">*</span>
+            <br>A <span class="exemplo">potenciação</span> pelo sinal <span class="exemplo">**</span>
+            <br>O <span class="exemplo">resto de divisão</span> pela <span class="exemplo">%</span>
+            </p>
+        </div>
+
+
+
+        <h3>Relacionais</h3>
+
+        <p>As operações relacionais são aquelas que relacionam uma coisa com outra, por exemplo, um numero maior e um numero menor. Veja a seguir:</p>
+
+        <div class="paragrafo-estilizado-colunas">
+            <p>
+                Sinal de maior: 
+                <br>Sinal de menor: 
+                <br>Sinal de menor ou igual:
+                <br>Sinal de maior ou igual:
+                <br>Sinal de igual:
+                <br>Sinal de idêntico:
+                <br>Sinal de diferente:
+                <br>Sinal de diferente identico:
+
+            </p>
+            <p><span class="exemplo">&lt;</span>
+            <br><span class="exemplo">&gt;</span>
+            <br><span class="exemplo">&lt;=</span>
+            <br><span class="exemplo">&gt;=</span>
+            <br><span class="exemplo">==</span>
+            <br><span class="exemplo">===</span>
+            <br><span class="exemplo">!=</span>
+            <br><span class="exemplo">!===</span>
+            </p>
+        </div>
+
+
+
+        <h3>Lógicos</h3>
+
+        <p>Os operadores lógicos são distribuidos em <span class="exemplo">negação</span>, <span class="exemplo">conjunção</span> e <span class="exemplo">disjunção</span>. Esses operadores fazem com que algo seja ou não verdadeiro.
+        <br>
+        <br>O operador de negação é o sinal <span class="exemplo">!</span>
+        <br>
+        <br>O operador de conjunção é o sinal <span class="exemplo">&&</span>, que é um operador binário, no o portugues esse operador quer dizer ____ <span class="exemplo">e</span> _____.
+        <br>
+        <br>O operador de Disjunção é o sinal <span class="exemplo">||</span>, também é um operador binario e no português seria assim: ____ <span class="exemplo">ou</span> _____
+        </p>
+
+        <h3>Tercenários</h3>
+
+        <p>Os operadores tercenarios tem três partes, a primeira, teste, a segunda, True, terceira, False. Ou seja sempre que o teste for verdadeiro acontecera algo e sempre que for falso o programa fará outra coisa. Veja a estrutura do operador:</p>
+
+        <p style=" margin:auto; width: 300px; text-align:center; color:white; border: solid 1px rgba(0, 0, 0, 0.534);  border-radius: 5px; padding:5px; background-color: rgba(73, 69, 69, 0.795); font-weight: bold;">Teste <span style="color: yellow;background-color: rgba(0, 255, 255, 0.274); padding: 2px;" >?</span>'__True__' <span style="color: yellow;background-color: rgba(0, 255, 255, 0.274); padding: 2px;" >:</span> '__False__'</p>
 
         
         
@@ -103,6 +181,9 @@
                 menu.style.display = 'block'
             }
         }
+
+
+        var r = idade >= 18 ? 'Maior':'Menor'
     </script>
 </body>
 </html>

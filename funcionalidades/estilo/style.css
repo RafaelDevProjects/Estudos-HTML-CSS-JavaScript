@@ -310,4 +310,28 @@
        list-style-position: inside; 
        margin-left: 5px;
     }
+
+    .paragrafo-estilizado { /* paragrafo estilizado com borda */
+        display: block;
+        margin: auto;
+        background-color: #dbd5d5bb;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        padding: 5px;
+        width: 300px;
+        text-align: center;
+        font-size: 11pt;
+
+    }
+
+    .paragrafo-estilizado-colunas {
+        display: flex;
+        justify-content: space-evenly;
+        margin: auto;
+        background-color: #dbd5d5bb;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        width: 300px;
+        font-size: 11pt;
+    }
+
     
