@@ -159,7 +159,68 @@
 
         <p>Os operadores tercenarios tem três partes, a primeira, teste, a segunda, True, terceira, False. Ou seja sempre que o teste for verdadeiro acontecera algo e sempre que for falso o programa fará outra coisa. Veja a estrutura do operador:</p>
 
-        <p style=" margin:auto; width: 300px; text-align:center; color:white; border: solid 1px rgba(0, 0, 0, 0.534);  border-radius: 5px; padding:5px; background-color: rgba(73, 69, 69, 0.795); font-weight: bold;">Teste <span style="color: yellow;background-color: rgba(0, 255, 255, 0.274); padding: 2px;" >?</span>'__True__' <span style="color: yellow;background-color: rgba(0, 255, 255, 0.274); padding: 2px;" >:</span> '__False__'</p>
+        <p style=" margin:auto; max-width: 300px; text-align:center; color:white; border: solid 1px rgba(0, 0, 0, 0.534);  border-radius: 5px; padding:5px; background-color: rgba(73, 69, 69, 0.795); font-weight: bold;">Teste <span style="color: yellow;background-color: rgba(0, 255, 255, 0.274); padding: 2px;" >?</span>'__True__' <span style="color: yellow;background-color: rgba(0, 255, 255, 0.274); padding: 2px;" >:</span> '__False__'</p>
+
+
+        <h2>Dominando o DOM</h2>
+        <p>A sigla DOM é um acronimo para Document Object Model é um conjunto de objetos que dão acesso a certos componentes dentro do site. O DOM esta presente dentro dos sites.</p>
+
+        <picture style="text-align: center; margin: auto;">
+            <source media="(max-width:550px )" srcset="imagens/arvoreDOM.pequena.jpg" type="image/JPEG">
+
+            <source media="(max-width:800px )" srcset="imagens/arvoreDOM.media.jpg" type="image/JPEG">
+
+            <img src="imagens/arvoreDOM.grande.jpg" alt="">
+        </picture>
+
+        <p>Podemos selecionar cada elemento da arvore DOM. Selecionando ele por <span class="exemplo">Marca</span>, por <span class="exemplo">ID</span class="exemplo">, por <span class="exemplo">Nome</span>, por <span class="exemplo">Classe</span> ou por <span class="exemplo">Seletor</span>.</p>
+
+        <div class="paragrafo-estilizado-colunas">
+            <p>por marca
+                <br>por Nome
+                <br>por ID            
+                <br>por Classe
+                <br>por Seletor
+            </p>
+            <p>
+                <span class="exemplo">getElementsByTagName('')</span>
+                <br><span class="exemplo">getElementsByName('')</span>
+                <br><span class="exemplo">getElementById('')</span>
+                <br><span class="exemplo">getElementsByClassName('')</span>
+                <br><span class="exemplo">querySelector('div#name')</span>
+            </p>
+        </div>
+
+
+        <h2>Funções</h2>
+        <p>Funções em JavaScript são blocos de código reutilizáveis que executam tarefas específicas. Elas podem receber dados de entrada, processá-los e retornar um resultado. Funções organizam o código, tornando-o mais compreensível, e são usadas para criar módulos, manipular dados e interagir com aplicativos web.</p>
+
+        <p>Para declarar uma função usar a chave <span class="exemplo">function</span> , seguida pelo nome da função e seus parametros. O corpo da função é aonde fica as instruções quando a função for chamada.</p>
+
+        <p>A função pode retornar um valor opcionalmente usando a palavra chave <span class="exemplo">return.</span></p>
+
+        <img src="imagens/print/onclick.png" alt="" class="img">
+
+        <p>Nessa imagem estamos chamando a função <span class="exemplo">clicou( )</span> quando o usuario clicar com o mouse na div, usando a forma de interação <span class="exemplo">onclick</span></p>
+
+        <img src="imagens/print/functionclicou.png" alt="" class="img">
+
+        <p>Nessa imagem mostra o corpo da função que possui uma instrução de achar o elemento com ID 'area' e mudar o seu texto para 'clicou!'.</p>
+
+
+
+        <h2>Condições</h2>
+        <p>Condições em JavaScript são como bifurcações em um caminho, permitindo que seu código escolha entre diferentes direções com base em informações. O <span class="exemplo">if</span> é como um "se", o <span class="exemplo">else</span> é um "senão", e o <span class="exemplo">else if</span> é como um "ou então se".</p>
+
+        <img src="imagens/print/condicional.png" alt="" class="img">
+
+
+        <h3>Multiplas condições</h3>
+        <p>Para multiplas condições usamos o <span class="exemplo">switch(expressão)</span> que faz com que tenha varios <span class="exemplo">casos(case)</span>, que possuem valores, se o valor de um caso não for encontrado o programa vai para o proximo caso, até encontra-lo. Deve ter um <span class="exemplo">break</span> no final de cada caso, para teminar a sequencia.</p>
+
+        <img src="imagens/print/switch.png" alt="" class="img">
+
+        <p>No final pode ter um <span class="exemplo">defalt</span> ou não, se por um acaso o programa não encontrar o valor.</p>
 
         
         
