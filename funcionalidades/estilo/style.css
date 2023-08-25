@@ -323,7 +323,7 @@
 
     }
 
-    .paragrafo-estilizado-colunas {
+    .paragrafo-estilizado-colunas { /* para paragrafos eslizados em colunas*/
         display: flex;
         justify-content: space-evenly;
         margin: auto;
@@ -332,6 +332,19 @@
         padding: 10px;
         max-width: 400px;
         font-size: 11pt;
+    }
+
+    .code {
+        max-width: 400px;
+        background-color: #1e1e1e;
+        color: white;
+        border-left: solid 6px #bb1919;
+        padding: 5px;
+        margin: auto;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.37);
+        border-radius: 5px;
+
+
     }
 
     
