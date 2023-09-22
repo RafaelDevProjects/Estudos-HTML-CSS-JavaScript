@@ -27,13 +27,14 @@
         background-attachment: fixed;
         font-family: Arial, Helvetica, sans-serif;
         text-align: justify;
+        overflow-x: hidden;
 
     }
 
     header{     /*configuração do header*/
         background-color:#5585af ;
         height: 100px;
-        width: 100vw;
+        width: 100%;
         position: sticky;
         top: 0px;
         z-index: 9;
