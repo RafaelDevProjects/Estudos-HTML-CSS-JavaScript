@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icone/dogcoin.ico.lnk" type="image/x-icon">
+    <link rel="stylesheet" href="estilo/style.css" media="all">
+    <link rel="stylesheet" href="estilo/print.css" media="print">
+    <link rel="stylesheet" href="estilo/midia-query.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>MySQL</title>
+</head>
+<body onresize="mudouTamanho()">
+    <header class="header" id="myheader">
+        <h1>Estudos</h1>
+        <span id="burguer" class="material-icons" onclick="clickMenu()">menu</span>
+        <menu id="menu">
+            <ul>
+                <li>
+                    <a href="index.html">HTML5</a>
+                </li>
+                <li>
+                    <a href="css.html">CSS</a>
+                </li>
+                <li>
+                    <a href="javascript.html">JavaScript</a>
+                </li>
+                <li>
+                    <a href="MySQL.html">MySQL</a>
+                </li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <h1>MySQL</h1>
+        <hr>
+
+        <h2>Linguagem SQL - História</h2>
+        <p>Desenvolvido no inicio dos anos 70 nos laratoríos da IMB. Eram chamdos de banco de daods sequenciais
+        No final dos anos 80 um orgão americano chamado ANSI estiupulou padrões para consltar os bancos de dados relacionais.
+        A linguagem veio com o objetivo de padronizar a forma como é consultado os bancos de dados relacionais.
+        </p>
+
+        <p>Existem bancos de dados que não seqem os padrões SQL, são os bancos de dados NoSQL.
+        A linguagem SQL não é uma linguagem estruturada.</p>
+
+        <ul>Existem alguns grupos de comandos no SQL:</ul>
+        <li>DDL: Permite a manipulação das estrutras do banco de dados.</li>
+        <li>DML: Linguagem de manipulação de dados.</li>
+        <li>DCL: Linguagem de controde de dados, gerencia o banco de dados</li>
+
+
+
+
+
+
+        <h2>MySQL - História</h2>
+        <p>Três desenvolvedores precisavam ter uma interface SQL compativel aos bancos de dados de mercado, para isso criaram o MySQL
+            Em 2008 a empresa que gerenciava o codigo da SQL foi comprada pela empresa <a href="https://en.wikipedia.org/wiki/Sun_Microsystems" target="_blank">Sun Microsystems</a>
+            (dona do projeto JAVA), em 2009 a <span class="exemplo">Oracle</span> compra a sun e vira dona do MySQL 
+
+            <fieldset>
+                <legend>Características</legend>
+                <ul style="columns: 3;">
+                    <li>Sevidor</li>
+                    <li>Portabilidade</li>
+                    <li>Multithreads</li>
+                    <li>Formas de Armazenamento</li>
+                    <li>Velocidade</li>
+                    <li>Desempenho</li>
+                    <li>Segurança</li>
+                    <li>Capacidade</li>
+                    <li>Aplicabilidade</li>
+                    <li>Logs</li>
+                </ul>
+            </fieldset>
+        </p>
+        <h2>Introdução ao MySQL</h2>
+        <p>Dentro do banco de dados temos diversas entidades. Uma delas é a tabela, com colunas e linhas.</p>
+
+
+        <h3>Tabelas:</h3>
+        <p>Cada tabela possui <span class="exemplo">campos(campos) e linhas</span>, para os campos, devemos determinar qual é o tipo de valor colocado
+            ali dentro, sendo ele <span class="exemplo">numérico, lógico ou strings</span>, podemos ter um numero infinito de linhas em uma tabela.
+            <br>
+            A tabela pode ter algo chamado de <span class="exemplo">chave primaria</span>.
+            Um exenplo de chave primaria é uma tabela aonde temos CPFs que não podem ser repetidos, se dissermos que o CPF é chave primaria não podemos ter na mesma tabela duas linhas com CPfs iguais.
+            <br>
+            A <span class="exemplo">chave estrangeira</span> é quando fazemos relações entre tabelas, por exemplo: temos um cliente em uma tabela, com um numero de CPF, na outra tabela devera ter esse cliente cadastrado nessa outra tabela.
+            <br>
+            As tabelas também podem ter um <span class="exemplo">índice</span> para um certo campo.
+        </p>
+
+
+        <h3>Esquemas</h3>
+        <p>Em MySQL, um "esquema" é um container lógico que ajuda a <span class="exemplo">organizar e agrupar objetos de banco de dados</span>, como tabelas, views, procedimentos armazenados, funções e outros elementos relacionados. Um esquema é uma abstração de alto nível que fornece uma estrutura para manter a coerência e a organiz.</p>
+
+
+        <h3>View</h3>
+        <p>No MySQL, uma "view" (visão) é uma <SPAN class="exemplo">representação virtual de uma tabela</SPAN> que é criada a partir de uma ou mais tabelas existentes. Uma view permite aos usuários consultar e manipular os dados de forma mais conveniente, como se estivessem interagindo com uma tabela real. </p>
+        
+        <h3>Procedures</h3>
+        <p>Uma procedure é composta por um <span class="exemplo">conjunto de instruções SQL</span>. Essas instruções podem incluir seleções de dados, inserções, atualizações, exclusões e outras operações SQL.</p>
+
+        <h3>Trigger</h3>
+        <p>Em MySQL, um "trigger" (gatilho) é um tipo especial de procedimento armazenado que é automaticamente executado pelo sistema de gerenciamento de banco de dados (DBMS) em <span class="exemplo">resposta um evento especifico</span>, como uma inserção, atualização ou exclusão de registros. Os triggers são usados para automatizar tarefas e aplicar regras de negócios no nível do banco de dados, sem a necessidade de intervenção manual. </p>
+
+        
+        
+
+
+
+    </main>
+    <script>
+        function mudouTamanho() {
+            if (window.innerWidth >=768) {
+                menu.style.display = 'block'
+            } else {
+                menu.style.display = 'none'
+            }
+
+        }
+        function clickMenu() {
+            if (menu.style.display == "block") {
+                menu.style.display = 'none'
+            
+            } else {
+                menu.style.display = 'block'
+            }
+        }
+    </script>
+    
+</body>
+</html>
