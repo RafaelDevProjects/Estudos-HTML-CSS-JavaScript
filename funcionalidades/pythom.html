@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icone/dogcoin.ico.lnk" type="image/x-icon">
+    <link rel="stylesheet" href="estilo/style.css" media="all">
+    <link rel="stylesheet" href="estilo/print.css" media="print">
+    <link rel="stylesheet" href="estilo/midia-query.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Pythom</title>
+</head>
+<body onresize="mudouTamanho()">
+    <header class="header" id="myheader">
+        <h1>Estudos</h1>
+        <span id="burguer" class="material-icons" onclick="clickMenu()">menu</span>
+        <menu id="menu">
+            <ul>
+                <li>
+                    <a href="index.html">HTML5</a>
+                </li>
+                <li>
+                    <a href="#">CSS</a>
+                </li>
+                <li>
+                    <a href="javascript.html">JavaScript</a>
+                </li>
+                <li>
+                    <a href="MySQL.html">MySQL</a>
+                </li>
+                <li>
+                    <a href="pythom.html">Pythom</a>
+                </li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <h1>Pythom</h1>
+        <hr>
+        <p>Python é uma linguagem de programação de alto nível, interpretada, orientada a objetos e amplamente utilizada em desenvolvimento de software, automação, análise de dados, aprendizado de máquina e muitos outros campos. Foi criada por Guido van Rossum e lançada pela primeira vez em 1991.</p>
+
+
+        <h2>Variáveis</h2>
+        <p>Variáveis são espaços reservados na memória do computador para que possamos armazenar, temporariamente, um determinado dado.
+            As variaveis devem ter identificadores, podemos dizer que o identificador é o nome que atribuimos a uma variável.
+        </p>
+
+        <h2>Tipos de Dados</h2>
+        <p>Agora que já foi definido o que são as variáveis, precisamos definir o tipo do dado que será armazenado dentro da variável. A principio, dentro da nossa proposta de programação
+            , podemos, identificar dois grupos básicos de tipos de dados: numéricos e alfanuméricos.
+
+            <h3>Tipo Numérico</h3>
+            <p><span class="exemplo">Inteiros (int)</span>: Os números inteiros em Python são representados pelo tipo int. Eles podem ser positivos, negativos ou zero. Por exemplo: 5, -10, 0.</p>
+            <p><span class="exemplo">Flutuantes (float)</span>: Os números de ponto flutuante são representados pelo tipo float. Eles incluem números decimais e números com notação científica. Exemplo: 3.14, 2.0e-3.</p>
+            <p><span class="exemplo">Complexos (complex)</span>: Números complexos são representados pelo tipo complex. Eles consistem em uma parte real e uma parte imaginária, ambas sendo números de ponto flutuante. Exemplo: 2 + 3j.</p>
+
+            <h3>Tipos Alfanuméricos</h3>
+            <p><span class="exemplo">Strings (str)</span>: As strings são sequências de caracteres alfanuméricos e são representadas pelo tipo str. Elas podem ser definidas usando aspas simples (' '), aspas duplas (" "), ou até mesmo aspas triplas para strings multilinha. Exemplo: "Olá, mundo!", 'Python'.</p>
+            <p><span class="exemplo">Listas (list)</span>: As listas são coleções ordenadas e mutáveis de objetos, incluindo números, strings e outros tipos. Elas são representadas pelo tipo list e são definidas usando colchetes [ ]. Exemplo: [1, 2, 3], ['a', 'b', 'c']. </p>
+            <p><span class="exemplo">Tuplas (tuple)</span>: Tuplas são semelhantes às listas, mas são imutáveis, ou seja, seus elementos não podem ser modificados após a criação. Elas são definidas usando parênteses ( ). Exemplo: (1, 2, 3), ('apple', 'banana', 'cherry').</p>
+            <p><span class="exemplo">Dicionários (dict</span>): Os dicionários são estruturas de dados que associam chaves (keys) a valores (values) e são representados pelo tipo dict. Cada chave é única. Eles são definidos usando chaves { }. Exemplo: {'nome': 'João', 'idade': 30}.</p>
+            <p><span class="exemplo">Conjuntos (set)</span>: Conjuntos são coleções não ordenadas de elementos únicos e são representados pelo tipo set. Eles são definidos usando chaves { } ou a função set(). Exemplo: {1, 2, 3}, set([1, 2, 2, 3, 3]).</p>
+            <p><span class="exemplo">Booleanos (bool)</span>: Os tipos booleanos representam os valores verdadeiro (True) e falso (False). Eles são frequentemente usados para expressar condições lógicas. Exemplo: True, False.</p>
+
+            <h3>Pedindo um valor ao usuário</h3>
+            <p>Usamos o comando <span class="exemplo">input</span> para pedir um valor ao usúario, lembre-se de colocar o tipo de valor antes do input.</p>
+            <pre class="code"><span style="color: rgb(17, 211, 17);">numero</span> = int(input('Digite um número: '))</pre>
+        
+
+        <h2>Tomada de Decisões</h2>
+            <p>Tomada de decisões em Python, como em qualquer linguagem de programação, envolve a capacidade de criar caminhos diferentes para o código, dependendo das condições específicas. Isso é feito usando estruturas de controle de fluxo, principalmente as declarações <span class="exemplo">if</span>, <span class="exemplo">elif (opcional)</span>, e <span class="exemplo">else</span></p>
+            <p><span class="exemplo">Declaração if</span>: A declaração if é usada para testar uma condição. Se a condição for avaliada como verdadeira, o bloco de código indentado sob o if é executado. Caso contrário, o bloco é ignorado.</p>
+            <p><span class="exemplo">Declaração elif (opcional)</span>: A declaração elif (abreviação de "else if") é usada para testar condições adicionais após um if. Ela permite avaliar múltiplas condições sequencialmente até encontrar uma que seja verdadeira.</p>
+            <p><span class="exemplo">Declaração else (opcional)</span>: A declaração else é usada para definir um bloco de código que será executado caso nenhuma das condições anteriores seja verdadeira.</p>
+            <p><span class="exemplo">Operadores Lógicos</span>: Python oferece operadores lógicos como <span class="exemplo">and (e)</span>, <span class="exemplo">or (ou)</span>, e <span class="exemplo">not (não)</span> para combinar e manipular condições em declarações if.</p>
+            <p><span class="exemplo">Aninhamento de Decisões</span>: É possível aninhar várias declarações if, elif e else para criar estruturas de decisão mais complexas. No entanto, deve-se ter cuidado para manter a clareza do código.</p>
+
+            <pre class="code">nota = 85
+if nota >= 70:
+    if nota >= 90:
+        print("Aprovado com distinção.")
+    else:
+        print("Aprovado.")
+else:
+    print("Reprovado.")</pre>
+
+
+        
+        <h2>Laçoes de Repetições</h2>
+            <p>Em Python, os laços de repetição, também conhecidos como estruturas de controle de fluxo de repetição, são usados para executar um bloco de código repetidamente enquanto uma condição é verdadeira ou para iterar sobre uma sequência de elementos. Existem duas principais construções para isso: o <span class="exemplo">for</span> e o <span class="exemplo">while</span>. </p> 
+            <ul>
+                <h3>Laço while</h3>
+                <li>O laço while é usado para repetir um bloco de código enquanto uma condição especificada for verdadeira.</li>
+                <li>É importante garantir que a condição do while seja eventualmente falsa para evitar loops infinitos.</li>
+                <pre class="code">contador = 0
+while contador < 5:
+    print(contador)
+    contador += 1</pre>
+            </ul>
+            <p>Neste exemplo, o <span class="exemplo">while</span> executa o bloco de código enquanto a variável contador for menor que 5.</p>
+
+
+            <ul>
+                <h3>Laço For</h3>
+                <li>O laço for é usado para iterar sobre uma sequência (como uma lista, tupla, string ou range).</li>
+                <li>Ele executa um bloco de código para cada item na sequência.</li>
+<pre class="code">for i in range(5):
+    print(i)
+</pre>
+            </ul>
+            <p>Neste exemplo, o <span class="exemplo">for</span> itera sobre os números de 0 a 4 e imprime cada valor.</p>
+
+            
+
+
+
+
+
+        
+    
+
+        
+
+
+
+
+        <fieldset>
+            <legend>Comandos importantes</legend>
+            <ul>
+                <li><abbr title="Todas as letras para maiúsculas">.upper()</abbr></li>
+            </ul>
+        </fieldset>
+
+    </main>
+    <script>
+        function mudouTamanho() {
+            if (window.innerWidth >=768) {
+                menu.style.display = 'block'
+            } else {
+                menu.style.display = 'none'
+            }
+        }
+
+        function clickMenu() {
+            if (menu.style.display == "block") {
+                menu.style.display = 'none'
+            } else {
+                menu.style.display = 'block'
+            }
+        }
+    </script>
