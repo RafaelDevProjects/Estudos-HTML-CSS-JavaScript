@@ -1,6 +1,6 @@
-### **Repositorio de Estudos**
-##HTML-CSS-JavaScript-MySQL-Python
-**HTML** :pushpin: conteudo:
+# **Repositorio de Estudos**
+## HTML-CSS-JavaScript-MySQL-Python
+### **HTML** :pushpin: conteudo:
 - textos
 - imagens
 - vídeos
@@ -10,7 +10,7 @@
 - formulários
 
 
-**CSS** :pushpin: design:
+### **CSS** :pushpin: design:
 - cores
 - sombras
 - tamanhos
