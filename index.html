@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="icone/dogcoin.ico.lnk" type="image/x-icon">
-    <link rel="stylesheet" href="estilo/style.css" media="all">
-    <link rel="stylesheet" href="estilo/print.css" media="print">
-    <link rel="stylesheet" href="estilo/midia-query.css">
+    <link rel="shortcut icon" href="funcionalidades/icone/dogcoin.ico.lnk" type="image/x-icon">
+    <link rel="stylesheet" href="funcionalidades/estilo/style.css" media="all">
+    <link rel="stylesheet" href="funcionalidades/estilo/print.css" media="print">
+    <link rel="stylesheet" href="funcionalidades/estilo/midia-query.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="estilo/prism/prism.css">
-    <script src="estilo/prism/prism.js"></script>
+    <link rel="stylesheet" href="funcionalidades/estilo/prism/prism.css">
+    <script src="funcionalidades/estilo/prism/prism.js"></script>
     <title>HTML</title>
 </head>
 <body onresize="mudouTamanho()">
@@ -24,16 +24,16 @@
                     <a href="index.html">HTML5</a>
                 </li>
                 <li>
-                    <a href="css.html">CSS</a>
+                    <a href="funcionalidades/css.html">CSS</a>
                 </li>
                 <li>
-                    <a href="javascript.html">JavaScript</a>
+                    <a href="funcionalidades/javascript.html">JavaScript</a>
                 </li>
                 <li>
-                    <a href="MySQL.html">MySQL</a>
+                    <a href="funcionalidades/MySQL.html">MySQL</a>
                 </li>
                 <li>
-                    <a href="pythom.html">Pythom</a>
+                    <a href="funcionalidades/pythom.html">Pythom</a>
                 </li>
             </ul>
         </menu>
@@ -229,7 +229,7 @@
 
 
         <h3>Usando links internos</h3>
-        <p>Link interno para o head <a href="head.html" rel="prev">ir para a pagina do head</a></p>
+        <p>Link interno para o head <a href="funcionalidades/head.html" rel="prev">ir para a pagina do head</a></p>
 
         <p> Usar a Tag <span class="exemplo">&lt;a&gt;</span> para ir a um link interno, apertar ctrl + espaço para achar o outro arquivo, que deve
             estar na <br>mesma pasta.</p>
@@ -237,8 +237,8 @@
 
         <h3>Links para donwload</h3>
         <ul>
-            <li><a href="livro/pdf-teste.zip" download="'pdf-teste" type="application/pdf">baixar pdf.zip</a></li>
-            <li><a href="livro/pdf-teste.pdf" download="pdf-teste.zip" type="application/zip">baixar pdf</a></li>
+            <li><a href="funcionalidades/livro/pdf-teste.zip" download="'pdf-teste" type="application/pdf">baixar pdf.zip</a></li>
+            <li><a href="funcionalidades/livro/pdf-teste.pdf" download="pdf-teste.zip" type="application/zip">baixar pdf</a></li>
         </ul>
 
         <p>Usar a Tag <span class="exemplo">&lt;a&gt;</span> e colocar como href o caminho de aquivo usando o ctrl + espaço, depois escrever download nome do arquivo, também adicionar um type= "application/zip" ou
@@ -251,11 +251,11 @@
         <h3>Imagens dinamicas</h3>
         <p>Diminua ou aumente o zoom do seu computador ou use o site em diferentes dispositivos</p>
         <picture>
-            <source media="(max-width: 750px )" srcset="imagens/imagem-p.png" type="image/png">
+            <source media="(max-width: 750px )" srcset="funcionalidades/imagens/imagem-p.png" type="image/png">
 
-            <source media="(max-width: 1050px)" srcset="imagens/imagem-m.png" type="image/png">
+            <source media="(max-width: 1050px)" srcset="funcionalidades/imagens/imagem-m.png" type="image/png">
             
-            <img src="imagens/imagem-g.png" alt="imagem grande">
+            <img src="funcionalidades/imagens/imagem-g.png" alt="imagem grande">
         </picture>
 
         <p>Para criar imagens dinamicas, use a tag <span class="exemplo">&lt;picture&gt;</span>, coloque a tag <span class="exemplo">&lt;img&gt;</span> e acima dessa imagem base, adicione a tag <span class="exemplo"> &lt;source&gt;</span> colocando o maximo de largura que cada imagem pode ter com o elemento <span class="exemplo">max-width</span>, dependendo da largura da tela, a imagem vai mudar para , grande, media ou pequena.</p>
@@ -265,9 +265,9 @@
         <h2>Reproduzindo audios</h2>
 
         <audio preload="metadata" controls>
-            <source src="midia/scarlet-fire.mp3" type="audio/mpeg">
-            <source src="midia/scarlet-fire.ogg" type="audio/ogg">
-            <source src="midia/scarlet-fire.wav" type="audio/wav">
+            <source src="funcionalidades/midia/scarlet-fire.mp3" type="audio/mpeg">
+            <source src="funcionalidades/midia/scarlet-fire.ogg" type="audio/ogg">
+            <source src="funcionalidades/midia/scarlet-fire.wav" type="audio/wav">
             <p>Infelizmente o seu dispositivo não reproduz o arquivo <a href="midia/scarlet-fire.mp3">audio</a>.</p>
         </audio>
 
@@ -290,9 +290,9 @@
         <p>Usar a tag <span class="exemplo">&lt;source&gt;</span> para adaptar o tipo de arquivo que cada navegador aceita</p>
         <p>Colocar no Type o tipo de arquivo que esta o seu video, podendo ser eles, arquivos: <b>mkv</b>, <b>webm</b>, <b>mp4</b></p>
         <video width="400" height="300" controls>
-            <source src="midia/Video-Exemplo.mkv" type="video/mp4">
-            <source src="midia/Video-Exemplo.webm" type="video/webm">
-            <source src="midia/video-exemplo.mp4" type="video/mp4">
+            <source src="funcionalidades/midia/Video-Exemplo.mkv" type="video/mp4">
+            <source src="funcionalidades/midia/Video-Exemplo.webm" type="video/webm">
+            <source src="funcionalidades/midia/video-exemplo.mp4" type="video/mp4">
             <p>Infelizmente não foi possivel reproduzir o video <a href="midia/video-exemplo.mp4">clique aqui para baixar o video</a></p>
         </video>
 
@@ -318,7 +318,7 @@
         </form>
         <br>
 
-        <img src="imagens/print/form01.png" alt="magem de formulario" class="img">
+        <img src="funcionalidades/imagens/print/form01.png" alt="magem de formulario" class="img">
 
         <p>Tambem foi usado o <span class="exemplo">autocomplete= "off"</span> que faz com que o texto nao se auto complete nas caixas de input.</p>
         
@@ -376,7 +376,7 @@
         </p>
         <p>Esse select foi feito com o comando <span class="exemplo">&lt;select&gt;</span> junto do elemento <span class="exemplo">&lt;option&gt;</span> que cria uma opção junto do <span class="exemplo">&lt;optgroup&gt;</span> que cria grupo de opções, nele é possivel usar um <span class="exemplo">&lt;label&gt;</span>, para nomear um grupo</p>
 
-        <img src="imagens/print/select.png" alt="imagem do select" class="img">
+        <img src="funcionalidades/imagens/print/select.png" alt="imagem do select" class="img">
 
         <p>O datalist é usado para a mesma coisa so select, porém no datalist é possivel escrever a sua escolha, tirando as que ja estão disponiveis, como no exemplo:</p>
 
@@ -394,7 +394,7 @@
 
         <p>O formulario é feito com o elemento <span class="exemplo">&lt;datalist&gt;</span>, junto com um <span class="exemplo">&lt;input:text&gt;</span> que ira criar uma caixa de texto aonde poderá escrever, no input colocar o atributo <span class="exemplo">list</span> para fazer com que se crie uma lista nesse input, e adicionar o elemento <span class="exemplo">&lt;datalist&gt;</span> com as suas <span class="exemplo">&lt;option&gt;</span>. não esqueça dos <strong>ids</strong>.</p>
 
-        <img src="imagens/print/datalist.png" alt="imagem do datalist" class="img">
+        <img src="funcionalidades/imagens/print/datalist.png" alt="imagem do datalist" class="img">
 
         <h3>Textarea</h3>
         <p>O elemento <span class="exemplo">textarea</span> cria uma área de texto para o úsuario digitar uma mensagem.</p>
@@ -406,7 +406,7 @@
 
         <p>Essa área de texto foi criada com o comando <span class="exemplo">&lt;textarea&gt;</span> aonde o programador pode escolher o numero de linhas e colunas</p>
 
-        <img src="imagens/print/textarea.png" alt="imagem do textarea" class="img"> 
+        <img src="funcionalidades/imagens/print/textarea.png" alt="imagem do textarea" class="img"> 
 
 
         <h3>Usando output</h3>
@@ -431,7 +431,7 @@
 
         <p>Esse <span class="exemplo">output</span> foi criado para somar esses dois numeros, isso é possivel por que foi feito um id em cada número, e somados dentro de um output, isso foi possivel graças a programação em <span class="exemplo">JavaScript</span></p>
 
-        <img src="imagens/print/output.png" alt="imagem do output" class="img">
+        <img src="funcionalidades/imagens/print/output.png" alt="imagem do output" class="img">
         
     </main>
 
