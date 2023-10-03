@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="estilo/print.css" media="print">
     <link rel="stylesheet" href="estilo/midia-query.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="estilo/prism/prism.css">
+    <script src="estilo/prism/prism.js"></script>
     <title>JavaScript</title>
 </head>
 <body onresize="mudouTamanho()">
@@ -71,7 +73,10 @@
 
         <p>Se o programador quiser mudar o tipo primitivo de string para number é preciso usar o comando <span class="exemplo">Number.parseInt(x)</span>, para números inteiros, ou <span class="exemplo">Number.parseFloat(x)</span>, para números reais.</p>
         
-        <img src="imagens/print/number.parseint.png" alt="covertendo os dados" class="img">
+        <pre><code class="language-js">var n1 = window.prompt('Digite um número') // Pergunta um número
+var n2 = window.prompt('Digite um número') //pergunta um número
+var s = Number.parseInt(n1) + Number.parseInt(n2) //Converte para Number
+window.alert('A soma desses dois números é igual a ' + s) //soma</code></pre>
 
         <p>A conversão de Number para string é feita pelo comando <span class="exemplo">String(n)</span> ou <span class="exemplo">n.toString()</span>.
         <br>A formatação de numeros para mais casas decimais pode ser feita pelo comando <span class="exemplo">n1.fixed(2)</span>, desse jeito o numero tera 2 casas decimais.
@@ -168,6 +173,9 @@
         <p style=" margin:auto; max-width: 300px; text-align:center; color:white; border: solid 1px rgba(0, 0, 0, 0.534);  border-radius: 5px; padding:5px; background-color: rgba(73, 69, 69, 0.795); font-weight: bold;">Teste <span style="color: yellow;background-color: rgba(0, 255, 255, 0.274); padding: 2px;" >?</span>'__True__' <span style="color: yellow;background-color: rgba(0, 255, 255, 0.274); padding: 2px;" >:</span> '__False__'</p>
 
 
+
+
+
         <h2>Dominando o DOM</h2>
         <p>A sigla DOM é um acronimo para Document Object Model é um conjunto de objetos que dão acesso a certos componentes dentro do site. O DOM esta presente dentro dos sites.</p>
 
@@ -198,6 +206,9 @@
         </div>
 
 
+
+
+
         <h2>Funções</h2>
 
     <p>Funções em JavaScript são blocos de código reutilizáveis que executam tarefas específicas. Elas podem receber dados de entrada, processá-los e <span class="exemplo">retornar</span> um resultado. Funções organizam o código, tornando-o mais compreensível, e são usadas para criar módulos, manipular dados e interagir com aplicativos web.</p>
@@ -206,47 +217,47 @@
 
         <p>A função pode retornar um valor opcional usando a palavra chave <span class="exemplo">return.</span></p>
 
-        <pre class="code">
-    <span style="color: yellow;">function verificarParOuImpar</span><span style="color: red;">(numero)</span> {
-        if (numero % 2 === 0) {
-            <span style="color: red;">return</span> "par";
-        } else {
-            <span style="color: red;">return</span> "ímpar";
-        }
+        <pre><code class="language-js">function verificarParOuImpar(numero){
+    if (numero % 2 === 0) {
+        return "par";
+    } else {
+        return "ímpar";
     }
-        <span style="color: orange;">verificarParouImpar(5)</span> //chamada</pre>
+}
+verificarParouImpar(5) //chamada </code></pre>
+
 
 
 
         <h2>Condições</h2>
         <p>Condições em JavaScript são como bifurcações em um caminho, permitindo que seu código escolha entre diferentes direções com base em informações. O <span class="exemplo">if</span> é como um "se", o <span class="exemplo">else</span> é um "senão", e o <span class="exemplo">else if</span> é como um "ou então se".</p>
 
-        <pre class='code'>
-    <span style="color:yellow;">if (temperature >= 30)</span> {
+        <pre><code class="language-js">if (temperature >= 30){
     console.log("It's a hot day!");
-    } <span style="color:yellow;">else if (temperature >= 20 && temperature < 30)</span> {
+}else if (temperature >= 20 && temperature &lt; 30){
     console.log("It's a pleasant day.");
-    } <span style="color:yellow;">else</span> {
+}else{
     console.log("It's a bit chilly.");
-    }</pre>
+    }</code></pre>
 
 
 
         <h3>Multiplas condições</h3>
         <p>Para multiplas condições usamos o <span class="exemplo">switch(expressão)</span> que faz com que tenha varios <span class="exemplo">casos(case)</span>, que possuem valores, se o valor de um caso não for encontrado o programa vai para o proximo caso, até encontra-lo. Deve ter um <span class="exemplo">break</span> no final de cada caso, para teminar a sequencia.</p>
 
-        <pre class="code">
-    <span style="color:yellow;">switch (dayOfWeek)</span> {
-        case 1:
-            dayName = "Sunday";
-            break;
-        case 2:
-            dayName = "Monday";
-            break;
-        case 3:
-        }</pre>
+        <pre><code class="language-js">switch (dayOfWeek){
+    case 1:
+        dayName = "Sunday";
+        break;
+    case 2:
+        dayName = "Monday";
+        break;
+    case 3:
+    }</code></pre>
+    
+    <p>No final pode ter um <span class="exemplo">defalt</span> ou não, se por um acaso o programa não encontrar o valor.</p>
 
-        <p>No final pode ter um <span class="exemplo">defalt</span> ou não, se por um acaso o programa não encontrar o valor.</p>
+
 
 
 
@@ -256,68 +267,63 @@
         <h3>Loop while</h3>
         <p>O loop "while" é usado quando você não sabe quantas vezes precisará repetir o código e a repetição depende de uma condição. Enquanto a condição for verdadeira, o bloco de código dentro do loop será executado.</p>
 
+        <pre><code class="language-js">var count = 0;
+while (count &lt; 5) {
+    console.log(count);
+    count++;
+}</code></pre>
         
-        <pre class="code">
-    var count = 0;
-    <span style="color:yellow;">while (count < 5)</span> {
-            console.log(count);
-            count++;
-    }</pre>
-        
+
         <h3>Loop for</h3>
         <p>O loop "for" é usado quando você sabe exatamente quantas vezes deseja executar um bloco de código. Ele consiste em três partes: a <span class="exemplo">inicialização</span>, a <span class="exemplo">condição de continuação</span> e o <span class="exemplo">incremento/decremento</span>. O código dentro do loop é executado repetidamente até que a condição de continuação seja falsa.</p>
 
-        <pre class="code">
-    <span style="color:yellow ">for (var i = 0; i < 5; i++)</span> {
-        console.log(i);
-    }</pre>
+        <pre><code class="language-js">for (var i = 0; i &lt; 5; i++) {
+    console.log(i);
+}</code></pre>
 
 
-    <h2>Variaveis Compostas</h2>
-    <p>Variáveis compostas são estruturas de dados que permitem armazenar e organizar <span class="exemplo">múltiplos valores</span> relacionados em uma única unidade. Os dois tipos principais de variáveis compostas são <span class="exemplo">arrays e listas</span>.</p>
-
-
-
-    <h3>Array</h3>
-    <p>Arrays são coleções fixas de elementos do mesmo tipo, acessados por índices numéricos.</p>
-
-    <pre class="code">
-    // Exemplo de array em JavaScript
-    let numeros = <span style="color: yellow;">[1, 2, 3, 4, 5]</span>;
-
-    // Acessando elementos do array por <span>índice</span>
-    console.log(numeros<span style="color: yellow;">[0]</span>);  // Saída: 1
-    console.log(numeros<span style="color: yellow;">[2]</span>);  // Saída: 3
-
-    // Modificando elementos do array
-    numeros[1] = 10;
-    console.log(numeros);  // Saída: [1, 10, 3, 4, 5]</pre>
+        <h2>Variaveis Compostas</h2>
+        <p>Variáveis compostas são estruturas de dados que permitem armazenar e organizar <span class="exemplo">múltiplos valores</span> relacionados em uma única unidade. Os dois tipos principais de variáveis compostas são <span class="exemplo">arrays e listas</span>.</p>
 
 
 
-    <h3>Listas</h3>
-    <p>Listas são coleções dinâmicas de elementos de tipos diferentes, que podem ser facilmente modificados em tamanho e conteúdo. </p>
+        <h3>Array</h3>
+        <p>Arrays são coleções fixas de elementos do mesmo tipo, acessados por índices numéricos.</p>
 
-    <pre class="code">
-    let cores = <span style="color: yellow;">["vermelho", "verde", "azul"]</span>;
-    console.log("Primeira cor:", cores[0]);
-    cores.push("amarelo");
-    console.log("Total de cores:", cores.length);</pre>
+        <pre><code class="language-js">// Exemplo de array em JavaScript
+let numeros = [1, 2, 3, 4, 5];
+
+// Acessando elementos do array por índice
+console.log(numeros [0]);  // Saída: 1
+console.log(numeros [2]);  // Saída: 3
+
+// Modificando elementos do array
+numeros[1] = 10;
+console.log(numeros);  // Saída: [1, 10, 3, 4, 5]</code></pre>
 
 
 
-    <p>Para ler os arrays e as listas podemos usar a repetição <span class="exemplo">for</span> que ira fazer com que essas variaveis compostas sejam escritas de uma forma mais facil para o cliente.</p>
+
+        <h3>Listas</h3>
+        <p>Listas são coleções dinâmicas de elementos de tipos diferentes, que podem ser facilmente modificados em tamanho e conteúdo. </p>
+
+        
+        <pre><code class="language-js">let cores = ["vermelho", "verde", "azul"];
+console.log("Primeira cor:", cores[0]);
+cores.push("amarelo");
+console.log("Total de cores:", cores.length);</code></pre>
 
 
 
-    <pre class="code">
-    let cores = ["vermelho", "verde", "azul"];
+        <p>Para ler os arrays e as listas podemos usar a repetição <span class="exemplo">for</span> que ira fazer com que essas variaveis compostas sejam escritas de uma forma mais facil para o cliente.</p>
 
-    // Loop para exibir todas as cores
-    <span style="color: yellow;">for (let pos in cores)</span> {
-        console.log("Cor:", cores[pos]);
-    }</pre>
 
+
+        <pre><code class="language-js">let cores = ["vermelho", "verde", "azul"];
+// Loop para exibir todas as cores
+for (let pos in cores){
+    console.log("Cor:", cores[pos]);
+}</code></pre>
 
 
     </main>

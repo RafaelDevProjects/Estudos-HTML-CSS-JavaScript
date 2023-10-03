@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="estilo/print.css" media="print">
     <link rel="stylesheet" href="estilo/midia-query.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="estilo/prism/prism.css">
+    <script src="estilo/prism/prism.js"></script>
     <title>Pythom</title>
 </head>
 <body onresize="mudouTamanho()">
@@ -65,7 +67,7 @@
 
             <h3>Pedindo um valor ao usuário</h3>
             <p>Usamos o comando <span class="exemplo">input</span> para pedir um valor ao usúario, lembre-se de colocar o tipo de valor antes do input.</p>
-            <pre class="code"><span style="color: rgb(17, 211, 17);">numero</span> = int(input('Digite um número: '))</pre>
+            <pre><code class="language-python">numero = int(input('Digite um número: '))</code></pre>
         
 
         <h2>Tomada de Decisões</h2>
@@ -76,14 +78,14 @@
             <p><span class="exemplo">Operadores Lógicos</span>: Python oferece operadores lógicos como <span class="exemplo">and (e)</span>, <span class="exemplo">or (ou)</span>, e <span class="exemplo">not (não)</span> para combinar e manipular condições em declarações if.</p>
             <p><span class="exemplo">Aninhamento de Decisões</span>: É possível aninhar várias declarações if, elif e else para criar estruturas de decisão mais complexas. No entanto, deve-se ter cuidado para manter a clareza do código.</p>
 
-            <pre class="code">nota = 85
-if nota >= 70:
-    if nota >= 90:
+            <pre><code class="language-python">nota = 85
+if nota &gt;= 70:
+    if nota &gt;= 90:
         print("Aprovado com distinção.")
     else:
         print("Aprovado.")
 else:
-    print("Reprovado.")</pre>
+    print("Reprovado.")</code></pre>
 
 
         
@@ -93,10 +95,10 @@ else:
                 <h3>Laço while</h3>
                 <li>O laço while é usado para repetir um bloco de código enquanto uma condição especificada for verdadeira.</li>
                 <li>É importante garantir que a condição do while seja eventualmente falsa para evitar loops infinitos.</li>
-                <pre class="code">contador = 0
-while contador < 5:
+                <pre><code class="language-python">contador = 0
+while contador &lt; 5:
     print(contador)
-    contador += 1</pre>
+    contador += 1</code></pre>
             </ul>
             <p>Neste exemplo, o <span class="exemplo">while</span> executa o bloco de código enquanto a variável contador for menor que 5.</p>
 
@@ -105,13 +107,61 @@ while contador < 5:
                 <h3>Laço For</h3>
                 <li>O laço for é usado para iterar sobre uma sequência (como uma lista, tupla, string ou range).</li>
                 <li>Ele executa um bloco de código para cada item na sequência.</li>
-<pre class="code">for i in range(5):
-    print(i)
-</pre>
             </ul>
+            <pre><code>for i in range(5):
+    print(i)</code></pre>
             <p>Neste exemplo, o <span class="exemplo">for</span> itera sobre os números de 0 a 4 e imprime cada valor.</p>
 
             
+        <h2>Listas</h2>
+            <p>Em Python, uma lista é uma estrutura de dados que permite armazenar uma coleção ordenada de elementos. As listas são muito versáteis e amplamente utilizadas na programação. Para criar uma lista, você pode usar <span class="exemplo">colchetes [ ]</span> e inserir os elementos separados por vírgulas.</p>
+
+            <p>Acesso a Elementos: Você pode acessar os elementos de uma lista usando <span class="exemplo">índices</span> (começando em 0 para o primeiro elemento). Por exemplo:</p>
+
+            <pre><code class="language-python">primeiro_elemento = minha_lista[0]  # Retorna 1</code></pre>
+
+
+
+            <p>Para saber o tamanho (número de elementos) de uma lista, use a função <span class="exemplo">len()</span>. Por exemplo:</p>
+
+            <pre><code class="language-python">tamanho = len(minha_lista)  # Retorna 5</code></pre>
+
+
+
+
+            <p>Você pode adicionar elementos a uma lista usando o método <span class="exemplo">append()</span> para adicionar um elemento ao final da lista ou o método <span class="exemplo">insert()</span> para inserir um elemento em uma posição específica.</p>
+
+            <pre><code class="language-python">minha_lista.append(6)      # Adiciona 6 ao final
+minha_lista.insert(2, 7)   # Insere 7 na posição 2</code></pre>
+
+
+
+
+            <p>Para verificar se um elemento está em uma lista, use o operador '<span class="exemplo">in</span>'.</p>
+
+            <pre><code class="language-python">if 3 in minha_lista:
+    print("3 está na lista")</code></pre>
+
+
+
+            <p>Para remover elementos, você pode usar o método <span class="exemplo">remove()</span> para remover um elemento específico ou a instrução <span class="exemplo">del</span> para remover um elemento com base no índice.</p>
+
+            <pre><code class="language-python">minha_lista.remove(4)  # Remove o elemento 4
+del minha_lista[1]     # Remove o elemento na posição 1</code></pre>
+
+
+
+            <p><span class="exemplo">Listas Aninhadas</span>: Você pode criar listas dentro de listas, formando listas aninhadas (ou listas multidimensionais).</p>
+
+            <pre><code class="language-python">matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]</code></pre>
+
+
+
+
+
+        <h2>Funções</h2>
+
+
 
 
 
@@ -129,6 +179,9 @@ while contador < 5:
             <legend>Comandos importantes</legend>
             <ul>
                 <li><abbr title="Todas as letras para maiúsculas">.upper()</abbr></li>
+                <li><abbr title="valor mais alto">max()</abbr></li>
+                <li><abbr title="valor mais baixo">min()</abbr></li>
+                <li><abbr title="Valor soma">sum()</abbr></li>
             </ul>
         </fieldset>
 

@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="estilo/print.css" media="print">
     <link rel="stylesheet" href="estilo/midia-query.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="estilo/prism/prism.css">
+    <script src="estilo/prism/prism.js"></script>
     <title>CSS</title>
 </head>
 <body onresize="mudouTamanho()">
@@ -103,7 +105,13 @@
         <p>Baixar a fonte desejada, e adicionar no seu codigo o comando <span class="exemplo">@font-face</span> </p>
         <p>exemplo:</p>
         
-        <img src="imagens/print/fontface.png" alt="foto do comando @font-face" class="img">
+        <pre><code class="language-css">@font-face{
+    font-family: 'Coffe';  
+    scr: url('fontes/CoffeCake.otf') format ('opentype'),
+    url('fontes/CoffeCake.ttf') format ('truetype');
+    font-weight:normal;
+    font-style:normal;
+}</code></pre>
 
         <p>Há varios tipos de formatos de arquivo de fontes, os mais usados são <abbr title="opentype">otf</abbr> e <abbr title="truetype">ttf</abbr></p>
         <p>Colocar a fonte no seu css usando o nome que você deu para ela, no exemplo o nome da fonte é 'Coffe'</p>
@@ -145,8 +153,10 @@
         <p>Ao passar o mouse por cima de cada quadrado (div) o quadrado ficou de outra cor, isso é graças ao comando <span class="exemplo">:hover</span> esse comando ativa uma ação quando estamos com o mouse em cima do quadrado</p>
         <p>Para usar as pseudo-classes usar ':' e apos usar o comando, como no exemplo:</p>
         
-        <img src="imagens/print/hover.png" alt="foto do comando :hover" class="img">
-
+        <pre><code class="language-css">.quadrado:hover{
+    background-color: blue;
+}</code></pre>
+ 
         <p>Outro exemplo:</p>
         <div class="escondido">
             <li>Passe o mouse aqui</li>
@@ -154,8 +164,20 @@
         </div>
         <p>Nesse caso foi usado uma <span class="exemplo">div</span> com a classe 'escondido' e usando a pseudo-classe <span class="exemplo">:houver</span> com o sinal de &gt; para marcar que o paragrafo que esta dentro da div é filho da div</p>
        
-        <img src="imagens/print/comandoescondido.png" alt="foto do comando para esconder texto" class="img"> 
+        <pre><code class="language-css">.escondido > p{       /*configuração para texto escondido*/
+    display: none;
+}
 
+.escondido:hover > p{
+    display: block;
+    color: white;
+    background-color: #0b59998c;
+    width: 200px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding: 2px;
+}</code></pre>
+ 
 
 
 
@@ -167,8 +189,11 @@
         
         <p>Depois do site exemplo aparece um contudo, o [link] que foi adicionado pelos comandos descritos acima, feito desse jeito</p>
 
+        <pre><code class="language-css">a::after{
+    content: "[Link]";
+}</code></pre>
 
-        <img src="imagens/print/contentafter.png" alt="foto do a::after" class="img">
+
 
 
         <h2>Modelo de caixas</h2>
@@ -217,7 +242,7 @@
         <h2>Box shadow</h2>
         <p>Para criar sombras nas suas caixas usar o comando <span class="exemplo">box shadow</span>.</p>
 
-        <img src="imagens/print/box-shadow.png" alt="imagem do comando box-shadow" class="img">
+        <pre><code class="language-css">box-shadow: 10px 10px 20px black;</code></pre>
 
         <ul>
             <li>3px: quantidade para direita</li>
@@ -342,7 +367,13 @@
 
         <p>Usando dessa forma:</p>
         
-        <img src="imagens/print/tabela.png" alt="imagem de tabela" class="img">
+        <pre><code class="language-html">&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td&gt;A1&lt;/td&gt;
+        &lt;td&gt;B1&lt;/td&gt;
+        &lt;td&gt;C1&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
 
         <p>nesse exemplo esta apenas a primeira linha da tabela</p>
         <p>Também foi usado o css para criar as bordas, como comando <span class="exemplo">border</span>, e a junção das bordas como comando <span class="exemplo" >border-collapse</span>, também foi usado o <span class="exemplo">width</span> para arrumar a lagura da tabela, dentro das <abbr title="dados de tabela">&lt;td&gt;</abbr></p>
@@ -401,11 +432,28 @@
             </tfoot>
         </table>
 
-        <img src="imagens/print/thead.png" alt="imagem do thead"  class="img">
-        <br>
-        <img src="imagens/print/tbody.png" alt="imagem do tbody" class="img">
-        <br>
-        <img src="imagens/print/tfoot.png" alt="imagem do tfoot" class="img">
+
+        <pre><code class="language-html">&lt;table class="tgrande"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th scope="col"&gt;estado&lt;/th&gt;
+            &lt;th&lt; scope="col" style="width: 100px;"&gt;população&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;São paulo&lt;/td&gt;
+            &lt;td class="num"&gt;41.262.199&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td scope="row"&gt;&lt;strong&gt;Total de habitantes&lt;/strong&gt;&lt;/td&gt;
+            &lt;td class="num"&gt;122.840.921&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+
 
 
 
@@ -414,16 +462,22 @@
 
         <p>O <span class="exemplo">scope:"col"</span> é usado em colunas do seu th, como no exemplo:</p>
 
-        <img src="imagens/print/scope-col.png" alt="imagem de scope-col" class="img">
+        <pre><code class="language-html">&lt;th scope="col"&gt;estado&lt;/th&gt;</code></pre>
+
 
         <p>O <span class="exemplo">scope:"row"</span> é usado para linhas do th, como no exemplo:</p>
 
-        <img src="imagens/print/scope-row.png" alt="imagem de scope-row" class="img">
+        <pre><code class="language-html">&lt;td scope="row"&gt;Total de habitantes&lt;/td&gt;</code></pre>
+
 
         <h3>Efeito zebrado</h3>
         <p>O efeito zabrado ajuda na leitura de uma tabela, pode ser feito no css com a pseudo classe <span class="exemplo">:nth-child()</span>, usando a variavel <abbr title="impar">odd</abbr> e a <abbr title="par">even</abbr>.</p>
 
-        <img src="imagens/print/nth-child.png" alt="imagem do nth-child" class="img">
+        <pre><code class="language-css">tbody > tr:nth-child(odd){
+    background-color: lightgray;
+}</code></pre>
+
+
 
 
         <h3>Mesclagem de células</h3>
@@ -445,8 +499,10 @@
             </tr>
         </table>
 
-        <img src="imagens/print/colspan.png" alt="colspan" class="img">
-        <img src="imagens/print/rowspan.png" alt="rowspan" class="img">
+
+        <pre><code class="language-html">&lt;td colspan="2"&gt;A&lt;/td&gt;</code></pre>
+
+        <pre><code class="language-html">&lt;td rowspan="2"&gt;F&lt;/td&gt;</code></pre>
 
         <p>Usando o comando <span class="exemplo">colspan="2"</span> a letra 'A' ficou o cupando duas colunas da tabela.</p>
 
@@ -470,7 +526,7 @@
 
         <p>Para criar um iframe basta usar a tag <span class="exemplo">&lt;frame&gt;</span> e dentro dela colocar o <span class="exemplo">src</span>. Fazer as configuraçoes de aparencia no css</p>
 
-        <img src="imagens/print/iframe.png" alt="imagem do iframe" class="img">
+        <pre><code class="language-html">&lt;iframe src="index.html" frameborder="0" class="iframe01"&gt;&lt;/iframe&gt;</code></pre>
 
         <h3>Usando para Mapas</h3>
 
@@ -496,12 +552,13 @@
         <h3>Portrait</h3>
         <p>Também podemos usar as Media quearies para diferenciar quando o aparelho esta no modo retrato. Usando o comando <span class="exemplo">portrait</span> na área de midia nos links, como no exemplo a baixo.</p>
 
-        <img src="imagens/print/portrait.png" alt="imagem do portrait" class="img">
+        <pre><code class="language-html">&lt;link rel="stylesheet" href="estilo/print.css" media="screen and (orientation: portrait)"&gt;</code></pre>
+
 
         <h3>Landscape</h3>
         <p>Assim como o portrait, podemos usar a orientação <span class="exemplo">landscape</span>, quando a tela estiver no modo paisagem.</p>
 
-        <img src="imagens/print/landscape.png" alt="imagem do landscape" class="img">
+        <pre><code class="language-html">&lt;link rel="stylesheet" href="estilo/print.css" media="screen and (orientation: landscape)"&gt;</code></pre>
 
 
         <h3>Typical Device Breakpoints</h3>

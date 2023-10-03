@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="estilo/print.css" media="print">
     <link rel="stylesheet" href="estilo/midia-query.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="estilo/prism/prism.css">
+    <script src="estilo/prism/prism.js"></script>
     <title>MySQL</title>
 </head>
 <body onresize="mudouTamanho()">
@@ -113,18 +115,16 @@
         <h2>Criando banco de dados</h2>
         <p>Para criar um banco de dados usar o comando:</p>
 
-<pre class="code">
-    CREATE {DATABASE | SCHEMA} [IF NOT EXISTS] db_name
+        <pre><code class="language-sql"></code>CREATE {DATABASE | SCHEMA} [IF NOT EXISTS] db_name
         [create_option] ...
     create_option: [DEFAULT] {
-        <span class="comentarioCodigo">// O tipo de caracteres (UTF-8)</span>
+        // O tipo de caracteres (UTF-8)
         CHARACTER SET [=] charset_name
-        <span class="comentarioCodigo">//Especifica o padrão</span>
+        //Especifica o padrão
         | COLLATE [=] collation_name
-        <span class="comentarioCodigo">//Especifica se vai ser criptografado</span>
+        //Especifica se vai ser criptografado</span>
         | ENCRYPTION [=] {'Y' | 'N'}
-    }
-</pre>
+    }</pre>
 
 
 
@@ -140,81 +140,99 @@
 
 
         <h2>Criando Tabela:</h2>
-        <p>Cada campo da tabela precisa ter um tipo de valor,sendo eles: <br>
-        <h3>Numéricos:</h3>
-            <ul style="columns: 2;">
-                <li><abbr title="valor em bytes: 1">TINYINT</abbr></li>
-                <li><abbr title="valor em bytes: 2">SMALLINT</abbr></li>
-                <li><abbr title="valor em bytes: 3">MEDIUMINT</abbr></li>
-                <li><abbr title="valor em bytes: 4">INT</abbr></li>
-                <li><abbr title="valor em bytes: 8">BIGINT</abbr></li>
-                <li><abbr title="ponto flutuante">FLOAT</abbr></li>
-                <li><abbr title="Valores Decimais">DECIMAL</abbr></li>
-                <li><abbr title="Valores de ate 64 bits. BIT(1) - pode ser 1 ou 0">BIT</abbr></li>
-            </ul>
-            <p>Cada valor pode ter um incremento, sendo eles: <br>
-                <strong>SIGNED ou UNSIGNED</strong>:  Vai possuir ou não sinal no número. <br>
-                <strong>ZEROFILL</strong>:  Preenche com zeros os Espaços. <br>
-                <strong>AUTO_INCREMENT</strong>:  Sequencia auto incrementada
+            <p>Cada campo da tabela precisa ter um tipo de valor,sendo eles: <br>
+            <h3>Numéricos:</h3>
+                <ul style="columns: 2;">
+                    <li><abbr title="valor em bytes: 1">TINYINT</abbr></li>
+                    <li><abbr title="valor em bytes: 2">SMALLINT</abbr></li>
+                    <li><abbr title="valor em bytes: 3">MEDIUMINT</abbr></li>
+                    <li><abbr title="valor em bytes: 4">INT</abbr></li>
+                    <li><abbr title="valor em bytes: 8">BIGINT</abbr></li>
+                    <li><abbr title="ponto flutuante">FLOAT</abbr></li>
+                    <li><abbr title="Valores Decimais">DECIMAL</abbr></li>
+                    <li><abbr title="Valores de ate 64 bits. BIT(1) - pode ser 1 ou 0">BIT</abbr></li>
+                </ul>
+                <p>Cada valor pode ter um incremento, sendo eles: <br>
+                    <strong>SIGNED ou UNSIGNED</strong>:  Vai possuir ou não sinal no número. <br>
+                    <strong>ZEROFILL</strong>:  Preenche com zeros os Espaços. <br>
+                    <strong>AUTO_INCREMENT</strong>:  Sequencia auto incrementada
+                </p>
+                <p>Erros de <strong>OUT OF RANGE</strong> vão acontecer quando os valores estourarem os limites.</p>
             </p>
-            <p>Erros de <strong>OUT OF RANGE</strong> vão acontecer quando os valores estourarem os limites.</p>
-        </p>
 
 
         <h3>Data e Hora:</h3>
-        <ul>
-            <li>DATE - datas</li>
-            <li>DATETIME - data e hora</li>
-            <li>TIMESTAMP - fuso horários</li>
-            <li>TIME - horário</li>
-            <li>YEAR - Ano</li>
-        </ul>
+            <ul>
+                <li>DATE - datas</li>
+                <li>DATETIME - data e hora</li>
+                <li>TIMESTAMP - fuso horários</li>
+                <li>TIME - horário</li>
+                <li>YEAR - Ano</li>
+            </ul>
 
         
         <h3>Srings</h3>
-        <ul>
-            <li>CHAR - cadeia de caractéres com valor fixo (de 0 a 255).</li>
-            <li>VARCHAR - cadeia de caractéres com valor variado (de 0 a 255).</li>
-            <li>BINARY - cadeia de caractéres com valor fixo (de 0 a 255). Expressos em binário.</li>
-            <li>VARBINARY - cadeia de caractéres com valor variado de (de 0 a 255). Expressos em binário.</li>
-            <li>BLOB - binário longo.</li>
-            <li>TEXT - texto longo.</li>
-            <li>ENUM - permite armazenar uma lista pré definida de valores.</li>
-            <li>SET e COLLATE - que tipo de conjunto de caractéres serão suportados (ex: UTF-8)</li>
-        </ul>
+            <ul>
+                <li>CHAR - cadeia de caractéres com valor fixo (de 0 a 255).</li>
+                <li>VARCHAR - cadeia de caractéres com valor variado (de 0 a 255).</li>
+                <li>BINARY - cadeia de caractéres com valor fixo (de 0 a 255). Expressos em binário.</li>
+                <li>VARBINARY - cadeia de caractéres com valor variado de (de 0 a 255). Expressos em binário.</li>
+                <li>BLOB - binário longo.</li>
+                <li>TEXT - texto longo.</li>
+                <li>ENUM - permite armazenar uma lista pré definida de valores.</li>
+                <li>SET e COLLATE - que tipo de conjunto de caractéres serão suportados (ex: UTF-8)</li>
+            </ul>
 
 
         <h3>Spacial:</h3>
-        <ul>
-            <li>GEOMETRY</li>
-            <li>POINT</li>
-            <li>LINESTRING</li>
-            <li>POLYGON</li>
-        </ul>
+            <ul>
+                <li>GEOMETRY</li>
+                <li>POINT</li>
+                <li>LINESTRING</li>
+                <li>POLYGON</li>
+            </ul>
 
-        <p>Na imagem a seguir temos a criação de uma tabela de um banco de dados para una loja:</p>
-        <img src="imagens/print/MySQL-create table.png" alt="CREATE TABLE">
+            <p>Na imagem a seguir temos a criação de uma tabela de um banco de dados para una loja:</p>
+            <img src="imagens/print/MySQL-create table.png" alt="CREATE TABLE" class="img">
 
 
 
 
         <h3>Inserindo registros na tabela</h3>
-        <p>Para inserir dados dentro de uma tabela usar o comando <span class="exemplo">INSERT</span></p>
-        <img src="imagens/print/MySQL-INSERT.png" alt="INSERT">
-        <p>Desse jeito os dados serão inseridos na tabela. Não esqueça que os dados devem estar na ordem conforme as colunas colocadas no insert into! </p>
+            <p>Para inserir dados dentro de uma tabela usar o comando <span class="exemplo">INSERT</span></p>
+            <img src="imagens/print/MySQL-INSERT.png" alt="INSERT" class="img">
+            <p>Desse jeito os dados serão inseridos na tabela. Não esqueça que os dados devem estar na ordem conforme as colunas colocadas no insert into! </p>
 
 
 
         <h3>Alterando registros</h3>
-        <p>Para alterar registros da sua tabela, usar o comando <span class="exemplo">UPDADE</span> tbnome <span class="exemplo">SET</span> mudança.</p>
-        <img src="imagens/print/MySQL-UPDADE.png" alt="UPDATE">
-        <p>O comando <span class="exemplo">WHERE</span> cria um filtro, somente esse produto será alterado.</p>
+            <p>Para alterar registros da sua tabela, usar o comando <span class="exemplo">UPDADE</span> tbnome <span class="exemplo">SET</span> mudança.</p>
+            <img src="imagens/print/MySQL-UPDADE.png" alt="UPDATE" class="img">
+            <p>O comando <span class="exemplo">WHERE</span> cria um filtro, somente esse produto será alterado.</p>
 
 
 
         <h3>Excluindo Registros</h3>
-        <p>Para deletar registros de dentro de uma tabela é preciso usa o comando <span class="exemplo">WHERE</span> novamente para filtrar e o comando <span class="exemplo">DELETE FROM </span> </p>
-        <img src="imagens/print/MySQL-DELETE.png" alt="DELETE">
+            <p>Para deletar registros de dentro de uma tabela é preciso usa o comando <span class="exemplo">WHERE</span> novamente para filtrar e o comando <span class="exemplo">DELETE FROM </span> </p>
+            <img src="imagens/print/MySQL-DELETE.png" alt="DELETE" class="img">
+
+
+
+        <h3>Incluindo chave prímaria</h3>
+            <p>Uma chave primária (primary key) no MySQL é um conceito importante em bancos de dados relacionais. Ela é uma coluna ou um conjunto de colunas que serve para identificar exclusivamente cada registro em uma tabela.
+                <p>Definição: Para definir uma chave primária em uma tabela, você pode usar a cláusula <span class="exemplo">PRIMARY KEY</span> ao criar a tabela ou modificá-la posteriormente usando a instrução <span class="exemplo">ALTER TABLE</span>.</p>
+                <img src="imagens/print/MySQL-Chave.png" alt="" class="img">
+            </p>
+
+
+        <h3>Filtrando registros</h3>
+            <p>Usando o comando <strong style="color: rgb(46, 127, 194)">SELECT</strong> NOME, MATRICULA <strong style="color: rgb(46, 127, 194)">FROM</strong> tbvendedores podemos filtrar uma tabela para ela encontrar somente os campos nome e matricula.</p>
+            <img src="imagens/print/MySQL-Tabela.png" alt="">
+
+            <p>Podemos usar também filtros simples com o comando (<strong style="color: rgb(46, 127, 194)">SELECT</strong> * <strong style="color: rgb(46, 127, 194)">FROM</strong> tbvendedores <strong style="color: rgb(46, 127, 194)">WHERE</strong> NOME = 'Claudia Morais'; ) isso fará com que seja filtrado apenas no nome Cláudia Morais dentro da tabela.</p>
+            <img src="imagens/print/MySQL-Filtros.png" alt="">
+
+            
 
 
 
