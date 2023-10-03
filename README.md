@@ -1,4 +1,4 @@
-# HTML-CSS-JavaScript
+# HTML-CSS-JavaScript-MySQL-Python
 ## **Repositorio de Estudos**
 **HTML** :pushpin: conteudo:
 - textos
