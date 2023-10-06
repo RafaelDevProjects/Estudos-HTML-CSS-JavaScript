@@ -572,6 +572,25 @@
             <li>tela grande: acima de <strong>1200px</strong></li>
         </ul>
 
+
+
+
+        <h2>FlexBox</h2>
+        <pre><code class="language-css">.container{
+    display: flex; /*Altera o display para flex*/
+    background-color: lightblue; 
+    justify-content: center; /*Alinha o conteudo horizontalmente*/
+    align-items: center; /*Alinha o conteudo verticalmente*/
+    justify-content: space-between; /*O espaço entre os itens do conteiner*/
+    flex-direction: column; /*Coloca a direção como coluna*/
+    flex-direction: column-reverse; /*Coloca a coluna como reversa*/
+    flex-wrap: wrap; /*O warp faz todos os elementos filhos quebram de linha*/
+}
+.item{
+    background-color: lightgrey;
+    border: solid 1px black;
+}</code></pre>
+
     </main>
     <script>
         function mudouTamanho() {
