@@ -20,7 +20,7 @@
         <menu id="menu">
             <ul>
                 <li>
-                    <a href="index.html">HTML5</a>
+                    <a href="../index.html">HTML5</a>
                 </li>
                 <li>
                     <a href="#">CSS</a>
@@ -160,6 +160,109 @@ del minha_lista[1]     # Remove o elemento na posição 1</code></pre>
 
 
         <h2>Funções</h2>
+
+        <p>Funções em Python são blocos de código reutilizáveis que executam uma tarefa específica. Elas ajudam a organizar e modularizar seu código, tornando-o mais legível e fácil de manter. </p>
+
+
+
+        <h3>Definição da função</h3>
+        <p>Você pode definir uma função usando a palavra-chave <span class="exemplo">def</span>, seguida pelo nome da função e parênteses que podem conter argumentos.</p>
+    
+        <pre><code class="language-python">def saudacao(nome):
+    print(f"Olá, {nome}!")</code></pre>
+
+        
+        <h3>Chamando Funções</h3>
+
+        <p>Para executar uma função, você a chama pelo nome e passa os argumentos necessários entre parênteses.</p>
+
+        <pre><code class="language-python">saudacao("Alice")</code></pre>
+
+
+        <h3>Argumentos</h3>
+
+        <p>Funções podem ter zero ou mais argumentos. Os argumentos são valores que você passa para a função para que ela os processe.</p>
+
+        <pre><code class="language-python">def soma(a, b):
+    return a + b</code></pre>
+
+        
+        <h3>Retorno de valores</h3>
+        <p>Uma função pode retornar um valor usando a palavra-chave <span class="exemplo">return</span>. Isso permite que você obtenha resultados da função para uso posterior.</p>
+
+
+        <pre><code class="language-python">resultado = soma(3, 5)</code></pre>
+
+
+        <h3>Funções Recursivas</h3>
+        <p>Funções podem chamar a si mesmas. Isso é útil para resolver problemas que podem ser divididos em subproblemas semelhantes.</p>
+
+        <pre><code class="language-python">def fatorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * fatorial(n-1)</code></pre>
+
+
+        <h2>Dicionários</h2>
+        <p>Dicionários em Python são estruturas de dados que permitem armazenar e organizar pares de chave-valor. Aqui está um resumo das principais características dos dicionários em Python:</p>
+
+        <h3>Definição de Dicionário</h3>
+        <p>Um dicionário é definido usando chaves {} e contém pares de chave-valor separados por dois-pontos :.</p>
+        <pre><code class="language-python">meu_dicionario = {"chave1": "valor1", "chave2": "valor2"}</code></pre>
+
+
+        <h3>Acesso a Valores</h3>
+        <p>Você pode acessar os valores de um dicionário fornecendo a chave correspondente entre colchetes [].</p>
+        <pre><code class="language-python">print(meu_dicionario["chave1"])  # Saída: "valor1"</code></pre>
+
+
+
+        <h3>Modificação de Valores</h3>
+        <p>Os valores de um dicionário podem ser alterados atribuindo um novo valor a uma chave existente.</p>
+        <pre><code class="language-python">meu_dicionario["chave2"] = "novo_valor"</code></pre>
+
+
+        <h3>Adição de Novos Pares</h3>
+        <p>Você pode adicionar novos pares chave-valor ao dicionário simplesmente atribuindo um valor a uma chave inexistente.</p>
+        <pre><code class="language-python">meu_dicionario["chave3"] = "valor3"</code></pre>
+
+
+        <h3>Remoção de Pares</h3>
+        <p>Use a palavra-chave del para remover um par chave-valor específico.</p>
+        <pre><code class="language-python">del meu_dicionario["chave1"]</code></pre>
+
+
+        <h3>Verificação de Existência</h3>
+        <p>Você pode verificar se uma chave existe em um dicionário usando o operador in.</p>
+        <pre><code class="language-python">if "chave2" in meu_dicionario:
+    print("A chave2 existe no dicionário.")</code></pre>
+
+
+        <h3>Iteração em Dicionários</h3>
+        <p>É possível iterar pelos pares chave-valor de um dicionário usando loops for.</p>
+        <pre><code class="language-python">for chave, valor in meu_dicionario.items():
+    print(f"A chave {chave} tem o valor {valor}.")</code></pre>
+
+
+        <h3>Métodos Úteis</h3>
+        <p>Dicionários em Python têm métodos úteis, como keys(), values(), e items(), que retornam as chaves, valores e pares chave-valor, respectivamente.</p>
+        <pre><code class="language-python">chaves = meu_dicionario.keys()
+    valores = meu_dicionario.values()
+    pares = meu_dicionario.items()</code></pre>
+
+        
+        <hr>
+
+
+            
+        
+
+
+        
+
+
+            
 
 
 
