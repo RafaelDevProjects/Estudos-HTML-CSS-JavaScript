@@ -166,13 +166,13 @@ window.alert('A soma desses dois números é igual a ' + s) //soma</code></pre>
         <br>O operador de Disjunção é o sinal <span class="exemplo">||</span>, também é um operador binario e no português seria assim: ____ <span class="exemplo">ou</span> _____
         </p>
 
-        <h3>Tercenários</h3>
+        <h3>Ternarios</h3>
 
         <p>Os operadores tercenarios tem três partes, a primeira, teste, a segunda, True, terceira, False. Ou seja sempre que o teste for verdadeiro acontecera algo e sempre que for falso o programa fará outra coisa. Veja a estrutura do operador:</p>
 
         <p style=" margin:auto; max-width: 300px; text-align:center; color:white; border: solid 1px rgba(0, 0, 0, 0.534);  border-radius: 5px; padding:5px; background-color: rgba(73, 69, 69, 0.795); font-weight: bold;">Teste <span style="color: yellow;background-color: rgba(0, 255, 255, 0.274); padding: 2px;" >?</span>'__True__' <span style="color: yellow;background-color: rgba(0, 255, 255, 0.274); padding: 2px;" >:</span> '__False__'</p>
 
-
+        <pre class="language-js"><code>let resultado = (numero % 2 === 0) ? 'par':'impar';</code></pre>
 
 
 
@@ -252,7 +252,8 @@ verificarParouImpar(5) //chamada </code></pre>
     case 2:
         dayName = "Monday";
         break;
-    case 3:
+    default:
+        dayName = "none";
     }</code></pre>
     
     <p>No final pode ter um <span class="exemplo">defalt</span> ou não, se por um acaso o programa não encontrar o valor.</p>
@@ -299,7 +300,10 @@ console.log(numeros [2]);  // Saída: 3
 
 // Modificando elementos do array
 numeros[1] = 10;
-console.log(numeros);  // Saída: [1, 10, 3, 4, 5]</code></pre>
+console.log(numeros);  // Saída: [1, 10, 3, 4, 5]
+
+//verificando se tem um elemento dentro do array
+console.log(numeros.includes('1'));</code></pre>
 
 
 
