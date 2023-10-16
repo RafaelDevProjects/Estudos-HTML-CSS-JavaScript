@@ -289,6 +289,64 @@ count_maçã = frutas.count('maçã')  # Retorna 1
 index_banana = frutas.index('banana')  # Retorna 1</code></pre>
 
         <p>As tuplas são frequentemente usadas quando você deseja armazenar um conjunto de valores relacionados que não devem ser alterados durante a execução do programa, como coordenadas x e y, informações sobre data e hora, etc.</p>
+
+        <h2>Manipulando Arquivos</h2>
+        <p>A manipulação de arquivos em Python é uma tarefa comum em programação, e o Python oferece diversas funcionalidades para lidar com arquivos de diferentes tipos, como leitura, escrita, criação e exclusão de arquivos. Aqui estão os conceitos básicos de como funciona a manipulação de arquivos em Python:</p>
+
+
+        <h3>Abertura de Arquivos:</h3>
+        <p>Você pode abrir um arquivo usando a função <span class="exemplo">open( )</span>. Esta função aceita dois argumentos: o nome do arquivo que você deseja abrir e o modo de abertura (leitura, escrita, etc.).</p>
+
+        <pre><code class="language-python">arquivo = open("meu_arquivo.txt", "r")</code></pre>
+
+        <p>Modos de abertura comuns:
+            <ul>
+                <li><span class="exemplo">"r"</span>: leitura (padrão).</li>
+                <li><span class="exemplo">"w"</span>: escrita, cria um novo arquivo ou sobrescreve o arquivo existente.</li>
+                <li><span class="exemplo">"a"</span>: anexação, adiciona dados ao final de um arquivo existente.</li>
+                <li><span class="exemplo">"b"</span>: modo binário para arquivos (por exemplo, "rb" ou "wb").</li>
+                <li><span class="exemplo">"x"</span>: cria o arquivo para escrita, mas gera um erro se o arquivo já existir.</li>
+            </ul>
+        </p>
+
+
+
+        <h3>Leitura de Arquivos:</h3>
+        <p>Para ler o conteúdo de um arquivo, você pode usar métodos como <span class="exemplo">read()</span>, <span class="exemplo">readline()</span>, ou <span class="exemplo">readlines()</span>. Exemplo de leitura de um arquivo linha por linha:</p>
+
+        <pre><code class="language-python">with open("meu_arquivo.txt", "r") as arquivo:
+    for linha in arquivo:
+        print(linha)</code></pre>
+
+        
+
+        <h3>Escrita em Arquivos:</h3>
+        <p>Para escrever em um arquivo, use o modo <span class="exemplo">"w"</span> ou <span>"a"</span> ao abrir o arquivo e, em seguida, use o método <span class="exemplo">write()</span> para adicionar conteúdo ao arquivo.</p>
+        <pre><code class="language-python">with open("meu_arquivo.txt", "w") as arquivo:
+    arquivo.write("Este é um exemplo de escrita em arquivo.\n")</code></pre>
+
+
+        <h3>Fechamento de Arquivos:</h3>
+        <p>Sempre feche o arquivo após terminar de usá-lo para liberar os recursos do sistema. Você pode fazer isso explicitamente usando o método <span class="exemplo">close()</span> ou, preferencialmente, usando um bloco with (context manager), que fecha automaticamente o arquivo quando você sai do bloco.</p>
+        <pre><code class="language-python">with open("meu_arquivo.txt", "r") as arquivo:
+    conteudo = arquivo.read()
+# O arquivo é automaticamente fechado ao sair do bloco "with". </code></pre>
+
+        
+        <h3>Manipulação de Arquivos Binários:</h3>
+        <p>Para arquivos binários, como imagens, use o modo <span class="exemplo">"rb"</span> para leitura e <span>"wb"</span> para escrita.</p>
+        <pre><code class="language-python">with open("imagem_origem.jpg", "rb") as origem, open("imagem_destino.jpg", "wb") as destino:
+    destino.write(origem.read())</code></pre>
+
+        
+            
+        <h3>Manipulação de Diretórios:</h3>
+        <p>O módulo <span class="exemplo">os</span> e o módulo <span class="exemplo">os.path</span> fornecem funcionalidades para trabalhar com diretórios, como criar, renomear e excluir diretórios.</p>
+        <pre><code class="language-python">import os
+os.mkdir("novo_diretorio")</code></pre>
+
+
+        <p>Lembre-se de que é importante lidar com exceções ao trabalhar com arquivos, pois podem ocorrer erros durante a leitura ou escrita. Portanto, sempre use estruturas de controle, como <span class="exemplo">try</span> e <span>except, para tratar possíveis exceções relacionadas à manipulação de arquivos.</p></span>
         <hr>
 
 

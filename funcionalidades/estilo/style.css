@@ -55,7 +55,7 @@
 
     menu{   /*menu do header*/
         display: block;
-        box-shadow: 1px 6px 4px 0px rgba(0, 0, 0, 0.219);
+        box-shadow: 1px 6px 6px 0px rgba(0, 0, 0, 0.185);
     }
 
     menu > ul{
