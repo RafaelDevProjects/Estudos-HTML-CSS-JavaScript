@@ -20,19 +20,19 @@
         <menu id="menu">
             <ul>
                 <li>
-                    <a href="../index.html">HTML5</a>
+                    <a href="../index.html"><strong>HTML5</strong></a>
                 </li>
                 <li>
-                    <a href="#">CSS</a>
+                    <a href="css.html"><strong>CSS</strong></a>
                 </li>
                 <li>
-                    <a href="javascript.html">JavaScript</a>
+                    <a href="javascript.html"><strong>JavaScript</strong></a>
                 </li>
                 <li>
-                    <a href="MySQL.html">MySQL</a>
+                    <a href="MySQL.html"><strong>MySQL</strong></a>
                 </li>
                 <li>
-                    <a href="pythom.html">Python</a>
+                    <a href="pythom.html"><strong>Python</strong></a>
                 </li>
             </ul>
         </menu>
@@ -251,7 +251,44 @@ del minha_lista[1]     # Remove o elemento na posição 1</code></pre>
     valores = meu_dicionario.values()
     pares = meu_dicionario.items()</code></pre>
 
-        
+        <h2>Tuplas</h2>
+        <p>Em Python, uma tupla é um tipo de estrutura de dados que permite armazenar um conjunto ordenado de elementos.</p>
+        <ol>
+            <li><strong>Imutabilidade</strong>: As tuplas são imutáveis, o que significa que, uma vez criadas, não é possível alterar, adicionar ou remover elementos individuais.</li>
+            <li><strong>Sintaxe</strong>: As tuplas são definidas usando parênteses, por exemplo: (1, 2, 3). Também é possível criar uma tupla sem parênteses, desde que haja uma vírgula para separar os elementos: 1, 2, 3.</li>
+            <li><strong>Elementos Ordenados</strong>: Os elementos em uma tupla são ordenados e podem ser acessados por meio de índices, começando em 0. Por exemplo, para acessar o segundo elemento de uma tupla t, você usaria t[1].</li>
+            <li><strong>Heterogeneidade</strong>: As tuplas podem conter elementos de diferentes tipos de dados, como inteiros, strings, float, etc.</li>
+            <li><strong>Comprimento Fixo</strong>: Uma vez criada, o tamanho de uma tupla é fixo e não pode ser alterado.</li>
+            <li><strong>Packing e Unpacking</strong>: Você pode criar uma tupla empacotando vários valores em uma única variável e, em seguida, desempacotá-la para obter os valores individuais. Por exemplo:
+                <pre><code class="language-python">tupla = (1, 2, 3)
+a, b, c = tupla  # Isso desempacota os valores para a, b e c</code></pre></li>
+            <li><strong>Iteração</strong>: Você pode percorrer os elementos de uma tupla usando um loop for ou acessá-los diretamente por índice.</li>
+            <li><strong>Métodos Básicos</strong>: As tuplas suportam métodos básicos, como count para contar ocorrências de um elemento e index para encontrar o índice de um elemento.</li>
+        </ol>
+
+        <p>Exemplo de uso de tuplas:</p>
+        <pre><code class="language-python"># Criando uma tupla
+frutas = ('maçã', 'banana', 'laranja')
+
+# Acessando elementos
+print(frutas[0])  # Saída: 'maçã'
+
+# Iterando pela tupla
+for fruta in frutas:
+    print(fruta)
+
+# Empacotando e desempacotando
+tupla = 1, 2, 3  # Empacotando
+a, b, c = tupla  # Desempacotando
+
+# Verificando o comprimento
+comprimento = len(frutas)  # Retorna 3
+
+# Métodos
+count_maçã = frutas.count('maçã')  # Retorna 1
+index_banana = frutas.index('banana')  # Retorna 1</code></pre>
+
+        <p>As tuplas são frequentemente usadas quando você deseja armazenar um conjunto de valores relacionados que não devem ser alterados durante a execução do programa, como coordenadas x e y, informações sobre data e hora, etc.</p>
         <hr>
 
 
