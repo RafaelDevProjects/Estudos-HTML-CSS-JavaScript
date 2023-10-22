@@ -345,8 +345,70 @@ index_banana = frutas.index('banana')  # Retorna 1</code></pre>
         <pre><code class="language-python">import os
 os.mkdir("novo_diretorio")</code></pre>
 
-
         <p>Lembre-se de que é importante lidar com exceções ao trabalhar com arquivos, pois podem ocorrer erros durante a leitura ou escrita. Portanto, sempre use estruturas de controle, como <span class="exemplo">try</span> e <span>except, para tratar possíveis exceções relacionadas à manipulação de arquivos.</p></span>
+
+
+
+
+
+        <h2>Manipulação de Strings</h2>
+        <p>Manipular strings em Python é uma tarefa comum e importante, uma vez que as strings são usadas para representar texto. Python oferece uma ampla gama de métodos e operadores para realizar várias operações em strings. Abaixo, você encontrará algumas das operações de manipulação de strings mais comuns em Python:</p>
+        
+
+
+        <h3>Concatenação de Strings:</h3>
+        <p>Para combinar duas ou mais strings, você pode usar o operador <span class="exemplo">+</span> ou o método <span class="exemplo">str.join()</span>.</p>
+        <pre><code class="language-python">str1 = "Olá"
+str2 = "Mundo"
+resultado = str1 + " " + str2  # Concatenação com o operador +
+resultado = " ".join([str1, str2])  # Concatenação com o método join()</code></pre>
+        
+
+        <h3>Comprimento de uma String:</h3>
+        <p>Para obter o número de caracteres em uma string, você pode usar a função <span class="exemplo">len()</span>.</p>
+        <pre><code class="language-python">texto = "Python é uma linguagem de programação"
+comprimento = len(texto)  # Retorna 31</code></pre>
+
+
+        <h3>Acessar Caracteres em uma String:</h3>
+        <p>Você pode acessar caracteres em uma string usando <span class="exemplo">índices</span>.</p>
+        <pre><code class="language-python">texto = "Python"
+primeiro_caracter = texto[0]  # Retorna 'P'</code></pre>
+
+
+        <h3>Fatiamento de Strings:</h3>
+        <p>Para obter partes específicas de uma string, você pode usar a notação de <span class="exemplo">fatiamento</span>.</p>
+        <pre><code class="language-python">texto = "Python é incrível"
+parte = texto[7:10]  # Retorna "é "</code></pre>
+
+
+        <h3>Métodos de Busca e Substituição:</h3>
+        <p>Você pode usar métodos como <span class="exemplo">str.find()</span>, <span class="exemplo">str.replace()</span>, <span class="exemplo">str.count()</span>, <span class="exemplo">str.startswith()</span>, e <span class="exemplo">str.endswith()</span> para buscar e substituir substrings, contar ocorrências e verificar se uma string começa ou termina com um determinado prefixo ou sufixo.</p>
+        <pre><code class="language-python">texto = "Python é uma linguagem de programação"
+texto.find("linguagem")  # Retorna a posição onde "linguagem" começa (12)
+novo_texto = texto.replace("Python", "Java")  # Substitui "Python" por "Java"</code></pre>
+
+
+        <h3>Maiúsculas e Minúsculas:</h3>
+        <p>Você pode dividir uma string em substrings usando o método <span class="exemplo">str.split()</span>.</p>
+        <pre><code class="language-python">frase = "Python é uma linguagem de programação"
+palavras = frase.split()  # Divide a string em palavras</code></pre>
+
+
+        <h3>Remover Espaços em Branco:</h3>
+        <p>Você pode remover espaços em branco no início e no final de uma string usando <span class="exemplo">str.strip()</span> ou remover espaços em branco à esquerda ou à direita usando <span class="exemplo">str.lstrip()</span> ou<span class="exemplo"> str.rstrip()</span>.</p>
+        <pre><code class="language-python">texto = "   Python   "
+texto_stripped = texto.strip()  # Retorna "Python"</code></pre>
+
+
+
+
+
+
+        
+
+
+        
         <hr>
 
 
