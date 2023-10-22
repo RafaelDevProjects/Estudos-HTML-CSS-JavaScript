@@ -591,6 +591,17 @@
     border: solid 1px black;
 }</code></pre>
 
+
+        <h2>Grid</h2>
+        <pre><code class="language-css">.container {
+    background-color: bisque;
+    display: grid;
+    grid-template-columns: 500px 200px 200px; /*Ajusta o tamanho horizontal*/
+    grid-template-rows: 100px 100px 100px; /*Ajusta o tamanho vertical*/
+    grid-template-columns: 1fr 1fr 2fr; /*Ajusta por fração da tela*/
+    grid-template-columns: repeat(3,1fr) /*Vai repetir a fração de 1 três vezes */
+}</code></pre>
+
     </main>
     <script>
         function mudouTamanho() {
