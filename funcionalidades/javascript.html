@@ -329,6 +329,24 @@ for (let pos in cores){
     console.log("Cor:", cores[pos]);
 }</code></pre>
 
+
+
+        <h3>addEventListener</h3>
+        <p>Para adicionar um evento, o <span class="exemplo">addEventListener</span> executa uma função ao clicar</p>
+        <pre><code class="language-js">const tirarDiv = document.querySelector('.tirarDiv');
+const VoltarDiv = document.querySelector('.voltarDiv');
+const card = document.querySelector('.card')
+
+tirarDiv.addEventListener('click', function(){
+    card.style.display = 'none';
+});
+
+VoltarDiv.addEventListener('click', function(){
+    card.style.display = 'flex'
+});</code></pre>
+
+
+
         <fieldset>
             <legend>Comandos</legend>
             <ul>
