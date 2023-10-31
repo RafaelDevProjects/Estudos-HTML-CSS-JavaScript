@@ -389,16 +389,97 @@ texto.find("linguagem")  # Retorna a posição onde "linguagem" começa (12)
 novo_texto = texto.replace("Python", "Java")  # Substitui "Python" por "Java"</code></pre>
 
 
-        <h3>Maiúsculas e Minúsculas:</h3>
+        <h3>Divisão de strings</h3>
         <p>Você pode dividir uma string em substrings usando o método <span class="exemplo">str.split()</span>.</p>
         <pre><code class="language-python">frase = "Python é uma linguagem de programação"
 palavras = frase.split()  # Divide a string em palavras</code></pre>
+
+        <h3>Metodos de Transformação</h3>
+        <p>Existem métodos de string para transformar o caso, como <span class="exemplo">lower()</span>, <span class="exemplo">upper()</span>, e <span class="exemplo">title()</span></p>
+        
+
 
 
         <h3>Remover Espaços em Branco:</h3>
         <p>Você pode remover espaços em branco no início e no final de uma string usando <span class="exemplo">str.strip()</span> ou remover espaços em branco à esquerda ou à direita usando <span class="exemplo">str.lstrip()</span> ou<span class="exemplo"> str.rstrip()</span>.</p>
         <pre><code class="language-python">texto = "   Python   "
 texto_stripped = texto.strip()  # Retorna "Python"</code></pre>
+
+        <h3>Verificação de Tipo de Caracteres:</h3>
+        <p>Os métodos <span class="exemplo">isalpha()</span>, <span class="exemplo">isdigit()</span>, <span class="exemplo">isalnum()</span>, entre outros, verificam o tipo de caracteres em uma string.</p>
+
+        
+        <h2>Manipulando arquivos JSON</h2>
+        <p>Arquivos JSON (JavaScript Object Notation) são uma forma popular de armazenar e transmitir dados estruturados em formato de texto. Em Python, você pode manipular arquivos JSON usando a biblioteca integrada chamada json. Aqui está um resumo de como trabalhar com arquivos JSON em Python:</p>
+
+        <h3>Importe a biblioteca JSON:</h3>
+        <pre><code class="language-python">import json</code></pre>
+
+        <h3>Abrir um arquivo JSON para leitura:</h3>
+        <p>Para abrir um arquivo JSON existente para leitura, você pode usar a função <span class="exemplo">open</span> e, em seguida, o método <span class="exemplo">json.load</span> para carregar o conteúdo do arquivo em um objeto Python.</p>
+        <pre><code class="language-python">with open('arquivo.json', 'r') as arquivo:
+    dados = json.load(arquivo)</code></pre>
+
+        <h3>Manipular dados JSON:</h3>
+        <p>Após carregar os dados do arquivo JSON em uma estrutura de dados Python (normalmente um dicionário), você pode manipulá-los como faria com qualquer outra estrutura de dados Python.</p>
+
+        <h3>Abrir um arquivo JSON para escrita:</h3>
+        <p>Para criar ou sobrescrever um arquivo JSON, você pode usar a função open com o modo de escrita <span class="exemplo">'w'</span> e, em seguida, o método <span class="exemplo">json.dump</span> para escrever um objeto Python no arquivo JSON.</p>
+        <pre><code class="language-python">dados = {"nome": "João", "idade": 30}
+    with open('arquivo.json', 'w') as arquivo:
+        json.dump(dados, arquivo)</code></pre>
+
+        <h3>Formatação de saída:</h3>
+        <p>Você pode especificar a formatação do arquivo JSON para torná-lo mais legível, definindo o argumento <span class="exemplo">indent</span> no <span class="exemplo">json.dump</span>. Isso adicionará espaçamento e recuo ao arquivo JSON.</p>
+        <pre><code class="language-python">with open('arquivo_formatado.json', 'w') as arquivo:
+    json.dump(dados, arquivo, indent=4)</code></pre>
+
+        <h3>Tratamento de erros:</h3>
+        <p>Certifique-se de lidar com exceções ao trabalhar com arquivos JSON, como <span class="exemplo">FileNotFoundError</span> ao tentar abrir um arquivo inexistente ou <span class="exemplo">json.JSONDecodeError</span> ao tentar carregar dados JSON inválidos.</p>
+
+        <h2>Convesando com o sistema operacional</h2>
+        <p>A biblioteca <span class="exemplo">platform</span> em Python fornece informações gerais sobre o sistema operacional e o ambiente de execução. Ela é útil para obter informações básicas sobre o sistema em que o código está sendo executado. Aqui estão alguns dos principais comandos disponíveis na biblioteca platform:</p>
+
+        <ol>
+            <li><span class="exemplo">platform.system()</span>: Retorna o nome do sistema operacional. Isso pode ser "Linux", "Windows", "Darwin" (para macOS), "Java", entre outros.
+                <pre><code class="language-python">import platform
+
+sistema = platform.system()
+print("Sistema Operacional:", sistema)</code></pre>
+            </li>
+            <li><span class="exemplo">platform.release()</span>: Retorna a versão do sistema operacional.
+                <pre><code class="language-python">import platform
+
+versao = platform.release()
+print("Versão do Sistema Operacional:", versao)</code></pre>
+            </li>
+            <li><span class="exemplo">platform.machine()</span>: Retorna a arquitetura da máquina, como "i386", "x86_64", "arm64", etc.
+                <pre><code class="language-python">import platform
+
+arquitetura = platform.machine()
+print("Arquitetura da Máquina:", arquitetura)</code></pre>
+            </li>
+            <li><span class="exemplo">platform.version()</span>: Retorna informações detalhadas sobre a versão do sistema operacional, geralmente incluindo informações adicionais sobre o ambiente de sistema.
+                <pre><code class="language-python">import platform
+
+informacoes_versao = platform.version()
+print("Informações de Versão:", informacoes_versao)</code></pre>
+            </li>
+            <li><span class="exemplo">platform.architecture()</span>: Retorna a arquitetura do sistema, como "32 bits" ou "64 bits"
+                <pre><code class="language-python">import platform
+
+arquitetura = platform.architecture()
+print("Arquitetura do Sistema:", arquitetura)</code></pre>
+            </li>
+            <li><span class="exemplo">platform.node()</span>: Retorna o nome da máquina de rede (nome do host) no qual o código Python está sendo executado.
+                <pre><code class="language-python">import platform
+
+nome_do_host = platform.node()
+print("Nome do Host:", nome_do_host)</code></pre>
+            </li>
+
+        </ol>
+
 
 
 
@@ -410,30 +491,6 @@ texto_stripped = texto.strip()  # Retorna "Python"</code></pre>
 
         
         <hr>
-
-
-            
-        
-
-
-        
-
-
-            
-
-
-
-
-
-
-
-        
-    
-
-        
-
-
-
 
         <fieldset>
             <legend>Comandos importantes</legend>
