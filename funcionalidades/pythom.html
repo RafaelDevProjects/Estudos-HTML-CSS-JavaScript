@@ -481,16 +481,117 @@ print("Nome do Host:", nome_do_host)</code></pre>
         </ol>
 
 
+        <h2>Protocolos de Comunicação e Python</h2>
+        <p>Em Python, você pode implementar protocolos de comunicação usando várias abordagens, dependendo dos requisitos e das tecnologias envolvidas. Alguns dos protocolos de comunicação mais comuns em Python incluem:</p>
+
+        <h3>TCP/IP (Transmission Control Protocol/Internet Protocol)</h3>
+        <p>O TCP/IP é um protocolo amplamente utilizado para comunicação na Internet e em redes locais. Você pode usar a biblioteca padrão socket do Python para criar aplicativos que se comunicam via TCP/IP. O <span class="exemplo">socket</span> permite que você crie sockets do <span class="exemplo">lado do cliente</span> e do <span class="exemplo">lado do servidor</span> para enviar e receber dados através da rede.</p>
+        <pre><code class="language-python">import socket
+
+# Lado do servidor
+servidor = "127.0.0.1"
+porta = 43210
+server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server_socket.bind((servidor, porta))
+server_socket.listen(1)
+client_socket, client_endereco = server_socket.accept()
+dado_recebido = client_socket.recv(1024)
+client_socket.send(b"Ola, cliente!")
+client_socket.close()
+
+# Lado do cliente
+servidor = "127.0.0.1"
+porta = 43210
+msg = bytes(input('Digite algo: '), 'utf-8')
+client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+client_socket.connect((servidor, porta))
+client_socket.send(msg)
+responsta = client_socket.recv(1024)
+client_socket.close()</code></pre>
+        
+
+        <h3>UDP (User Datagram Protocol)</h3>
+        <p>Em resumo, o UDP é uma escolha adequada para aplicações que requerem baixa latência e não são sensíveis à perda ocasional de pacotes. No entanto, é importante notar que o UDP não é adequado para todas as situações, especialmente para aplicações que exigem confiabilidade na entrega de dados. Nesses casos, o TCP, com seu controle de congestionamento e garantia de entrega, é uma escolha mais apropriada.</p>
+        <pre><code class="language-python">import socket
+#lado do servidor
+# Cria um socket UDP
+server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
+# Associa o socket a um endereço IP e porta
+server_address = ("localhost", 12345)
+server_socket.bind(server_address)
+
+print(f"Servidor aguardando em {server_address}")
+
+while True:
+    data, client_address = server_socket.recvfrom(1024)
+    print(f"Recebido {len(data)} bytes de {client_address}: {data.decode()}")
+
+    # Responde ao cliente
+    response = "Mensagem recebida no servidor!"
+    server_socket.sendto(response.encode(), client_address)
+        </code></pre>
+        <p>Neste exemplo, o servidor cria um socket UDP e o associa a um endereço IP e porta. Em seguida, ele entra em um loop onde aguarda pacotes UDP. Quando um pacote é recebido, ele imprime os dados e o endereço do cliente e envia uma resposta de volta para o cliente.</p>
+
+        <pre><code class="language-python">import socket
+#Lado do Cliente
+# Cria um socket UDP
+client_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
+# Define o endereço do servidor
+server_address = ("localhost", 12345)
+
+# Dados a serem enviados
+message = "Olá, servidor!"
+client_socket.sendto(message.encode(), server_address)
+
+# Recebe a resposta do servidor
+data, server_address = client_socket.recvfrom(1024)
+print(f"Recebido {len(data)} bytes de {server_address}: {data.decode()}")
+
+# Fecha o socket do cliente
+client_socket.close()
+        </code></pre>
+        <p>O cliente cria um socket UDP e envia uma mensagem para o servidor especificado por seu endereço IP e porta. Em seguida, ele espera pela resposta do servidor e imprime a resposta recebida.</p>
+        
+
+        <h3>FTP (File Transfer Protocol)</h3>
+        <p>O File Transfer Protocol (FTP) é um protocolo utilizado para a transferência de arquivos entre sistemas em uma rede, comumente a Internet. Ele permite que os usuários façam upload e download de arquivos de e para servidores FTP, que são dispositivos ou servidores específicos configurados para armazenar e compartilhar arquivos.</p>
+
+        <pre><code class="language-python">from ftplib import FTP
+
+# Conectar ao servidor FTP
+ftp = FTP("ftp.example.com")
+ftp.login(user="seu_usuario", passwd="sua_senha")
+
+# Diretório de destino no servidor FTP
+diretorio_destino = "/pasta_no_servidor"
+
+# Nome do arquivo a ser enviado
+nome_arquivo = "arquivo.txt"
+
+# Abra o arquivo em modo binário e faça o upload
+with open(nome_arquivo, "rb") as arquivo:
+    ftp.storbinary(f"STOR {diretorio_destino}/{nome_arquivo}", arquivo)
+
+# Encerrar a conexão FTP
+ftp.quit()
+        </code></pre>
+
+
 
         <h2>Bibliotecas úteis</h2>
         <ul>
             <li>datetime: para aplicações com data, hora e ano</li>
             <li>platform: para aplicações com sistemas operacionais</li>
             <li>geocoder: para aplicações com geolocalização</li>
-            <li>getpass: para aplicações como, pegar o usuário logado na maquina ou pegar informações como senha</li>
+            <li>getpass: para aplicações como, pegar o usuário logado na maquina ou pegar informações</li>
             <li>sympy: para aplicações matematicas</li>
-
+            <li>socket: para protocolos de comunicação em python</li>
+            <li>ftplib: para acessar o protocolo FTP</li>
         </ul>
+        <br>
+        <br>
 
 
 
