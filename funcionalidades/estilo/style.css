@@ -128,7 +128,7 @@
     }
 
     p{
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         text-align: justify;
     }
 
@@ -310,7 +310,7 @@
     }
 
     main ol li{
-        padding: 10px;
+        padding: 2px;
     }
 
     .paragrafo-estilizado { /* paragrafo estilizado com borda */

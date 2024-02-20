@@ -32,7 +32,7 @@
                     <a href="MySQL.html"><strong>MySQL</strong></a>
                 </li>
                 <li>
-                    <a href="pythom.html"><strong>Python</strong></a>
+                    <a href="python.html"><strong>Python</strong></a>
                 </li>
             </ul>
         </menu>
@@ -49,8 +49,8 @@
         </p>
 
         <h2>Tipos de Dados</h2>
-        <p>Agora que já foi definido o que são as variáveis, precisamos definir o tipo do dado que será armazenado dentro da variável. A principio, dentro da nossa proposta de programação
-            , podemos, identificar dois grupos básicos de tipos de dados: numéricos e alfanuméricos.
+            <p>Agora que já foi definido o que são as variáveis, precisamos definir o tipo do dado que será armazenado dentro da variável. A principio, dentro da nossa proposta de programação
+            , podemos, identificar dois grupos básicos de tipos de dados: numéricos e alfanuméricos.</p>
 
             <h3>Tipo Numérico</h3>
             <p><span class="exemplo">Inteiros (int)</span>: Os números inteiros em Python são representados pelo tipo int. Eles podem ser positivos, negativos ou zero. Por exemplo: 5, -10, 0.</p>
@@ -113,7 +113,7 @@ while contador &lt; 5:
             <p>Neste exemplo, o <span class="exemplo">for</span> itera sobre os números de 0 a 4 e imprime cada valor.</p>
 
             
-        <h2>Listas</h2>
+            <h2>Listas</h2>
             <p>Em Python, uma lista é uma estrutura de dados que permite armazenar uma coleção ordenada de elementos. As listas são muito versáteis e amplamente utilizadas na programação. Para criar uma lista, você pode usar <span class="exemplo">colchetes [ ]</span> e inserir os elementos separados por vírgulas.</p>
 
             <p>Acesso a Elementos: Você pode acessar os elementos de uma lista usando <span class="exemplo">índices</span> (começando em 0 para o primeiro elemento). Por exemplo:</p>
@@ -268,7 +268,7 @@ a, b, c = tupla  # Isso desempacota os valores para a, b e c</code></pre></li>
 
         <p>Exemplo de uso de tuplas:</p>
         <pre><code class="language-python"># Criando uma tupla
-frutas = ('maçã', 'banana', 'laranja')
+frutas = ('maçã', 'banana', 'laranja')</code></pre>
 
 # Acessando elementos
 print(frutas[0])  # Saída: 'maçã'
@@ -577,6 +577,48 @@ with open(nome_arquivo, "rb") as arquivo:
 # Encerrar a conexão FTP
 ftp.quit()
         </code></pre>
+
+        <h2>Programação orientada a objetos (OOP)</h2>
+        <p>A programação orientada a objetos (POO) em Python é uma abordagem de programação que organiza o código em objetos que possuem atributos (dados) e métodos (funções) associados. Aqui está um resumo das principais características e conceitos da POO em Python:</p>
+        
+        <ol>
+            <b><li>Classes e objetos</li></b>
+                <ul>
+                    <li>Uma classe é um modelo para criar objetos. Ela define os atributos e métodos que os objetos desse tipo terão</li>
+                    <li>Um objeto é uma instância de uma classe. Pode ser criado usando a sintaxe nome_da_classe().</li>
+                </ul>
+<pre><code class="language-python">class Pessoa:
+def __init__(self, nome, idade):
+    self.nome = nome
+    self.idade = idade
+
+# Criando um objeto Pessoa
+p1 = Pessoa("João", 30)
+print(p1.nome)  # Saída: João
+print(p1.idade)  # Saída: 30
+</code></pre>
+            <b>
+                <li>Metodos:</li>
+            </b>
+                <ul>
+                    <li>São funções definidas dentro de uma classe que podem ser chamadas para realizar operações em objetos daquela classe.</li>
+                    <li>Podem ser acessados usando a notação de ponto (objeto.atributo).</li>
+                </ul>
+<pre><code class="language-python">class Retangulo:
+    def __init__(self, comprimento, largura):
+        self.comprimento = comprimento
+        self.largura = largura
+
+    def calcular_area(self):
+        return self.comprimento * self.largura
+
+# Método de um objeto Retangulo
+r1 = Retangulo(5, 4)
+print(r1.calcular_area())  # Saída: 20</code></pre>
+            
+        </ol>
+
+
 
 
 
