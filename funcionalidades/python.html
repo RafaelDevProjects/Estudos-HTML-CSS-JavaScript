@@ -597,7 +597,26 @@ p1 = Pessoa("João", 30)
 print(p1.nome)  # Saída: João
 print(p1.idade)  # Saída: 30
 </code></pre>
-            <b>
+
+
+            <b><li>Atributos</li></b>
+            <ul>
+                <li>São variáveis que pertencem a um objeto e armazenam dados sobre o objeto.</li>
+                <li>Podem ser acessados usando a notação de ponto (objeto.atributo)</li>
+            </ul>
+<pre><code class="language-python">class Carro:
+    def __init__(self, marca, modelo):
+        self.marca = marca
+        self.modelo = modelo
+
+# Atributos de objetos Carro
+carro1 = Carro("Toyota", "Corolla")
+print(carro1.marca)  # Saída: Toyota
+print(carro1.modelo)  # Saída: Corolla
+</code></pre><b>
+        
+
+
                 <li>Metodos:</li>
             </b>
                 <ul>
@@ -615,6 +634,29 @@ print(p1.idade)  # Saída: 30
 # Método de um objeto Retangulo
 r1 = Retangulo(5, 4)
 print(r1.calcular_area())  # Saída: 20</code></pre>
+
+
+
+                <b><li>Metodos Especiais(Mágicos):</li></b>
+            
+                <ul>
+                    <li>São métodos predefinidos em Python que permitem que você execute operações específicas em objetos, como inicialização, representação, adição, subtração, etc.</li>
+                    <li>Eles têm nomes que começam e terminam com duplo sublinhado (por exemplo, __init__, __str__, __add__)</li>
+                </ul>
+<pre><code class="language-python">lass Livro:
+    def __init__(self, titulo, autor):
+        self.titulo = titulo
+        self.autor = autor
+
+    def __str__(self):
+        return f"{self.titulo} por {self.autor}"
+
+# Método especial __str__
+livro = Livro("Python for Dummies", "John Smith")
+print(livro)  # Saída: Python for Dummies por John Smith</code></pre>
+
+
+        
             
         </ol>
 
