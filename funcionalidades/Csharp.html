@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icone/dogcoin.ico.lnk" type="image/x-icon">
+    <link rel="stylesheet" href="estilo/style.css" media="all">
+    <link rel="stylesheet" href="estilo/print.css" media="print">
+    <link rel="stylesheet" href="estilo/midia-query.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="estilo/prism/prism.css">
+    <script src="estilo/prism/prism.js"></script>
+    <title>C++</title>
+</head>
+<body onresize="mudouTamanho()">
+    <header class="header" id="myheader">
+        <h1>Estudos</h1>
+        <span id="burguer" class="material-icons" onclick="clickMenu()">menu</span>
+        <menu id="menu">
+            <ul>
+                <li>
+                    <a href="../index.html"><strong>HTML5</strong></a>
+                </li>
+                <li>
+                    <a href="css.html"><strong>CSS</strong></a>
+                </li>
+                <li>
+                    <a href="javascript.html"><strong>JavaScript</strong></a>
+                </li>
+                <li>
+                    <a href="MySQL.html"><strong>MySQL</strong></a>
+                </li>
+                <li>
+                    <a href="python.html"><strong>Python</strong></a>
+                </li>
+                <li>
+                    <a href="#"><strong>C++</strong></a>
+                </li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <h1>Linguaguem C#</h1>
+        <p>
+            Bem-vindo ao mundo da programação com C#! Como uma linguagem de programação moderna e versátil, o C# é amplamente reconhecido pela sua elegância e poder. Desenvolvido pela Microsoft, o C# é parte integrante do ecossistema .NET, oferecendo uma sintaxe limpa e uma ampla gama de recursos para criar aplicativos robustos e escaláveis. Se você está começando sua jornada na programação ou já possui experiência em outras linguagens, o C# oferece uma curva de aprendizado suave e uma vasta comunidade de apoio. Prepare-se para mergulhar em conceitos fundamentais como tipos de dados, estruturas de controle e orientação a objetos, enquanto descobre o potencial desta linguagem para criar desde simples aplicativos de desktop até soluções empresariais complexas. 
+        </p>
+
+        <h2>Console.WhiteLine</h2>
+        <p>
+            Em C#, a tarefa de imprimir ou exibir informações na tela é realizada principalmente através do uso do método <span class="exemplo">Console.WriteLine()</span>. Este método aceita uma variedade de tipos de dados como argumentos e exibe o valor correspondente no console. Por exemplo, para exibir uma simples mensagem de texto, você pode usar:
+        </p>
+        <pre><code class="lang-c#">Console.WriteLine("Olá, mundo!");</code></pre>
+
+        <p>
+            Se você quiser exibir o valor de uma variável, basta passar a variável como argumento para Console.WriteLine(). Por exemplo:
+        </p>
+
+        <pre><code class="lang-c#">int numero = 10;
+Console.WriteLine("O valor de numero é: " + numero);</code></pre>
+
+        <h2>Linguagem fortemente tipada</h2>
+        <h2>Aplicando a Orientação a objetos</h2>
+        <p>
+            Para criar uma classe em c# usamos a palavra <span class="exemplo">class</span>, que deve ter um nome com a primeira letra em maiúsculo para mostrar que é uma class, podemos criar atributos para cada característica dessa classe, como o exemplo a seguir:
+        </p>
+
+        <pre><code class="lang-c#">class Musica        
+{
+    public string nome;
+    public string artista;
+    public string duracao;
+    public bool disponivel;
+}</code></pre>
+
+        
+
+        <p>
+            Para criar uma variavel que seja da classe Musica precisamos do seguinte codigo:
+        </p>
+
+        <pre><code class="lang-c#">Musica musica1 = new Musica();</code></pre>
+
+        <p>
+            Para acessar um desses atributos na lista precisamos que ela seja publica, para acessar:
+        </p>
+
+
+        <pre><code class="lang-c#">musica1.nome = "Convoque seu buda";</code></pre>
+
+        <p>
+            Desse modo o nome da Musica1 tera o nome Convoque seu buda
+        </p>
+
+        <p>
+            Podemos também criar comportamentos dentro das classes que são os metodos, como a mostrada seguir: 
+        </p>
+
+        <pre><code class="lang-c#">public void ExibirFichaTecnica()
+{
+    Console.WriteLine($"Nome: {nome}");
+    Console.WriteLine($"Artista: {artista}");
+    Console.WriteLine($"Duração: {duracao}");
+}
+
+musica1.ExibirFichaTecnica();</code></pre>
+
+        
+
+
+    </main>
+
+    <script>
+        function mudouTamanho() {
+            if (window.innerWidth >=768) {
+                menu.style.display = 'block'
+            } else {
+                menu.style.display = 'none'
+            }
+        }
+
+        function clickMenu() {
+            if (menu.style.display == "block") {
+                menu.style.display = 'none'
+            } else {
+                menu.style.display = 'block'
+            }
+        }
+    </script>
