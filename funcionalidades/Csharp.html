@@ -50,22 +50,88 @@
         <p>
             Em C#, a tarefa de imprimir ou exibir informações na tela é realizada principalmente através do uso do método <span class="exemplo">Console.WriteLine()</span>. Este método aceita uma variedade de tipos de dados como argumentos e exibe o valor correspondente no console. Por exemplo, para exibir uma simples mensagem de texto, você pode usar:
         </p>
-        <pre><code class="lang-c#">Console.WriteLine("Olá, mundo!");</code></pre>
+        <pre><code class="lang-cs">Console.WriteLine("Olá, mundo!");</code></pre>
 
         <p>
             Se você quiser exibir o valor de uma variável, basta passar a variável como argumento para Console.WriteLine(). Por exemplo:
         </p>
 
-        <pre><code class="lang-c#">int numero = 10;
+        <pre><code class="lang-cs">int numero = 10;
 Console.WriteLine("O valor de numero é: " + numero);</code></pre>
 
+        <h2>Funções</h2>
+        <h2>Funções lambda</h2>
+        <p>
+            No C#, <b>lambdas</b> são funções anônimas que podem ser usadas para criar expressões ou blocos de código compactos e concisos. Eles são especialmente úteis quando se trata de trabalhar com coleções de dados, realizar operações em uma sequência de elementos ou lidar com delegados.
+        </p>
+        <p>
+            Vamos começar com um exemplo simples de um código sem lambda. Suponha que você tenha uma lista de números inteiros e deseje filtrar apenas os números pares. Aqui está um exemplo sem o uso de lambda:
+        </p>
+<pre><code class="lang-cs">List<int> numeros = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+    List<int> numerosPares = numeros.FindAll(BuscarNumerosQueSaoPares);
+    
+    bool BuscarNumerosQueSaoPares(int numero)
+    {
+        return numero % 2 == 0;
+    }
+    
+    foreach (int numero in numerosPares)
+    {
+        Console.WriteLine(numero);
+    }</code></pre>
+
+        <p>Ao executar esse programa, o resultado será:</p>
+
+<pre><code class="lang-cs">2
+4
+6
+8
+10</code></pre>
+        <p>
+            Neste exemplo, definimos um método chamado <b>BuscarNumerosQueSaoPares</b>, que recebe um número inteiro e retorna um valor booleano indicando se o número é par. Em seguida, usamos o método <b>FindAll</b> da classe <b>List&lt;T&gt</b>; para filtrar os números da lista com base nessa condição e exibimos os valores no console.
+        </p>
+
+        <h3>Como seria esse código com funções lambdas?</h3>
+        <p>Lembrando que a estrutura de código de uma função lambda no C# segue um formato geral. Aqui está a estrutura básica de uma função lambda:</p>
+        <pre><code class="lang-cs">(parametros) => expressao</code></pre>
+
+        <p><b>Parâmetros:</b> É uma lista opcional de parâmetros, separados por vírgulas, que especifica as entradas da função lambda. Cada parâmetro pode ser tipado explicitamente ou pode ser inferido pelo compilador.</p>
+
+        <p><b>Operador =>:</b> É o operador de seta (=>), que separa a lista de parâmetros da expressão lambda. Ele indica que os parâmetros estão sendo mapeados para a expressão ou bloco de código seguinte.</p>
+
+        <p><b>Expressão ou bloco de código</b>: É a expressão ou o bloco de código que define a lógica da função lambda. Pode ser uma única expressão ou um bloco de código delimitado por chaves ({}). Se a função lambda contiver um único comando, a expressão será automaticamente retornada. Caso contrário, você pode usar a palavra-chave return para retornar explicitamente um valor.</p>
+
+        <p>Vamos iniciar substituindo a função BuscarNumerosQueSaoPares por uma função anônima que tem a mesma finalidade:</p>
+
+        <pre><code class="lang-cs">List&lt;int&gt; numeros = new List&lt;int&gt; { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+List&lt;int&gt; numerosPares = numeros.FindAll(numero => numero % 2 == 0);</code></pre>
+
+        <p>A expressão lambda especifica um parâmetro numero seguido por uma seta (=>) e uma expressão que retorna um valor booleano. A função FindAll utiliza essa expressão lambda como critério para filtrar os números da lista.</p>
+
+        <p>Em seguida, podemos usar uma função lambda na exibição dos números pares:</p>
+
+        <pre><code class="lang-cd">numerosPares.ForEach(numero => Console.WriteLine(numero));</code></pre>
+
+        <p>Segue o código completo:</p>
+        
+        <pre><code class="lang-cs">List<int> numeros = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+List<int> numerosPares = numeros.FindAll(numero => numero % 2 == 0);
+numerosPares.ForEach(numero => Console.WriteLine(numero));</code></pre>
+
+
+
+
+
         <h2>Linguagem fortemente tipada</h2>
+
         <h2>Aplicando a Orientação a objetos</h2>
         <p>
             Para criar uma classe em c# usamos a palavra <span class="exemplo">class</span>, que deve ter um nome com a primeira letra em maiúsculo para mostrar que é uma class, podemos criar atributos para cada característica dessa classe, como o exemplo a seguir:
         </p>
 
-        <pre><code class="lang-c#">class Musica        
+        <pre><code class="lang-cs">class Musica        
 {
     public string nome;
     public string artista;
@@ -73,30 +139,19 @@ Console.WriteLine("O valor de numero é: " + numero);</code></pre>
     public bool disponivel;
 }</code></pre>
 
-        
+        <p>Para criar uma variavel que seja da classe Musica precisamos do seguinte codigo:</p>
 
-        <p>
-            Para criar uma variavel que seja da classe Musica precisamos do seguinte codigo:
-        </p>
+        <pre><code class="lang-cs">Musica musica1 = new Musica();</code></pre>
 
-        <pre><code class="lang-c#">Musica musica1 = new Musica();</code></pre>
+        <p>Para acessar um desses atributos na lista precisamos que ela seja publica, para acessar:</p>
 
-        <p>
-            Para acessar um desses atributos na lista precisamos que ela seja publica, para acessar:
-        </p>
+        <pre><code class="lang-cs">musica1.nome = "Convoque seu buda";</code></pre>
 
+        <p>Desse modo o nome da Musica1 tera o nome Convoque seu buda</p>
 
-        <pre><code class="lang-c#">musica1.nome = "Convoque seu buda";</code></pre>
+        <p>Podemos também criar comportamentos dentro das classes que são os metodos, como a mostrada seguir: </p>
 
-        <p>
-            Desse modo o nome da Musica1 tera o nome Convoque seu buda
-        </p>
-
-        <p>
-            Podemos também criar comportamentos dentro das classes que são os metodos, como a mostrada seguir: 
-        </p>
-
-        <pre><code class="lang-c#">public void ExibirFichaTecnica()
+        <pre><code class="lang-cs">public void ExibirFichaTecnica()
 {
     Console.WriteLine($"Nome: {nome}");
     Console.WriteLine($"Artista: {artista}");
@@ -104,6 +159,46 @@ Console.WriteLine("O valor de numero é: " + numero);</code></pre>
 }
 
 musica1.ExibirFichaTecnica();</code></pre>
+
+        <h3>Propriedades</h3>
+        <p>No C#, um atributo é uma variável declarada dentro de uma classe que armazena dados associados a uma instância específica desta classe e uma propriedade é uma abstração que fornece um meio de acessar e modificar os valores dos atributos de uma classe, encapsulando a lógica de leitura e escrita. Veja o exemplo de código abaixo que contém uma classe com um atributo e uma propriedade:</p>
+
+        <pre><code class="lang-cs">class Filme
+{
+    public string Titulo;
+
+    public int Orcamento { get; set; }
+}       </code></pre>
+
+        <p>Um exemplo da instância desta classe seria:</p>
+
+        <pre><code class="lang-cs">Filme matrix = new Filme();
+matrix.Titulo = "Matrix";
+matrix.Orcamento = 63;
+        </code></pre>
+
+        <p>A propriedade Orcamento fornece um meio de acessar e modificar o valor com os métodos <b>get</b> e <b>set</b>. Já o atributo Titulo pode ser acessado e modificado diretamente, sem a necessidade de métodos específicos.</p>
+
+        <p>Embora haja uma relação entre <b>atributos</b> (fields) e <b>propriedades</b> (properties) em C#, eles são conceitos distintos e oferecem diferentes recursos e funcionalidades para o desenvolvimento de classes e objetos.</p>
+
+
+        <h3>Relacionamento entre classes</h3>
+        <p>No C#, podemos criar um relacionamento entre classes utilizando a composição, que é uma forma de relacionamento em que uma classe possui uma instância de outra classe como um de seus membros. Isso permite que a classe tenha acesso aos membros e comportamentos da classe relacionada, como ilustra o código abaixo:</p>
+
+        <pre><code class = "lang-cs">public class Pessoa
+{
+    public string Nome { get; set; }
+    public Endereco Endereco { get; set; }
+
+    public void ExibirInformacoes()
+    {
+        Console.WriteLine($"Nome: {Nome}");
+        Console.WriteLine($"Endereço: {Endereco.Rua}, {Endereco.Cidade}, {Endereco.Estado}");
+    }
+}       </code></pre>
+
+
+
 
         
 
